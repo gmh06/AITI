@@ -6,7 +6,7 @@ An interactive AI personality quiz for the roadshow of Tsinghua CS's 44th Studen
 
 ## 项目简介
 
-AITI 是由 [gmh06](https://github.com/gmh06) 与 [Zaogezi](https://github.com/Zaogezi) 共同筹划制作的趣味 AI 人格测试活动，计划在学生节前的路演中与同学们见面。
+AITI 是一项趣味 AI 人格测试活动，计划在学生节前的路演中与同学们见面。
 
 我们希望通过轻松、有参与感的互动，让同学们发现自己更多面的可能，并与本届学生节的主题 **Beyond Context** 建立联系。
 
@@ -18,10 +18,12 @@ AITI 是由 [gmh06](https://github.com/gmh06) 与 [Zaogezi](https://github.com/Z
 
 ## 当前进展
 
-项目处于筹划与需求确认阶段，尚未实现可运行的测试应用。
+活动策划案已整理，当前推进内容准备和可行性确认，尚未实现可运行的测试应用。
 
 具体玩法、内容体系、结果呈现和技术方案，将随筹划推进补充到项目文档。
 
 ## 项目资料
 
-详见[项目简报](docs/PROJECT_BRIEF.md)，其中记录了已确认的背景、活动目标与需要共同确定的问题。
+- [活动策划案](docs/Activity_draft.md)：活动流程、系统功能、卡片设计、现场安排及待落实事项。
+- [策划案 PDF](docs/Activity_draft.pdf)：便于阅读和转发的版本。
+- [项目简报](docs/PROJECT_BRIEF.md)：已确认的背景、目标与方案摘要。
