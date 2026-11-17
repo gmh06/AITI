@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "status": "user-approved",
+  "mode": "built-in image_gen",
+  "recordType": "consolidated final specifications",
+  "sourcePromptFile": "docs/card_image_prompts.md",
+  "historyFile": "generation_history.json",
+  "referencePathBase": "repository root",
+  "images": [
+    {
+      "model": "gpt",
+      "file": "gpt.png",
+      "approvedRevision": "gpt",
+      "references": [
+        {
+          "file": "asset/mini2_character/gpt.jpg",
+          "role": "character and style"
+        },
+        {
+          "file": "asset/mini_character/gpt.jpg",
+          "role": "detail reference"
+        }
+      ],
+      "text": [],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景，画面中不得出现任何文字。\n角色：雪白及腰大波浪卷发（发色偏白、带一点浅紫），头顶一根细长上翘呆毛，齐眉碎刘海，两侧长鬓蓬松外翻；瞳孔是紫色（**别画成蓝色**），半垂眼、眼尾一道红棕色挑线；头顶一对象牙白分节龙角，向后上方弯；尖长精灵耳。**没有尾巴，没有翅膀。**\n服装：白色小礼服式蓬蓬短裙，泡泡袖与荷叶边层叠裙摆，胸前细链条与浅紫色菱形垂饰；左侧一枚银白色花结发饰，垂小环与流苏；白色短靴，鞋面带蝴蝶结绑带。\n动作：正面站立，肩膀微微内缩，双手捏着一页白纸的两角翻看（纸是唯一道具，画面中不出现笔），低头盯着纸，眉心紧皱，不抬眼看镜头。\n构图：竖版 2:3，人物居中偏左，右侧留约 30% 空白，顶部留 10%。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel shading, desaturated palette, pure white background, NO text of any kind in the image.\nCharacter: waist-length wavy white hair with a faint lavender tint and a single long ahoge, blunt bangs, thick side locks; **purple** half-lidded eyes with a reddish-brown wing line (never blue); a pair of ivory segmented dragon horns curving back; pointed elf ears. **No tail, no wings.**\nOutfit: white party-style puffy short dress with puff sleeves and tiered ruffled hem, a delicate chest chain with pale-lavender diamond pendants, a silver-white knotted hair ornament with tassel on the left, white ankle boots with ribbon lacing.\nPose: standing front-facing, shoulders slightly hunched, holding a single sheet of white paper by its two top corners with both hands, head lowered staring at the paper, brows knitted, not looking at camera. No pen.\nComposition: vertical 2:3, character centered-left, ~30% empty space on the right, 10% headroom."
+    },
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "approvedRevision": "deepseek-v9",
+      "references": [
+        {
+          "file": "asset/mini2_character/deepseek.jpg",
+          "role": "character and style"
+        },
+        {
+          "file": "asset/mini_character/deepseek.jpg",
+          "role": "detail reference"
+        }
+      ],
+      "text": [
+        "嗯，用户现在……"
+      ],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景。\n角色：靛蓝到浅雾蓝渐变的及腰大波浪卷发，厚齐眉刘海，头顶一根蓝色弯曲呆毛，白色蕾丝女仆发饰与两侧蓝蝴蝶结；**没有悬浮光环**；宝石蓝到冰蓝渐变的圆润大眼、眼下有小点腮红；一对大而明显的鲸鱼胸鳍状耳朵（外蓝内白、带鳍纹，张开后接近头部宽度），一条藏青鲸尾从腰后伸出；眼睛是蓝色（**别换瞳色**）。\n服装：白色高领竖褶衬衫配深蓝纽扣，藏青泡泡袖短外套（袖口古铜金滚边与白蕾丝），胸前深藏青大蝴蝶结配浅蓝宝石胸针；藏青束腰双排古铜金纽扣；藏青短裙接浅蓝横带（金藤蔓小花纹）与白蕾丝衬裙；白色蕾丝荷叶边围裙，围裙正中一枚喷水的藏青鲸鱼图案；藏青玛丽珍鞋，白色及膝袜。\n动作：参照已确认成品，坐在地上，双腿并拢屈膝抬到身前，双手环抱膝盖，两只鞋并排靠近，一只手的手指无意识地敲着膝盖；**不盘腿，不交叉小腿，不把膝盖向两侧打开**。仰头望上方放空，腮帮子微微鼓起，嘴巴轻抿，表情专注又走神；**不画嘴边气泡**。裙摆自然遮住髋部。\n文字：人物头顶右上方漂浮着一行浅灰蓝色的细体中文小字「嗯，用户现在……」，字迹清淡、略透明，像思绪；省略号由恰好六个横向小圆点组成，各点底边与汉字底部基线水平对齐，不放在文字中线上。从左到右逐渐变小、变浅、变透明，点间留有清晰间隔，第六个点也必须隐约可见、可数。用渐淡的六点表现思绪慢慢飘远，不画波峰或上下跳动，不额外添加灰色圆点、气泡或运动线。画面中只允许出现这几个字，不得出现其他任何文字。\n构图：竖版 2:3，人物整体压低坐姿，头顶留约 25% 空白，人物居中偏左。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background.\nCharacter: waist-length wavy indigo-to-pale-blue gradient hair, thick blunt bangs, a curved blue ahoge, a white lace maid headdress and blue side bows; **no floating halo**; round sapphire-to-ice-blue eyes with small blush dots; large prominent whale-fin-shaped ears (blue outside, white inside, spread nearly as wide as the head), a navy whale tail at the waist; **blue** eyes, never change the eye color.\nOutfit: white high-collar pleated blouse with navy buttons, navy puff-sleeve cropped jacket with antique-gold trim and white lace, large navy bow with a pale blue gem brooch; navy corset belt with double rows of gold buttons; navy short skirt with a light-blue band, white lace petticoat; white lace ruffled apron with a small spouting navy whale emblem at its center; navy Mary Janes, white knee socks.\nPose: match the approved final illustration: sitting on the floor with both knees raised together in front of the torso, arms hugging the knees, shins together and shoes close side by side; one hand idly tapping a knee. **Not cross-legged, no crossed shins, no knees spread outward.** Head tilted up staring blankly, cheeks slightly puffed, a tiny pursed mouth with **no mouth bubble**. Skirt naturally covers the hips.\nText: a single line of small, pale blue-grey, slightly translucent Chinese text 「嗯，用户现在……」 floats above and to the right of her head. Use **exactly six small round dots with their lower edges aligned to the bottom baseline of the Chinese characters, not the text midline**, gradually decreasing in size, blue-grey intensity and opacity from left to right, suggesting thoughts trailing off. Keep clean gaps; even the sixth dot must remain faintly visible and countable. No arch, bouncing crest, separate grey thought circles, bubbles or motion lines. This must be the ONLY text in the image.\nComposition: vertical 2:3, seated low, 25% empty space above the head, character centered-left."
+    },
+    {
+      "model": "glm",
+      "file": "glm.png",
+      "approvedRevision": "glm",
+      "references": [
+        {
+          "file": "asset/mini_character/glm.jpg",
+          "role": "character"
+        },
+        {
+          "file": "asset/mini2_character/gpt.jpg",
+          "role": "style"
+        }
+      ],
+      "text": [],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景，画面中不得出现任何文字。\n角色：墨黑超长直发（发尾透蓝紫光泽），厚刘海，两侧长鬓垂到腰；蓝灰色大眼、眼尾细上挑、眼下有一排点状腮红，安静浅笑；一对大型狐狼耳（外黑内白绒毛），一条极蓬松的黑毛白尖狐尾。\n服装：头顶白色蕾丝荷叶边发带，发带上趴一只黑色睡眠眼罩（绣着闭眼睫毛）；白色蕾丝高领衬衫（竖细褶、小纽扣），黑色缎带蝴蝶结领结，正中一枚方形金属扣牌（**素面，不带任何字母**）；黑色宽腰封配方形金属扣与细银链；白色长裙外叠黑色多层罩裙，白裙正面有黑银十字架与菱形水晶刺绣；白色系带短靴，黑色鞋头与厚底。\n动作：蹲姿，一手撑在地上，另一手朝画面外伸出来像要接住递过来的东西，身体前倾，眼睛直视观者，嘴角一撇。\n构图：竖版 2:3，蹲姿压低重心，人物居中偏左，右侧留约 30% 空白。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background, NO text of any kind.\nCharacter: extremely long straight ink-black hair with blue-violet sheen at the tips, thick bangs, long side locks; blue-grey large eyes with thin upturned liner and a row of dot blush under the eyes, faint smile; large black fox-wolf ears with white inner fluff, a very fluffy black fox tail with a white tip.\nOutfit: white lace ruffled headband with a black sleep mask resting on it; white lace high-collar blouse with tiny pleats and buttons, black ribbon bow with a **blank square metal plate** at its center; black wide corset belt with a square metal buckle and fine silver chain; white long skirt layered with black overskirts, black-and-silver cross and diamond-crystal embroidery; white lace-up ankle boots with black toe caps and thick soles.\nPose: crouching, one hand on the floor for support, the other reaching out toward the viewer as if to take something, leaning forward, eyes looking straight at the camera, one corner of the mouth pulled.\nComposition: vertical 2:3, low crouching silhouette, centered-left, ~30% empty space on the right."
+    },
+    {
+      "model": "grok",
+      "file": "grok.png",
+      "approvedRevision": "grok-v4",
+      "references": [
+        {
+          "file": "asset/mini_character/grok.jpg",
+          "role": "character"
+        },
+        {
+          "file": "asset/mini2_character/gpt.jpg",
+          "role": "style"
+        }
+      ],
+      "text": [
+        "Grok, is this real?"
+      ],
+      "prompt": "2D 日系轻插画，Q 版约 2.6 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景。\n角色：极浅奶油香槟金的高位巨型双马尾大波浪卷发，刘海偏分露额，两侧碎发贴脸；天蓝色宝石眼、上眼线粗挑，腮红明显，张口露出一颗上虎牙；一对尖长精灵耳。\n服装：头顶黑色小金冠（正面一枚圆形罗盘徽章），冠后一枚大型新月饰，两侧黑色大蝴蝶结各挂一枚黑色小蝙蝠翼；黑色哥特式露肩上衣（大领口配黑蕾丝），黑色缎面领结配罗盘金属徽章，酒红色内衬小斗篷；黑色紧身束腰配金链与罗盘徽章；黑色不对称高低裙（金色刺绣滚边、酒红内衬荷叶边）；黑色高跟短靴配金色罗盘搭扣；黑色半透丝袜与带金饰的大腿环。 裙摆只在两侧内缘局部向下延长，充分遮住髋部和两侧开口；中央保留交叠双腿的露出，不改成整片长裙。\n动作：坐在一道台座上，双腿自然交叠、一条腿垂下，身体前倾，一只手托腮；挑眉坏笑，斜眼瞟向观者，一副看戏的样子。\n文字：画面左上方横着一条白色圆角半透明小条，条内用深灰色无衬线小号英文字母写着「Grok, is this real?」，首字母 G 大写、其余小写，带逗号和问号，轻微软斜。这是画面中唯一出现的文字，不得出现任何其他字母、数字或符号。\n构图：竖版 2:3，人物偏右，左上方留出空白，底部保留垂下的腿。",
+      "englishPrompt": "2D anime chibi illustration, ~2.6 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background.\nCharacter: very pale creamy champagne-blonde enormous twin-tails with big curls, side-parted bangs, face-framing strands; sky-blue jewel eyes with thick upturned liner, strong blush, mouth open showing one small fang; pointed elf ears.\nOutfit: small black-and-gold crown with a round compass medallion, a large crescent ornament behind it, black bows on both sides each with a tiny black bat wing; black gothic off-shoulder top with lace, black satin bow with a compass medallion, wine-red lined mini capelet; black corset with gold chain and compass medallion; black asymmetric high-low skirt with gold embroidery and wine-red ruffled lining; black heeled ankle boots with gold compass buckles; sheer black tights and a gold-trimmed thigh band. Extend only the two inner side hems enough for full hip coverage; retain the open front showing the crossed legs, rather than a full-length front skirt.\nPose: sitting on a plinth with legs naturally crossed and one leg hanging down, leaning forward, one hand propping her cheek; smirking with raised eyebrow and a sideways glance at the viewer.\nText: in the upper-left there is a small white rounded semi-transparent bar containing the sans-serif grey English text \"Grok, is this real?\" with a comma and question mark. This must be the ONLY text in the image — no other letters, numbers or symbols anywhere.\nComposition: vertical 2:3, character on the right, empty space upper-left, keep the hanging leg in frame."
+    },
+    {
+      "model": "kimi",
+      "file": "kimi.png",
+      "approvedRevision": "kimi-v2",
+      "references": [
+        {
+          "file": "asset/original_character/kimi.jpg",
+          "role": "original colors and K emblems"
+        },
+        {
+          "file": "asset/mini_character/kimi.jpg",
+          "role": "character"
+        },
+        {
+          "file": "asset/mini2_character/gpt.jpg",
+          "role": "style"
+        }
+      ],
+      "text": [
+        "K",
+        "K"
+      ],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景，仅保留头侧蝴蝶结和腰侧方牌上的两处大写 K，不出现其他文字。\n角色：近雪白的银白色（仅保留冷灰蓝色阴影）的及腰大波浪卷发，极蓬松，厚刘海，两侧长鬓；薰衣草紫色大眼，眼中有四角星高光，温柔微笑；无兽耳无角无尾。\n服装：白色蕾丝荷叶边发箍；右侧一串挂饰包含银色新月、银色八分音符、深藏青蝴蝶结和浅紫菱形水晶坠，蝴蝶结中央保留白色大写 K；白色高领荷叶边衬衫；深藏青束腰马甲、短披肩和外裙，银纽扣与细银链，月亮、星座、五线谱、音符与琴键下摆图案保留。腰侧银链垂下一枚深蓝底、银色细边的方牌，中央是白色大写 K。白色内裙和荷叶边仅用淡冷蓝灰阴影，避免整体泛紫；藏青玛丽珍鞋、白色过膝袜。主色为接近原图的深藏青蓝，约 #242D4B；胸口标志保持被书堆遮住，不新增第三处可见 K。\n动作：抱着一摞窄而高的书与文件（高过下巴），下巴轻轻压在最上面那一本上，从资料后面露出眼睛看观者，安静地笑。\n构图：竖版 2:3，那一摞资料形成纵向高轮廓，人物居中偏左，右侧留约 30% 空白。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background, only the two specified uppercase K emblems and no other lettering.\nCharacter: voluminous waist-length wavy snow-white/silver-white hair with only faint cool grey-blue shadows, thick bangs, long side locks; large lavender eyes with four-pointed star highlights, gentle smile; no animal ears, no horns, no tail.\nOutfit: white lace ruffled headband; silver crescent, eighth note, deep-navy hair bow and pale-violet crystal drops at the side, with a clearly legible white uppercase K centered on the bow. White high-collar ruffled blouse, deep-navy corset vest, capelet and outer skirt, silver buttons and fine chains; preserve moon, constellation, music-staff, note and piano-key motifs. A small dark-navy square plaque with a thin silver frame and a white uppercase K hangs from the hip chain. White inner ruffles use faint cool blue-grey shading, not an overall violet tint. Navy Mary Janes and white over-knee socks. Match the original deep-navy palette, approximately #242D4B. The chest emblem remains hidden by the books; do not add a third visible K.\nPose: holding a narrow, tall stack of books and papers that rises above her chin, chin resting on the topmost book, peeking at the viewer over the stack with a quiet smile.\nComposition: vertical 2:3, the stack forms a tall vertical silhouette, centered-left, ~30% empty space on the right."
+    },
+    {
+      "model": "claude",
+      "file": "claude.png",
+      "approvedRevision": "claude",
+      "references": [
+        {
+          "file": "asset/mini2_character/claude.jpg",
+          "role": "character and style"
+        },
+        {
+          "file": "asset/mini_character/claude.jpg",
+          "role": "detail reference"
+        }
+      ],
+      "text": [],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景，画面中不得出现任何文字。\n角色：杏橙色及腰长发，斜分刘海盖额，两侧长鬓；眼睛是**琥珀色**，细长微垂的眼型，眼中有橙金光点；左侧鬓角一朵大型橙色花形发饰（花心珍珠感），后系黑色缎带配米白流苏；金色钟形水滴耳坠；无兽耳无角无尾。\n服装：米白底配橙色花纹的蓬蓬短裙，层层荷叶边；黑色缎带蝴蝶结配橙色雏菊胸针，**领口那一朵小花也别漏**；黑色腰带，垂米白流苏；黑色玛丽珍鞋，鞋面带橙色小花。\n动作：3/4 侧身站立，一只手握钢笔，笔尖已经点在摊开的一页方案纸上（纸在腰侧高度，纸面**空白**），另一只手自然下垂；抬眼看观者，眼神犀利，眉头略沉。\n构图：竖版 2:3，人物偏左，右侧留约 30% 空白。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background, NO text of any kind.\nCharacter: waist-length apricot-orange hair, side-parted bangs, long side locks; **amber** narrow slightly drooping eyes with golden highlights; a large orange flower ornament by her left temple with black ribbon and cream tassel; gold bell-shaped drop earring; no animal ears, no horns, no tail.\nOutfit: cream puffy short dress with orange floral patterns and tiered ruffles; black ribbon bow with an orange daisy brooch, **plus a small flower at the collar that must not be omitted**; black waist belt with cream tassels; black Mary Jane shoes with orange flower ornaments.\nPose: standing in 3/4 view, one hand holding a fountain pen with the nib pressed onto an **open blank sheet** of plan paper at hip height, the other arm relaxed; chin slightly raised, sharp gaze at the viewer, brows slightly knitted.\nComposition: vertical 2:3, character on the left, ~30% empty space on the right."
+    },
+    {
+      "model": "gemini",
+      "file": "gemini.png",
+      "approvedRevision": "gemini",
+      "references": [
+        {
+          "file": "asset/mini_character/gemini.jpg",
+          "role": "character"
+        },
+        {
+          "file": "asset/mini2_character/gpt.jpg",
+          "role": "style"
+        }
+      ],
+      "text": [],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景，画面中不得出现任何文字。\n角色：长春花蓝到樱花粉渐变的蓬松及腰长卷发，耳上两侧各一个丸子包头，头顶一根大呆毛；**异色瞳**（画面左眼紫红细瞳、画面右眼金琥珀色），眼中带星形高光；脸颊贴小星点贴饰；一对大型猫耳（外蓝紫、内侧粉色绒毛），一条蓬松紫蓝渐变猫尾。\n服装：藏蓝短款挂颈上衣（露腰，面料带星空亮片与星纹），胸前四角星胸针垂星链；深蓝紫开襟短外套（宽大幻彩星空渐变袖、白蕾丝荷叶袖口）；藏蓝配白荷叶边短裙，髋侧挂星形坠；厚底松糕鞋（藏蓝鞋身配幻彩珠光厚底、星形挂饰），白色绒毛袜套；右耳侧一枚大型幻彩四角星发饰。\n动作：站着，上身前倾，双手背在身后，仰头看观者，笑意明显、双眼保持睁开以清楚呈现异色瞳，一副等着被表扬的样子。\n构图：竖版 2:3，人物偏左，右侧留约 30% 空白。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background, NO text of any kind.\nCharacter: voluminous waist-length curly hair gradient from periwinkle blue to sakura pink, two buns on top of the ears, one big ahoge; **heterochromia** (viewer-left eye magenta with a slit pupil, viewer-right eye golden amber), star-shaped highlights; tiny star stickers on the cheek; large cat ears (blue-purple outside, pink fluff inside), a fluffy blue-purple gradient cat tail.\nOutfit: navy halter crop top with starry glitter fabric and a four-point star brooch with a star chain; deep blue-violet open short jacket with iridescent starry wide sleeves and white lace cuffs; navy skirt with white ruffles and a star charm at the hip; chunky platform shoes with iridescent pearl soles and star charms, white fluffy leg warmers; a large iridescent four-point star hair ornament.\nPose: standing, upper body leaning forward, both hands behind her back, head tilted up looking at the viewer, eyes smiling but open enough to clearly show both different iris colors, waiting to be praised.\nComposition: vertical 2:3, character on the left, ~30% empty space on the right."
+    },
+    {
+      "model": "doubao",
+      "file": "doubao.png",
+      "approvedRevision": "doubao",
+      "references": [
+        {
+          "file": "asset/original_character/doubao.jpg",
+          "role": "character and clothing only"
+        },
+        {
+          "file": "asset/mini2_character/claude.jpg",
+          "role": "2D chibi style"
+        }
+      ],
+      "text": [
+        "我用最直白、最不绕弯子的",
+        "方式告诉你……"
+      ],
+      "prompt": "2D 日系轻插画，Q 版约 2.8 头身，细线稿（深灰褐色），柔和淡彩上色，低饱和柔和配色，纯白背景。\n角色：深栗棕色齐脖内扣鲍勃短发，偏分刘海，脸侧一缕较长鬓发；深棕近黑的大圆眼睛配粗黑上睫毛与细黑眉，温柔地笑；**没有任何兽耳、角、尾巴或光环**。\n服装：深砖红色针织围巾绕颈一圈，长端垂到腹部，末端带流苏；黑色圆领卫衣配罗纹袖口与下摆；黑色直筒长裤，裤脚外翻出浅灰蓝色宽折边；黑色鞋身配灰色鞋底的圆头厚底鞋。\n动作：站定，双手捧着一杯奶茶向前递出，肩膀放松，笑得甜甜的，眼神温柔地看着观者。\n文字：画面下方贴着一张米黄色便利贴，右下角微微卷起并带阴影，纸条略微倾斜；纸条上用清晰的手写体分两行写着「我用最直白、最不绕弯子的」和「方式告诉你……」，字体工整不连笔，每个字都清晰可辨。画面中只允许出现这两行字。\n构图：竖版 2:3，人物偏左，右侧与底部各留空白。",
+      "englishPrompt": "2D anime chibi illustration, ~2.8 heads tall, thin dark-brown outlines, fine lineart with soft pastel coloring, desaturated palette, pure white background. **Convert the 3D clay-render reference into flat 2D anime style; do not keep any 3D, clay or plastic-doll look.**\nCharacter: chestnut-brown chin-length bob with inward curl, side-parted bangs, one longer strand by the cheek; large dark-brown near-black round eyes with thick upper lashes and thin brows, gentle smile; **no animal ears, no horns, no tail, no halo**.\nOutfit: deep brick-red knit scarf wrapped once around the neck with a long fringed end hanging to the abdomen; black crewneck sweatshirt with ribbed cuffs and hem; black straight-leg trousers with wide pale blue-grey turned-up cuffs; black round-toe platform shoes with grey soles.\nPose: standing, holding a cup of milk tea forward with both hands, relaxed shoulders, sweet smile, looking gently at the viewer.\nText: at the bottom of the image there is a pale yellow sticky note with a slightly curled lower-right corner and a soft shadow, tilted a few degrees; on it, in clean legible handwriting in two lines: 「我用最直白、最不绕弯子的」 and 「方式告诉你……」. These must be the ONLY two lines of text in the image.\nComposition: vertical 2:3, character on the left, empty space on the right and at the bottom."
+    }
+  ]
+}

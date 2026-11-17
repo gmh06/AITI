@@ -1,0 +1,90 @@
+{
+  "status": "user-approved",
+  "approvedDate": "2026-11-17",
+  "format": "PNG",
+  "schemaVersion": 2,
+  "promptLog": "prompts.json",
+  "historyFile": "generation_history.json",
+  "assets": [
+    {
+      "model": "gpt",
+      "file": "gpt.png",
+      "sha256": "539d35e9f62cc637762f0b4a54fa73c8f7a6045777f0380cce7551d9fae074e1",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "gpt",
+      "promptKey": "gpt",
+      "bytes": 1605728
+    },
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "sha256": "fe08dda26c5d8f8c0f2481e4c838568a476837407c86f246f393180fa2ff5135",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "deepseek-v9",
+      "promptKey": "deepseek",
+      "bytes": 1822394
+    },
+    {
+      "model": "glm",
+      "file": "glm.png",
+      "sha256": "7535003a5cbd75feeee749c1f98dde48fdd8918c831f64dea2b1c7e38e61b272",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "glm",
+      "promptKey": "glm",
+      "bytes": 2178586
+    },
+    {
+      "model": "grok",
+      "file": "grok.png",
+      "sha256": "b874dac811fb95f9df9217c7ef39c5e1c2ac760c5a96dc6d7a85e714dd5b9091",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "grok-v4",
+      "promptKey": "grok",
+      "bytes": 2061996
+    },
+    {
+      "model": "kimi",
+      "file": "kimi.png",
+      "sha256": "6bf373f706e981c5aa0a633fc574c4ee5a3b4be4fa951ccc4b7ab26f81204697",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "kimi-v2",
+      "promptKey": "kimi",
+      "bytes": 1625243
+    },
+    {
+      "model": "claude",
+      "file": "claude.png",
+      "sha256": "ff34dc8b6b1b9097dd982dc3d9f251cbc40aed9a7012739ba391208045154a0a",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "claude",
+      "promptKey": "claude",
+      "bytes": 1735174
+    },
+    {
+      "model": "gemini",
+      "file": "gemini.png",
+      "sha256": "070c2f09e4913ed8f8efb0de0bbac942a8fca31f1a0fe771109de2894657dfc3",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "gemini",
+      "promptKey": "gemini",
+      "bytes": 1695754
+    },
+    {
+      "model": "doubao",
+      "file": "doubao.png",
+      "sha256": "81a9e971aa191f4e0f0d3fdce245c8d225c11ec2095bdbc947f6e4e30f12c600",
+      "width": 1024,
+      "height": 1536,
+      "approvedRevision": "doubao",
+      "promptKey": "doubao",
+      "bytes": 1386751
+    }
+  ]
+}
