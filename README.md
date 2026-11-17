@@ -25,7 +25,6 @@ AITI 是一项趣味 AI 人格测试活动，计划在学生节前的路演中�
 ## 项目资料
 
 - [活动策划案](docs/Activity_draft.md)：活动流程、系统功能、卡片设计、现场安排及待落实事项。
-- [策划案 PDF](docs/Activity_draft.pdf)：便于阅读和转发的版本。
 - [项目简报](docs/PROJECT_BRIEF.md)：已确认的背景、目标与方案摘要。
 - [AITI 人格分类](docs/aiti_personality.md)：认知内核、思考倾向、对齐模式和交互姿态四个维度的定义及两极特征。
 - [模型人格设定](docs/model_character.md)：8 个模型对应的 16 种人格代号、角色描述与拟人化形象。

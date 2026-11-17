@@ -15,6 +15,10 @@ __pycache__/
 *.py[cod]
 *.log
 
+# Markdown 导出的 PDF。
+/题目设计.pdf
+/docs/Activity_draft.pdf
+
 # 操作系统产生的文件。
 .DS_Store
 Thumbs.db
