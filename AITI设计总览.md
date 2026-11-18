@@ -14,6 +14,11 @@ AITI 是清华大学计算机科学与技术系第44届学生节「Beyond Contex
 
 具体内容在上述三份分文档中维护，本页保留整体说明和阅读入口。
 
+## 角色视觉方案
+
+- [原卡片形象与生图规范](docs/card_image_prompts.md)：原拟人／娘化版本的八张插画已确认，制作进度冻结，成品与记录继续保留。
+- [模型形象设定 · 非人形方案](docs/nonhuman_character.md)：与原版平级维护。GPT 白龙、DeepSeek 蓝色鲸鱼、Claude Clawd、Kimi 小蓝球＋月亮、Gemini 猫、Grok 黑色小恶魔精灵、GLM 狐狸；豆包沿用现有形象。当前完成意象确认，具体造型与画风待设计。
+
 ## 活动与系统方案
 
 [活动策划案](docs/Activity_draft.md)说明参与流程、报告与卡片、系统功能、现场安排及传播方案；[项目简报](docs/PROJECT_BRIEF.md)汇总活动背景与已确认的方案。
