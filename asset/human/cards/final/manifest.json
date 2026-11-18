@@ -4,7 +4,7 @@
   "format": "PNG",
   "schemaVersion": 2,
   "promptLog": "prompts.json",
-  "historyFile": "generation_history.json",
+  "historyFile": "history.json",
   "assets": [
     {
       "model": "gpt",

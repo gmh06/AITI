@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "status": "finalized-per-user-instruction",
+  "generator": "built-in image_gen",
+  "date": "2026-11-18",
+  "pathBase": "project-root",
+  "characters": [
+    {
+      "model": "gpt",
+      "finalFile": "gpt.png",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one polished four-view character turnaround sheet, an AITI revised design draft.\nLATEST USER CORRECTION HAS HIGHEST PRIORITY: ABSOLUTELY NO CLOTHING, and DO NOT translate human long hair into a mane, wig, hairstyle or huge masses of fur. This new animal/creature must have NORMAL SPECIES-APPROPRIATE external anatomy and coat length. Only a small number of signature JEWELLERY/accessory items may be retained. Completely uncovered natural animal/creature torso and limbs. No cape, capelet, collar fabric, bow tie, neck ruff, shoulder cloth, dress, cuffs, boots or outfit.\nInput image 1: HUMANIZED source character, used ONLY to extract palette, eye colour and the few specified signature accessories. Its hair, face shape, clothing, breasts, limbs and human proportions are NOT a template. Input image 2: approved card illustration, used ONLY for fine line quality, colour rendering and accessory finish. Do not inherit the human hairstyle or garment shapes from EITHER reference.\nStyle: delicate refined Japanese 2D light illustration, clean thin grey-brown outlines, soft pale/desaturated colouring with subtle cel shading, gentle detailed eyes and tiny metal/gem highlights matching the reference art. Natural uncomplicated creature silhouette. White background. No 3D, clay, plastic, photoreal fur, pixel art or costume.\nLayout: one wide landscape sheet, exactly FOUR full-body drawings of the SAME creature in a 2x2 grid. Top-left FRONT, top-right LEFT anatomical profile with nose pointing to page left, bottom-left BACK, bottom-right RIGHT anatomical profile with nose pointing to page right. Tiny grey labels below each, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text. True orthographic rotations, same model and scale, neutral standing pose, full outline including ears, feet, wings and tail inside margins. No 3/4 view, extra portrait or variant. Keep physical accessory laterality, eye laterality and attachment points consistent, not mirrored; naturally hidden accessories should not be copied to the wrong side.\n\nSubject: a COMPLETE small WHITE DRAGON with a normal scaled dragon head and a modest reptilian muzzle, NOT a humanized face. Compact four-legged young dragon with four clawed animal feet, two small neatly folded membranous dragon wings attached high to the shoulder region, two ivory segmented backward/upward-curving horns, and one long tapered scaled tail. Snow-white smooth/small-scaled body, very pale lavender undersides and wing membranes. Big PURPLE eyes, half-lidded serious thoughtful expression recalling the reference. Normal dragon facial plates and sparse delicate scale detail.\nThe dragon must have NO HAIR AND NO FUR: no mane, forelock, ahoge, bangs, locks, beard, curled cheek fur, neck fur or hair down the spine. Crown of head is a clean scaled surface between the two horns; neck and back are clean scaled anatomy. Optional tiny integrated scale ridges are anatomical, never strands or a hair mass. No fluffy wrists/chest. Keep the complete torso visible with no fabric at all.\nONLY signature accessories: one compact silver-white interwoven knot/flower charm with a short fine silver tassel attached at the base of its anatomical LEFT horn (front page right), and a small pale lavender diamond gem integrated into that charm. No neck ruff, necklace costume, chest bib or garment. Keep the charm on the same physical side through rotation.\nFour legs, two wings, two horns and one tail, absolutely no human hands, female features, dress or unrelated props. Retain the pure white/lavender palette and purple eyes while looking like a coherent little dragon animal.",
+          "inputFiles": [
+            "asset/human/sheets/gpt.jpg",
+            "asset/human/cards/final/gpt.png"
+          ],
+          "outputFile": "asset/nonhuman/final/gpt.png",
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/human/sheets/gpt.jpg",
+              "sha256": "cbad381cfa5ba64a3c3ea37dde28eb6613a1a8236e5130f1aee9473f9884c507",
+              "retained": true,
+              "originalFile": "asset/mini_character/gpt.jpg"
+            },
+            {
+              "file": "asset/human/cards/final/gpt.png",
+              "sha256": "539d35e9f62cc637762f0b4a54fa73c8f7a6045777f0380cce7551d9fae074e1",
+              "retained": true,
+              "originalFile": "asset/card_character/final/gpt.png"
+            }
+          ],
+          "outputSha256": "289e1b3bbb33e42c45d8c57602e2544317a5647fc2dba1ef67e8e10b19fa091b",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v2/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/mini_character/gpt.jpg",
+            "asset/card_character/final/gpt.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v2/gpt-four-views-v2.png",
+          "outputRetained": true
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "finalFile": "deepseek.png",
+      "approvedDate": "2026-11-18",
+      "approvalMessage": "都同意",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one new polished character turnaround sheet for the AITI project, first draft.\nWhite background, wide landscape 1536x1024 composition. Exactly FOUR full-body drawings of ONE identical non-human character, clean 2x2 layout: top-left FRONT, top-right anatomical LEFT profile with the character facing page left, bottom-left BACK, bottom-right anatomical RIGHT profile facing page right. Small unobtrusive grey labels below each drawing, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text except a single K only if explicitly requested below. Same scale, neutral pose and construction through all rotations. Orthographic views with no three-quarter portrait or extra inset. Complete silhouette, all appendages and accessories within comfortable white margins, no overlap between panels. Rotate the complete physical model rather than mirroring asymmetric accessories.\nMatch the supporting final-sheet reference's refined 2D Japanese light-illustration finish: very fine clean dark grey-brown outlines, soft restrained pastel/desaturated colouring, subtle cel shading and little eye/gem highlights. Clean readable small character, gentle personality. Not a 3D/clay/plastic render, pixel art, realistic photograph or furry toy.\nAll bodies are fully NON-HUMAN. NO clothing, cape, collar fabric, maid headdress, wig, human hair, bangs, forelock, ahoge, mane, huge hair masses, human face or human hands. Use smooth natural creature anatomy and only the few explicitly specified identifying features. Do not copy source captions, credit lines, logo wordmarks, frames or interface elements.\n\nSubject: a complete cute FAT ROUND BLUE WHALE, with a very plump rounded head continuous with a compact oval whale body, a modest smooth blunt whale snout, exactly TWO short paddle-like pectoral flippers and ONE tapering tail ending in TWO HORIZONTALLY spread whale tail flukes. Clear whale anatomy, no legs or animal paws, not a fish with a vertical tail fin, seal, shark or dolphin with a long beak. A tiny normal low dorsal fin is allowed, never a hair curl or horn. Smooth skin, NO scales, fur or hair.\nColours: rich indigo/navy blue over the upper back blending gently into clear medium and pale mist blue at the flanks and flipper edges, with a clean soft WHITE belly and lower jaw. Keep a naturally integrated blue/white whale colour-block pattern; no garments or printed whale emblem. Large gemstone BLUE eyes with restrained ice-blue highlights and a small quiet mouth, a thoughtful slightly absent-minded gentle expression, not a human anime face. No accessories in this first draft.\nAll four views show the same whale hovering in a neutral relaxed horizontal swimming pose, not standing on fins. FRONT looks toward the whale's rounded head and shows the matched flippers; BACK looks toward the whale's tail/body rear and shows the real horizontal pair of flukes, with no eyes on the back. LEFT/RIGHT clearly reveal the body length, white underbelly and tail attachment. Keep the flippers and tail-fluke orientation physically consistent across the four views. No rice bowl, food, speech bubbles, thought text, water plume, background ocean, water splashes or props.",
+          "inputFiles": [
+            "asset/icon/deepseek/whale.jpg",
+            "asset/human/cards/final/deepseek.png",
+            "asset/nonhuman/final/gemini.png"
+          ],
+          "outputFile": "asset/nonhuman/final/deepseek.png",
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/icon/deepseek/whale.jpg",
+              "role": "Whale body/silhouette reference only; ignore its caption, watermark and exaggerated action pose.",
+              "sha256": "6a7213b6e1540e1f38b05cee9dddd7696ffb36e9d3c422b01e7c6cd553a3a720",
+              "retained": true,
+              "originalFile": "asset/icon/deepseek/2.jpg"
+            },
+            {
+              "file": "asset/human/cards/final/deepseek.png",
+              "role": "Existing humanized character palette and blue-eye reference only; discard all hair, clothing, hands and text.",
+              "sha256": "efae1689ba6d60d548b1b7dedc2191a58ad8d8e445958586dc31c176e3c4837e",
+              "retained": true,
+              "originalFile": "asset/card_character/final/deepseek.png"
+            },
+            {
+              "file": "asset/nonhuman/final/gemini.png",
+              "role": "Final-series linework, soft colouring and four-view layout reference only; do not use cat anatomy, fur or ornaments.",
+              "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059",
+              "retained": true,
+              "originalFile": "asset/nonhuman_character/final/gemini-four-views.png"
+            }
+          ],
+          "outputSha256": "3b5e39316ea7db5e4233054aa2b27de661b0afaa16082803fdc221800241ae29",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/remaining-v1/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/icon/deepseek/2.jpg",
+            "asset/card_character/final/deepseek.png",
+            "asset/nonhuman_character/final/gemini-four-views.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/remaining-v1/deepseek-four-views-v1.png",
+          "outputRetained": true
+        }
+      ]
+    },
+    {
+      "model": "claude",
+      "finalFile": "claude.png",
+      "approvedDate": "2026-11-18",
+      "approvalMessage": "都同意",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one new polished character turnaround sheet for the AITI project, first draft.\nWhite background, wide landscape 1536x1024 composition. Exactly FOUR full-body drawings of ONE identical non-human character, clean 2x2 layout: top-left FRONT, top-right anatomical LEFT profile with the character facing page left, bottom-left BACK, bottom-right anatomical RIGHT profile facing page right. Small unobtrusive grey labels below each drawing, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text except a single K only if explicitly requested below. Same scale, neutral pose and construction through all rotations. Orthographic views with no three-quarter portrait or extra inset. Complete silhouette, all appendages and accessories within comfortable white margins, no overlap between panels. Rotate the complete physical model rather than mirroring asymmetric accessories.\nMatch the supporting final-sheet reference's refined 2D Japanese light-illustration finish: very fine clean dark grey-brown outlines, soft restrained pastel/desaturated colouring, subtle cel shading and little eye/gem highlights. Clean readable small character, gentle personality. Not a 3D/clay/plastic render, pixel art, realistic photograph or furry toy.\nAll bodies are fully NON-HUMAN. NO clothing, cape, collar fabric, maid headdress, wig, human hair, bangs, forelock, ahoge, mane, huge hair masses, human face or human hands. Use smooth natural creature anatomy and only the few explicitly specified identifying features. Do not copy source captions, credit lines, logo wordmarks, frames or interface elements.\n\nSubject: a fully non-human CLAWD-inspired small orange geometric creature. Preserve the recognisable broad HORIZONTAL RECTANGULAR body outline of the Clawd reference, with softly rounded corners and mostly straight top/bottom edges, clear moderate body thickness. The body is the head and torso together, not a separate human head on a neck. Warm muted terracotta/apricot-orange body, very subtle cream-lit underside, smooth matte surface, no hair/fur/shell realism. Exactly two simple dark nearly-black VERTICAL rounded-rectangular eyes on the FRONT face, with at most a tiny amber pinpoint glint; keep them recognisably simple, not big human anime eyes. Calm attentive slightly clever personality, no human mouth needed.\nA pair of tiny squared side arm-stubs and FOUR short little peg-like feet along the lower body echo the reference's iconic silhouette. Clearly establish one consistent three-dimensional arrangement of these four feet, and rotate that same model; profiles may naturally occlude far feet, do not multiply limbs to fill the panel. Preserve the blocky identity while smoothing edges for the existing 2D hand-drawn series. Do not turn it into a realistic crab, a rounded cat, an insect or an orange human child. NO giant pincers, eye stalks, long arthropod legs, antennae or extra feet.\nONLY accessory: one SMALL flat orange flower pin with a cream/gold pearl-like centre attached on the character's anatomical LEFT upper side (FRONT page right), adapted from the former character's flower ornament. Keep it the same modest size and physical attachment through rotation; it may be hidden on the opposite side. No large black bow, tassel, headband, collar, clothing, hair or tools.\nNeutral standing pose and the same scale in all views. BACK has no face or duplicate eyes. Profiles show the actual body thickness and edge of the front facial plane, rather than painting a new pair of eyes onto every side. No terminal window, poster, letters, pixel blocks, hats or costume.",
+          "inputFiles": [
+            "asset/icon/claude/clawd.png",
+            "asset/icon/claude/stickers-light.jpg",
+            "asset/human/cards/final/claude.png",
+            "asset/nonhuman/final/gemini.png"
+          ],
+          "outputFile": "asset/nonhuman/final/claude.png",
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/icon/claude/clawd.png",
+              "role": "Official-hosted Clawd baseline silhouette, orange body and two simple dark eyes; the artwork is low in a large transparent canvas, focus only on the creature.",
+              "sha256": "595609a13c6ff6b16bac4f10bd10f46b6a437a0dde0fd3a30e202b5dc2ba59dc",
+              "retained": true,
+              "originalFile": "asset/icon/claude/5.png"
+            },
+            {
+              "file": "asset/icon/claude/stickers-light.jpg",
+              "role": "Supplementary Clawd complete-body/short-limb shape reference; ignore all poster layout, text, objects, hats and costumes.",
+              "sha256": "790f5e8b33d0ab59963fad8b050413cbe36bd5ff83dfd1d1e3ba6253ae6fd276",
+              "retained": true,
+              "originalFile": "asset/icon/claude/1.jpg"
+            },
+            {
+              "file": "asset/human/cards/final/claude.png",
+              "role": "Apricot/orange/cream palette and one small orange-flower ornament only; no human hairstyle or outfit.",
+              "sha256": "ff34dc8b6b1b9097dd982dc3d9f251cbc40aed9a7012739ba391208045154a0a",
+              "retained": true,
+              "originalFile": "asset/card_character/final/claude.png"
+            },
+            {
+              "file": "asset/nonhuman/final/gemini.png",
+              "role": "Final-series delicate linework, soft colouring and four-view layout only; no feline anatomy or fur.",
+              "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059",
+              "retained": true,
+              "originalFile": "asset/nonhuman_character/final/gemini-four-views.png"
+            }
+          ],
+          "outputSha256": "d7aad21156d1388d6b1fc9fd174eb4f049c78b2633688ff7c9d351f6b5159fe5",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/remaining-v1/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/icon/claude/5.png",
+            "asset/icon/claude/1.jpg",
+            "asset/card_character/final/claude.png",
+            "asset/nonhuman_character/final/gemini-four-views.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/remaining-v1/claude-four-views-v1.png",
+          "outputRetained": true
+        }
+      ]
+    },
+    {
+      "model": "kimi",
+      "finalFile": "kimi.png",
+      "approvedDate": "2026-11-18",
+      "approvalMessage": "都同意",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one new polished character turnaround sheet for the AITI project, first draft.\nWhite background, wide landscape 1536x1024 composition. Exactly FOUR full-body drawings of ONE identical non-human character, clean 2x2 layout: top-left FRONT, top-right anatomical LEFT profile with the character facing page left, bottom-left BACK, bottom-right anatomical RIGHT profile facing page right. Small unobtrusive grey labels below each drawing, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text except a single K only if explicitly requested below. Same scale, neutral pose and construction through all rotations. Orthographic views with no three-quarter portrait or extra inset. Complete silhouette, all appendages and accessories within comfortable white margins, no overlap between panels. Rotate the complete physical model rather than mirroring asymmetric accessories.\nMatch the supporting final-sheet reference's refined 2D Japanese light-illustration finish: very fine clean dark grey-brown outlines, soft restrained pastel/desaturated colouring, subtle cel shading and little eye/gem highlights. Clean readable small character, gentle personality. Not a 3D/clay/plastic render, pixel art, realistic photograph or furry toy.\nAll bodies are fully NON-HUMAN. NO clothing, cape, collar fabric, maid headdress, wig, human hair, bangs, forelock, ahoge, mane, huge hair masses, human face or human hands. Use smooth natural creature anatomy and only the few explicitly specified identifying features. Do not copy source captions, credit lines, logo wordmarks, frames or interface elements.\n\nSubject: ONE original Kimi character formed by a SMALL SMOOTH BLUE SPHERE and a larger SILVER-WHITE CRESCENT MOON that gently cradles/supports it from BEHIND AND BELOW. They are one fixed composite design, not two unrelated floating characters. The round blue ball is the living character, with two simple light-coloured eyes carrying a restrained pale-lavender highlight and a very tiny gentle smile, quiet intelligent and warm. Clean deep-navy-to-clear-blue sphere shading with softly drawn highlights, not transparent glass, polished plastic or 3D-rendered jelly. No limbs, human head, hair, bangs, tuft, ears, horns, fur or clothes.\nThe moon is a SOLID substantial softly tapered crescent of silver-white/pearly moonstone colour with pale cool grey-blue shading, NOT yellow/gold, NOT a shiny metal crown and NOT a tiny head ornament. Its outer height is about 1.2-1.35 times the ball diameter. In FRONT the large crescent is broadly C-shaped, opening toward page right, with the ball resting in its inner concavity; the lower horn supports the ball and the upper horn rises beside/above it. The moon has clear rounded thickness (about a quarter of ball diameter), so this is a coherent physical cradle, not a flat crescent painted onto the ball. The sphere sits slightly in front of the moon's middle plane.\nKeep the ball/moon attachment and scale ratio FIXED through all four rotations. BACK naturally shows the reverse silver crescent and rear of the blue ball; LEFT/RIGHT show the real depth/edge of the moon cradle, not the same front-facing C pasted into every view. The front eyes stay on the ball's front hemisphere and are not duplicated on its back. One very small plain WHITE uppercase K on the upper REAR of the blue ball is allowed as the only extra mark, visible in BACK when not occluded by the cradle; never an enormous K replacing the body. No additional stars, music-note chains, bow, book stack, jewellery, halo, scene, separate floating moon or additional characters. Leave sufficient margins for the entire crescent in every panel.",
+          "inputFiles": [
+            "asset/human/cards/final/kimi.png",
+            "asset/nonhuman/final/gemini.png"
+          ],
+          "outputFile": "asset/nonhuman/final/kimi.png",
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/human/cards/final/kimi.png",
+              "role": "Former character's deep-blue/silver-white/lavender palette, quiet gentle expression, moon and tiny K motif; no human body, clothes, hair, books or other accessories.",
+              "sha256": "6bf373f706e981c5aa0a633fc574c4ee5a3b4be4fa951ccc4b7ab26f81204697",
+              "retained": true,
+              "originalFile": "asset/card_character/final/kimi.png"
+            },
+            {
+              "file": "asset/nonhuman/final/gemini.png",
+              "role": "Final-series delicate linework, soft colouring, clean white sheet and four-view layout only; no cat anatomy or fur.",
+              "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059",
+              "retained": true,
+              "originalFile": "asset/nonhuman_character/final/gemini-four-views.png"
+            }
+          ],
+          "outputSha256": "ec56f911ed15bc5f34b9e5e0747cdca83df304efb9ac508c1d41b34f14816c46",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/remaining-v1/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/card_character/final/kimi.png",
+            "asset/nonhuman_character/final/gemini-four-views.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/remaining-v1/kimi-four-views-v1.png",
+          "outputRetained": true
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "finalFile": "gemini.png",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one polished four-view character turnaround sheet, an AITI revised design draft.\nLATEST USER CORRECTION HAS HIGHEST PRIORITY: ABSOLUTELY NO CLOTHING, and DO NOT translate human long hair into a mane, wig, hairstyle or huge masses of fur. This new animal/creature must have NORMAL SPECIES-APPROPRIATE external anatomy and coat length. Only a small number of signature JEWELLERY/accessory items may be retained. Completely uncovered natural animal/creature torso and limbs. No cape, capelet, collar fabric, bow tie, neck ruff, shoulder cloth, dress, cuffs, boots or outfit.\nInput image 1: HUMANIZED source character, used ONLY to extract palette, eye colour and the few specified signature accessories. Its hair, face shape, clothing, breasts, limbs and human proportions are NOT a template. Input image 2: approved card illustration, used ONLY for fine line quality, colour rendering and accessory finish. Do not inherit the human hairstyle or garment shapes from EITHER reference.\nStyle: delicate refined Japanese 2D light illustration, clean thin grey-brown outlines, soft pale/desaturated colouring with subtle cel shading, gentle detailed eyes and tiny metal/gem highlights matching the reference art. Natural uncomplicated creature silhouette. White background. No 3D, clay, plastic, photoreal fur, pixel art or costume.\nLayout: one wide landscape sheet, exactly FOUR full-body drawings of the SAME creature in a 2x2 grid. Top-left FRONT, top-right LEFT anatomical profile with nose pointing to page left, bottom-left BACK, bottom-right RIGHT anatomical profile with nose pointing to page right. Tiny grey labels below each, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text. True orthographic rotations, same model and scale, neutral standing pose, full outline including ears, feet, wings and tail inside margins. No 3/4 view, extra portrait or variant. Keep physical accessory laterality, eye laterality and attachment points consistent, not mirrored; naturally hidden accessories should not be copied to the wrong side.\n\nSubject: a COMPLETE SHORT-HAIRED fantasy CAT on FOUR PAWS, with normal feline anatomy, a smooth rounded cat skull, natural triangular ears, short feline muzzle, little pink triangle nose and whiskers. Small compact animal body with ordinary feline legs and one normally furred curved tail. Fur length should be like a plush short-haired domestic cat; softly plush but NOT long-haired, shaggy or mane-like. Natural small cheek contour and chest fur only. NO human bangs, fringe, locks, curled side hair, head buns, ahoge, forelock, mane, beard, long neck fur or back hair. The silhouette must read as a cat even with all accessories removed.\nTranslate colour ONLY: periwinkle/lavender short coat with pale sakura-pink gradient at the ear interiors, subtle cheek areas and tail tip; a soft pale chest is natural coat colouring, not a ruff or shirt. Tail is proportional ordinary cat tail, not the gigantic sweeping mass of long hair from a humanized character.\nHETEROCHROMIA must match the source: anatomical RIGHT eye magenta-purple (FRONT page LEFT), anatomical LEFT eye golden amber (FRONT page RIGHT). LEFT profile eye is gold, RIGHT profile eye is magenta. Friendly bright cat expression and little four-point glints in the irises.\nONLY signature accessories: a small iridescent faceted FOUR-POINT star ornament on the anatomical LEFT ear, with one tiny dangling four-point star; optional very fine jewellery chain with one small four-point star at the chest, no fabric. No capelet, jacket, shawl, shirt, clothes, boots or large bow.\nNo human face or hands, no bipedal doll, no wings or horns; exactly one tail. All panels depict the same short-coated cat and the same physical ear ornament.",
+          "inputFiles": [
+            "asset/human/sheets/gemini.jpg",
+            "asset/human/cards/final/gemini.png"
+          ],
+          "outputFile": "asset/nonhuman/final/gemini.png",
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/human/sheets/gemini.jpg",
+              "sha256": "e0b1bb1805706661696276cc70ab9c57ac98abf27f354d03c8d1df3426dab583",
+              "retained": true,
+              "originalFile": "asset/mini_character/gemini.jpg"
+            },
+            {
+              "file": "asset/human/cards/final/gemini.png",
+              "sha256": "070c2f09e4913ed8f8efb0de0bbac942a8fca31f1a0fe771109de2894657dfc3",
+              "retained": true,
+              "originalFile": "asset/card_character/final/gemini.png"
+            }
+          ],
+          "outputSha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v2/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/mini_character/gemini.jpg",
+            "asset/card_character/final/gemini.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v2/gemini-four-views-v2.png",
+          "outputRetained": true
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "finalFile": "grok.png",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one polished four-view character turnaround sheet, an AITI revised design draft.\nLATEST USER CORRECTION HAS HIGHEST PRIORITY: ABSOLUTELY NO CLOTHING, and DO NOT translate human long hair into a mane, wig, hairstyle or huge masses of fur. This new animal/creature must have NORMAL SPECIES-APPROPRIATE external anatomy and coat length. Only a small number of signature JEWELLERY/accessory items may be retained. Completely uncovered natural animal/creature torso and limbs. No cape, capelet, collar fabric, bow tie, neck ruff, shoulder cloth, dress, cuffs, boots or outfit.\nInput image 1: HUMANIZED source character, used ONLY to extract palette, eye colour and the few specified signature accessories. Its hair, face shape, clothing, breasts, limbs and human proportions are NOT a template. Input image 2: approved card illustration, used ONLY for fine line quality, colour rendering and accessory finish. Do not inherit the human hairstyle or garment shapes from EITHER reference.\nStyle: delicate refined Japanese 2D light illustration, clean thin grey-brown outlines, soft pale/desaturated colouring with subtle cel shading, gentle detailed eyes and tiny metal/gem highlights matching the reference art. Natural uncomplicated creature silhouette. White background. No 3D, clay, plastic, photoreal fur, pixel art or costume.\nLayout: one wide landscape sheet, exactly FOUR full-body drawings of the SAME creature in a 2x2 grid. Top-left FRONT, top-right LEFT anatomical profile with nose pointing to page left, bottom-left BACK, bottom-right RIGHT anatomical profile with nose pointing to page right. Tiny grey labels below each, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text. True orthographic rotations, same model and scale, neutral standing pose, full outline including ears, feet, wings and tail inside margins. No 3/4 view, extra portrait or variant. Keep physical accessory laterality, eye laterality and attachment points consistent, not mirrored; naturally hidden accessories should not be copied to the wrong side.\n\nSubject: a BLACK LITTLE DEVIL SPRITE, a fully NON-HUMAN round magical imp. Large round creature head merging into a compact pear/bean body, two tiny mitten-like forelimbs without human fingers, two short paw-like hind feet, two small swept-back black horns, pointed imp ears, two small black bat wings with muted wine-red/burgundy membranes, and one slender curled tail with a spade tip. Upright on two tiny feet is allowed but proportions must be an unmistakable small monster, never a human child, doll or woman. Smooth charcoal-BLACK skin on face and body, with soft cool dark-purple reflections keeping the outline readable. Bright sky-BLUE gem eyes, raised-brow cheeky expression, smile showing one small ivory upper fang.\nABSOLUTELY HAIRLESS: NO champagne-blond tuft, forelock, ahoge, bangs, pigtails, curls, mane, fur, beard or hair mass. Head between the horns is a clean smooth black creature surface. Transfer the original pale-gold colour ONLY into small gold metal accessories, never into hair or pale skin. Keep the black body uninterrupted and fully uncovered.\nONLY signature accessories: a small black crown with antique-gold edging, its original round compass-like FRONT medallion, and a gold CRESCENT rising from the crown. These make one compact crown accessory with the crescent and emblem, positioned consistently through all views; keep the two black horns separately visible. NO neck collar, cape, capelet, ruff, costume, corset, dress, gold body chains, boots, clothing bows or neckwear. Burgundy is present only on the wing membranes, not fabric.\nExactly two horns, two little arms, two short feet, two wings and one spade-ended tail. No peach human skin, human face/body/hands, hair, long hairstyle, throne, pedestal, speech bubble, slogan, letter X, clothing or unrelated objects.",
+          "inputFiles": [
+            "asset/human/sheets/grok.jpg",
+            "asset/human/cards/final/grok.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/human/sheets/grok.jpg",
+              "sha256": "c043b200009ccaf0c4a0fd717a791f6e5e82afff8e342451683aae271a1b5a9a",
+              "retained": true,
+              "originalFile": "asset/mini_character/grok.jpg"
+            },
+            {
+              "file": "asset/human/cards/final/grok.png",
+              "sha256": "b874dac811fb95f9df9217c7ef39c5e1c2ac760c5a96dc6d7a85e714dd5b9091",
+              "retained": true,
+              "originalFile": "asset/card_character/final/grok.png"
+            }
+          ],
+          "outputSha256": "4821d05c1fa3032240daa91f3f3943c864dbfa4ef80f51189c2d3ec27391361f",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v2/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/mini_character/grok.jpg",
+            "asset/card_character/final/grok.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v2/grok-four-views-v2.png",
+          "outputRetained": false
+        },
+        {
+          "step": 2,
+          "intent": "edit",
+          "exactPrompt": "Use case: precise-object-edit.\nEdit the supplied Grok four-view character sheet. This is a TARGETED PROPORTION REVISION of the SAME black little devil sprite. Preserve the existing fine 2D anime/light-illustration style, white background, four-view 2x2 layout, FRONT/LEFT/BACK/RIGHT labels, head design, blue gem eyes, little fangs and cheeky expression, two black horns, pointed ears, black-and-antique-gold crown with its compass emblem and golden crescent, dark black body colour, burgundy bat-wing membranes and single spade-ended tail.\n\nMAKE THESE CHANGES IN ALL FOUR VIEWS CONSISTENTLY:\n1. Make the body SMALLER AND SLIMMER below the unchanged large round head. Reduce the torso width to approximately 50-55% of the head width, and reduce torso height to approximately 50-55% of head height. Remove the plump pear-shaped belly: a tiny narrow gently tapered bean-like creature torso with small stubby feet and tiny short forelimbs. The creature should feel like a little imp with an oversized head and a light small body, never a fat round-bodied plush toy. Keep it completely non-human, with no waist/chest human anatomy.\n2. Make the bat wings CLEARLY LARGER, approximately 35-45% longer than in the input, the paired front/back wingspan roughly 1.8-2 times the head width. The wing roots stay on the small upper back, wing fingers and burgundy membrane segments remain clean and coherent across the four rotations. Big wings should frame the tiny body. Leave sufficient white margin so neither wing is cropped or crosses into another panel.\n3. The sprite MUST BE COMPLETELY HAIRLESS. Keep a clean smooth dark scalp and skin between and around the horns. NO hair, no forelock, no bangs, no ahoge, no tuft, no mane, no fur, no pigtails or hair silhouette in any view. The golden crescent is metal jewellery attached to the crown, never hair.\n\nNo clothing: no cape, dress, collar, scarf, bow, sleeve or costume. Crown remains the only worn ornament. Preserve exactly two horns, two little arms, two tiny feet, two large wings, and ONE tail. Preserve the four correct views at matching scale and pose; no extra portraits, no new objects, no scene, no extra text. Do not redesign the face or crown, do not add a human body or head hair. This is the same character with smaller/slimmer body and enlarged wings.",
+          "inputFiles": [],
+          "userChanges": [
+            "躯干小一点、瘦一点",
+            "翅膀大一点",
+            "完全无头发"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "sha256": "4821d05c1fa3032240daa91f3f3943c864dbfa4ef80f51189c2d3ec27391361f",
+              "archivedFile": "asset/nonhuman_character/four_views/v2/grok-four-views-v2.png",
+              "retained": false
+            }
+          ],
+          "outputSha256": "79db852fb6f7d1d088470d91c944ef1e77b6fb8d2feff0b5c77e6a8bb1caacb2",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v3/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/nonhuman_character/four_views/v2/grok-four-views-v2.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v3/grok-four-views-v3.png",
+          "outputRetained": false
+        },
+        {
+          "step": 3,
+          "intent": "edit",
+          "exactPrompt": "Use case: precise-object-edit.\nEdit the supplied four-view Grok black devil sprite sheet, preserving its exact existing design and proportions except for THREE targeted changes. The sprite has a huge rounded hairless head, a TINY SMALL SLIM body, very LARGE burgundy bat wings, blue gem eyes, little fangs, two horns, pointed ears, and a narrow tail. Preserve those proportions, the delicate 2D anime illustration style, black skin, white background and 2x2 FRONT/LEFT/BACK/RIGHT view layout.\n\nApply these changes consistently in ALL FOUR VIEWS:\n1. REMOVE ONLY THE LARGE GOLDEN CRESCENT/MOON ornament rising above the crown. Remove its complete curved moon shape and any stem that only supported that crescent. KEEP the little black-and-antique-gold CROWN itself and its compass-like circular medallion/details intact. Do not remove the crown, do not replace the moon with another ornament or hair.\n2. Recolour BOTH existing curved horns from black to WARM GOLD, with soft pale-gold highlights and deeper antique-gold shading. Keep their same paired shape, length, anatomical roots and rotation through the views. Two gold horns total, no additional horns. These are gold-coloured anatomical horns, not jewellery floating above the head.\n3. Make the SINGLE tail LONGER AND THINNER: about 1.7-2 times the current visible tail length and approximately half the previous shaft thickness. Give it a graceful thin curling/S-shaped taper, retaining a small neat pointed spade tip. The tail must attach naturally at the same lower-back root and be consistent through rotation; do not add a second tail. Keep it inside each panel with a white margin, not cropped or tangled into the wings.\n\nInvariants: head is completely HAIRLESS and smooth black, NO forelock, bangs, tuft, ahoge, hair, mane or fur. Keep the current small/slender body and expanded wing size unchanged; no plump belly or shrinking the wings. Keep two tiny arms, two short feet, the crown WITHOUT the moon, exactly two golden horns, and one long thin spade-tipped tail. NO clothes, cape, collar, bow, fabric or added accessories. Keep the same cheerful cheeky expression, blue eyes and existing four poses/labels. No red annotation circles, extra text, new scenes or extra portraits. This is a precise edit of the supplied model sheet, not a new character redesign.",
+          "inputFiles": [],
+          "userChanges": [
+            "仅移除王冠上方的金色新月，保留小王冠",
+            "两只角改为金色",
+            "单尾更细长",
+            "保持无头发、小而瘦的躯干和大翅膀"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "sha256": "79db852fb6f7d1d088470d91c944ef1e77b6fb8d2feff0b5c77e6a8bb1caacb2",
+              "archivedFile": "asset/nonhuman_character/four_views/v3/grok-four-views-v3.png",
+              "retained": false
+            }
+          ],
+          "outputSha256": "a3e893631633858f8362d79e8b59368ccfbc64ab9ec4a5f98a150f81cbf847db",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v4/grok-prompt.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/nonhuman_character/four_views/v3/grok-four-views-v3.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v4/grok-four-views-v4.png",
+          "outputRetained": false
+        },
+        {
+          "step": 4,
+          "intent": "edit",
+          "exactPrompt": "Use case: precise-object-edit.\nMake ONLY these TWO targeted refinements to the supplied Grok black little devil sprite FOUR-VIEW SHEET.\n\n1. HORNS: keep the exact existing pair of curved horns and their shape/size/placement, but change the bright METALLIC GOLD surface into a natural matte horn/keratin material: warm yellowish IVORY WHITE, pale cream/bone colour with subtle soft ochre shading near the bases. Mostly off-white gently yellowed natural horn, NOT solid yellow, not orange, not shiny gold, no metal reflections, no bright specular gold streaks, no chrome. Tiny gentle natural surface value variation only. These are biological horns. Apply consistently in front, left, back and right views. Leave the black-and-gold CROWN jewellery unchanged; ONLY the horns lose their metallic material.\n\n2. FANGS: make the existing pair of upper pointed canine teeth a little LONGER and clearly visible, approximately 1.6-1.8 times their current exposed length. Clean ivory-white triangular canines extend downward from the upper corners of the open smiling mouth. Keep them proportional to this cute mischievous creature, not giant tusks or saber teeth. Show the applicable near fang in side profiles; no new back-view face, no additional rows of teeth. Preserve the current smile, tongue and face shape.\n\nEverything else is invariant: smooth HAIRLESS black head and skin with NO tuft/forelock/hair/fur, bright blue eyes, cheeky expression, small SLIM body with tiny arms and feet, very LARGE burgundy bat wings, one long THIN spade-tipped tail, the existing small black-and-gold crown WITHOUT a crescent. No clothing, no new accessories. Preserve the same four neutral poses, 2x2 arrangement, FRONT/LEFT/BACK/RIGHT labels, fine 2D anime illustration style, white background and margins. No annotation marks or added text. Do not redesign the creature, thicken the body/tail, shrink the wings or reintroduce the golden crescent.",
+          "inputFiles": [],
+          "userChanges": [
+            "两颗上尖牙适度加长",
+            "双角改成偏黄的象牙白哑光角质，去掉金属质感"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "sha256": "a3e893631633858f8362d79e8b59368ccfbc64ab9ec4a5f98a150f81cbf847db",
+              "archivedFile": "asset/nonhuman_character/four_views/v4/grok-four-views-v4.png",
+              "retained": false
+            }
+          ],
+          "outputSha256": "a0e0c7a8aad510ec062a9dd6745af51846ca0be62ceab35282765a1cd058cc92",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v5/grok-prompt.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/nonhuman_character/four_views/v4/grok-four-views-v4.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v5/grok-four-views-v5.png",
+          "outputRetained": false
+        },
+        {
+          "step": 5,
+          "intent": "edit",
+          "exactPrompt": "Use case: precise-object-edit.\nMake ONE small correction to the supplied Grok devil sprite four-view character sheet: the upper canine fangs are too long.\nSHORTEN the two visible upper fangs to approximately 55-60% of their CURRENT exposed length. They should be small, cute, clearly pointed ivory-white teeth, gently descending into the upper portion of the smile, not reaching toward the bottom of the open mouth and not resembling vampire tusks. Keep them noticeable but modest. Apply consistently in the FRONT and applicable LEFT/RIGHT profile drawings. BACK stays faceless. Keep the mouth shape, lip line, tongue and expression unchanged.\n\nEVERY OTHER FEATURE IS ALREADY ACCEPTED AND MUST STAY THE SAME: the smooth completely hairless black head/skin; bright blue eyes; the existing paired matte yellowish ivory-white NATURAL KERATIN horns (NOT metallic); the black-and-gold little crown with NO crescent; large burgundy bat wings; tiny small slim body; tiny arms and feet; single long thin spade-tipped tail; no clothes or added ornaments. Preserve all current poses, proportions, colours, clean fine 2D anime/light-illustration linework and shading, white background, 2x2 composition, FRONT/LEFT/BACK/RIGHT labels and full silhouette margins.\nThis is a localized tooth-length edit, not a redesign. Do not change the horns, crown, eyes, head size, wing size, body, tail, canvas or labels.",
+          "inputFiles": [],
+          "outputFile": "asset/nonhuman/final/grok.png",
+          "userChanges": [
+            "尖牙缩短到 v5 的约55%—60%，保留小而清楚的尖牙",
+            "其他特征均沿用已接受的 v5",
+            "按用户要求将四款终版设定图及完整 prompt 落盘"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "sha256": "a0e0c7a8aad510ec062a9dd6745af51846ca0be62ceab35282765a1cd058cc92",
+              "archivedFile": "asset/nonhuman_character/four_views/v5/grok-four-views-v5.png",
+              "retained": false
+            }
+          ],
+          "outputSha256": "332da2daf59ad52e4502ea7900fe130718fa2ce6550ea1e7bd065af38cc8481e",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v6/grok-prompt.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/nonhuman_character/four_views/v5/grok-four-views-v5.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v6/grok-four-views-v6.png",
+          "outputRetained": true
+        }
+      ]
+    },
+    {
+      "model": "glm",
+      "finalFile": "glm.png",
+      "steps": [
+        {
+          "step": 1,
+          "intent": "generate-with-references",
+          "exactPrompt": "Use case: stylized-concept.\nAsset: one polished four-view character turnaround sheet, an AITI revised design draft.\nLATEST USER CORRECTION HAS HIGHEST PRIORITY: ABSOLUTELY NO CLOTHING, and DO NOT translate human long hair into a mane, wig, hairstyle or huge masses of fur. This new animal/creature must have NORMAL SPECIES-APPROPRIATE external anatomy and coat length. Only a small number of signature JEWELLERY/accessory items may be retained. Completely uncovered natural animal/creature torso and limbs. No cape, capelet, collar fabric, bow tie, neck ruff, shoulder cloth, dress, cuffs, boots or outfit.\nInput image 1: HUMANIZED source character, used ONLY to extract palette, eye colour and the few specified signature accessories. Its hair, face shape, clothing, breasts, limbs and human proportions are NOT a template. Input image 2: approved card illustration, used ONLY for fine line quality, colour rendering and accessory finish. Do not inherit the human hairstyle or garment shapes from EITHER reference.\nStyle: delicate refined Japanese 2D light illustration, clean thin grey-brown outlines, soft pale/desaturated colouring with subtle cel shading, gentle detailed eyes and tiny metal/gem highlights matching the reference art. Natural uncomplicated creature silhouette. White background. No 3D, clay, plastic, photoreal fur, pixel art or costume.\nLayout: one wide landscape sheet, exactly FOUR full-body drawings of the SAME creature in a 2x2 grid. Top-left FRONT, top-right LEFT anatomical profile with nose pointing to page left, bottom-left BACK, bottom-right RIGHT anatomical profile with nose pointing to page right. Tiny grey labels below each, exactly \"FRONT\", \"LEFT\", \"BACK\", \"RIGHT\"; no other text. True orthographic rotations, same model and scale, neutral standing pose, full outline including ears, feet, wings and tail inside margins. No 3/4 view, extra portrait or variant. Keep physical accessory laterality, eye laterality and attachment points consistent, not mirrored; naturally hidden accessories should not be copied to the wrong side.\n\nSubject: a COMPLETE BLACK-AND-WHITE FOX on four paws, with normal FOX proportions and species-appropriate coat: upright pointed ears, a slender pointed fox muzzle, dark nose, alert BLUE-GREY eyes, a slim animal torso, four little digitigrade fox legs, and one naturally bushy long fox tail with a large white final third. Body coat is ordinary smooth/short-to-medium fox fur following the body contour, not shaggy long hair. Black/charcoal coat with subtle blue-violet reflected highlights, normal white cheek and muzzle patches, a modest WHITE THROAT BIB and white paw tips. Natural ear tufts and the naturally bushy fox TAIL are allowed; do NOT create a long mane, flowing neck hair, shoulder hair, layered hair locks, bangs, forelock, wig, skirt-shaped fur or a giant mass of human hair on its back. Head shape and eye area stay entirely fox-like and sleek.\nExpression calmly focused and slightly clever, inherited through the blue-grey eyes, not through a human face. Narrower muzzle, taller pointed ears and longer natural tail distinguish it from the Gemini cat.\nONLY signature accessories: the black SLEEP MASK with a simple small white closed-eyelash motif resting above the eyes on the forehead, held by a slim PLAIN unobtrusive strap, not a maid headdress or ruffled lace band. Both actual eyes remain open and uncovered. At its anatomical LEFT ear-base retain one small blank dark square charm with a silver edge and TWO small silver bells on short cords. Compact jewellery-scale accessories, no giant dangling hair ribbons. The square plaque is plain, NO Z or letters. Keep it on the same side through rotation.\nNO clothing at all: no maid dress, apron, cape, collar bow, fabric neck ribbon, sleeves, skirt, boots or body chain. White chest patch is real fur, not fabric. Exactly one black tail with a white tip and four fox paws, no human body or hands.",
+          "inputFiles": [
+            "asset/human/sheets/glm.jpg",
+            "asset/human/cards/final/glm.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "file": "asset/human/sheets/glm.jpg",
+              "sha256": "323d2505e95ea4a94a6dd22346ee55792d5ca1a620d6195fafbfc080fc507655",
+              "retained": true,
+              "originalFile": "asset/mini_character/glm.jpg"
+            },
+            {
+              "file": "asset/human/cards/final/glm.png",
+              "sha256": "7535003a5cbd75feeee749c1f98dde48fdd8918c831f64dea2b1c7e38e61b272",
+              "retained": true,
+              "originalFile": "asset/card_character/final/glm.png"
+            }
+          ],
+          "outputSha256": "e764b61f792e252fc113b21cf3ebd18d0d7d77a96880712c7af2e1ea4712d37b",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v2/prompts.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/mini_character/glm.jpg",
+            "asset/card_character/final/glm.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v2/glm-four-views-v2.png",
+          "outputRetained": false
+        },
+        {
+          "step": 2,
+          "intent": "edit",
+          "exactPrompt": "Use case: precise-object-edit.\nEdit ONLY the ear-side hanging accessory assembly on this existing GLM black-and-white fox four-view sheet.\nREMOVE the entire hanging ornament from the fox's anatomical LEFT ear/head side in EVERY view where it appears: both silver bells, ALL cords/chains/attachment loops that suspend them, and the blank black square silver-rimmed plaque above the bells. Remove the entire assembly, not just the round bells. Restore the natural black fox fur and clean head/neck outline underneath. The FRONT view, LEFT profile and BACK view currently show this assembly; remove it consistently. The RIGHT profile is already free of this ornament and should stay that way.\nKEEP the BLACK SLEEP MASK resting above the eyes on the forehead, with its small white closed-eyelash motif and slim plain head strap. Do NOT remove or redesign this mask/strap.\nEverything else must stay as close as possible to the input: the same four fox poses, normal species-appropriate coat with NO human hair or mane, body proportions, blue-grey eyes, pointed muzzle and ears, black coat, white muzzle/chest/paw markings, large black tail with white tip, delicate 2D anime fine lines and soft pale colouring, white background, and 2x2 FRONT / LEFT / BACK / RIGHT layout with the existing labels. No clothing, cape, collar, bow, additional ornaments, red circles or annotation marks. No new character variants. This is a precise removal edit, not a redesign.",
+          "inputFiles": [],
+          "outputFile": "asset/nonhuman/final/glm.png",
+          "userChanges": [
+            "移除圈出的头侧铃铛挂饰整组：铃铛、挂绳与方牌",
+            "保留额上眼罩与细带"
+          ],
+          "tool": "built-in image_gen",
+          "transparent_background": false,
+          "inputs": [
+            {
+              "sha256": "e764b61f792e252fc113b21cf3ebd18d0d7d77a96880712c7af2e1ea4712d37b",
+              "archivedFile": "asset/nonhuman_character/four_views/v2/glm-four-views-v2.png",
+              "retained": false
+            }
+          ],
+          "outputSha256": "3eb7b188f72540c375b5ce9a5107b61e2c293cc9088d0606a5b025fa8028c531",
+          "archivedPromptRecordFile": "asset/nonhuman_character/four_views/v3/glm-prompt.json",
+          "promptRecordStorage": "Exact prompt embedded in this step and in prompts.json",
+          "archivedInputFiles": [
+            "asset/nonhuman_character/four_views/v2/glm-four-views-v2.png"
+          ],
+          "archivedOutputFile": "asset/nonhuman_character/four_views/v3/glm-four-views-v3.png",
+          "outputRetained": true
+        }
+      ]
+    }
+  ],
+  "updatedDate": "2026-11-18",
+  "pathNote": "Current path fields use the simplified repository names. archived* fields preserve original paths to intermediate files removed during workspace organization; those files are not active dependencies. Exact prompt strings are unchanged.",
+  "pathAliases": {
+    "asset/nonhuman_character/final/gpt-four-views.png": "asset/nonhuman/final/gpt.png",
+    "asset/nonhuman_character/final/deepseek-four-views.png": "asset/nonhuman/final/deepseek.png",
+    "asset/nonhuman_character/final/claude-four-views.png": "asset/nonhuman/final/claude.png",
+    "asset/nonhuman_character/final/kimi-four-views.png": "asset/nonhuman/final/kimi.png",
+    "asset/nonhuman_character/final/gemini-four-views.png": "asset/nonhuman/final/gemini.png",
+    "asset/nonhuman_character/final/grok-four-views.png": "asset/nonhuman/final/grok.png",
+    "asset/nonhuman_character/final/glm-four-views.png": "asset/nonhuman/final/glm.png",
+    "asset/human/card_character/final/generation_history.json": "asset/human/cards/final/history.json",
+    "asset/nonhuman_character/final/generation_history.json": "asset/nonhuman/final/history.json",
+    "docs/images_design/card_image_prompts.md": "docs/art/human.md",
+    "docs/images_design/nonhuman_character.md": "docs/art/nonhuman.md",
+    "asset/icon/claude/1.jpg": "asset/icon/claude/stickers-light.jpg",
+    "asset/icon/claude/2.jpg": "asset/icon/claude/stickers-dark.jpg",
+    "asset/icon/claude/3.jpg": "asset/icon/claude/app.jpg",
+    "asset/icon/claude/4.svg": "asset/icon/claude/web.svg",
+    "asset/icon/claude/5.png": "asset/icon/claude/clawd.png",
+    "asset/icon/deepseek/1.jpg": "asset/icon/deepseek/app.jpg",
+    "asset/icon/deepseek/2.jpg": "asset/icon/deepseek/whale.jpg",
+    "asset/icon/deepseek/3.svg": "asset/icon/deepseek/web.svg",
+    "asset/icon/doubao/app-store.jpg": "asset/icon/doubao/app.jpg",
+    "asset/icon/doubao/doubao-web.png": "asset/icon/doubao/web.png",
+    "asset/icon/gemini/app-store.jpg": "asset/icon/gemini/app.jpg",
+    "asset/icon/gemini/gemini-web.png": "asset/icon/gemini/web.png",
+    "asset/icon/glm/app-store.jpg": "asset/icon/glm/app.jpg",
+    "asset/icon/glm/zai-web.svg": "asset/icon/glm/web.svg",
+    "asset/icon/gpt/app-store.jpg": "asset/icon/gpt/app.jpg",
+    "asset/icon/gpt/chatgpt-web.svg": "asset/icon/gpt/web.svg",
+    "asset/icon/grok/app-store.jpg": "asset/icon/grok/app.jpg",
+    "asset/icon/grok/grok-web.svg": "asset/icon/grok/web.svg",
+    "asset/icon/grok/grok-logomark-dark.svg": "asset/icon/grok/mark-dark.svg",
+    "asset/icon/grok/grok-logomark-light.svg": "asset/icon/grok/mark-light.svg",
+    "asset/icon/kimi/app-store.jpg": "asset/icon/kimi/app.jpg",
+    "asset/icon/kimi/kimi-brand-round.png": "asset/icon/kimi/round.png",
+    "asset/icon/kimi/kimi-brand-symbol.svg": "asset/icon/kimi/symbol.svg",
+    "asset/human/card_character/": "asset/human/cards/",
+    "asset/human/original_character/": "asset/human/original/",
+    "asset/human/mini_character/": "asset/human/sheets/",
+    "asset/human/mini2_character/": "asset/human/notes/",
+    "asset/nonhuman_character/": "asset/nonhuman/",
+    "docs/images_design/": "docs/art/",
+    "asset/card_character/": "asset/human/cards/",
+    "asset/original_character/": "asset/human/original/",
+    "asset/mini_character/": "asset/human/sheets/",
+    "asset/mini2_character/": "asset/human/notes/",
+    "docs/card_image_prompts.md": "docs/art/human.md",
+    "docs/nonhuman_character.md": "docs/art/nonhuman.md",
+    "asset/icon/claude/app-store.jpg": "asset/icon/claude/app.jpg",
+    "asset/icon/claude/claude-web.svg": "asset/icon/claude/web.svg",
+    "asset/icon/deepseek/app-store.jpg": "asset/icon/deepseek/app.jpg",
+    "asset/icon/deepseek/deepseek-web.svg": "asset/icon/deepseek/web.svg",
+    "card_image_prompts.md": "human.md",
+    "nonhuman_character.md": "nonhuman.md",
+    "generation_history.json": "history.json",
+    "gpt-four-views.png": "gpt.png",
+    "deepseek-four-views.png": "deepseek.png",
+    "claude-four-views.png": "claude.png",
+    "kimi-four-views.png": "kimi.png",
+    "gemini-four-views.png": "gemini.png",
+    "grok-four-views.png": "grok.png",
+    "glm-four-views.png": "glm.png"
+  }
+}

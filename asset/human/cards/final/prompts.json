@@ -3,8 +3,8 @@
   "status": "user-approved",
   "mode": "built-in image_gen",
   "recordType": "consolidated final specifications",
-  "sourcePromptFile": "docs/card_image_prompts.md",
-  "historyFile": "generation_history.json",
+  "sourcePromptFile": "docs/art/human.md",
+  "historyFile": "history.json",
   "referencePathBase": "repository root",
   "images": [
     {
@@ -13,11 +13,11 @@
       "approvedRevision": "gpt",
       "references": [
         {
-          "file": "asset/mini2_character/gpt.jpg",
+          "file": "asset/human/notes/gpt.jpg",
           "role": "character and style"
         },
         {
-          "file": "asset/mini_character/gpt.jpg",
+          "file": "asset/human/sheets/gpt.jpg",
           "role": "detail reference"
         }
       ],
@@ -31,19 +31,19 @@
       "approvedRevision": "deepseek-style-v10",
       "references": [
         {
-          "file": "asset/mini2_character/deepseek.jpg",
+          "file": "asset/human/notes/deepseek.jpg",
           "role": "character and style"
         },
         {
-          "file": "asset/mini_character/deepseek.jpg",
+          "file": "asset/human/sheets/deepseek.jpg",
           "role": "detail reference"
         },
         {
-          "file": "asset/card_character/final/gpt.png",
+          "file": "asset/human/cards/final/gpt.png",
           "role": "clean fine-line series rendering"
         },
         {
-          "file": "asset/card_character/final/claude.png",
+          "file": "asset/human/cards/final/claude.png",
           "role": "clean fine-line series rendering"
         }
       ],
@@ -60,11 +60,11 @@
       "approvedRevision": "glm",
       "references": [
         {
-          "file": "asset/mini_character/glm.jpg",
+          "file": "asset/human/sheets/glm.jpg",
           "role": "character"
         },
         {
-          "file": "asset/mini2_character/gpt.jpg",
+          "file": "asset/human/notes/gpt.jpg",
           "role": "style"
         }
       ],
@@ -78,11 +78,11 @@
       "approvedRevision": "grok-v4",
       "references": [
         {
-          "file": "asset/mini_character/grok.jpg",
+          "file": "asset/human/sheets/grok.jpg",
           "role": "character"
         },
         {
-          "file": "asset/mini2_character/gpt.jpg",
+          "file": "asset/human/notes/gpt.jpg",
           "role": "style"
         }
       ],
@@ -98,15 +98,15 @@
       "approvedRevision": "kimi-v2",
       "references": [
         {
-          "file": "asset/original_character/kimi.jpg",
+          "file": "asset/human/original/kimi.jpg",
           "role": "original colors and K emblems"
         },
         {
-          "file": "asset/mini_character/kimi.jpg",
+          "file": "asset/human/sheets/kimi.jpg",
           "role": "character"
         },
         {
-          "file": "asset/mini2_character/gpt.jpg",
+          "file": "asset/human/notes/gpt.jpg",
           "role": "style"
         }
       ],
@@ -123,11 +123,11 @@
       "approvedRevision": "claude",
       "references": [
         {
-          "file": "asset/mini2_character/claude.jpg",
+          "file": "asset/human/notes/claude.jpg",
           "role": "character and style"
         },
         {
-          "file": "asset/mini_character/claude.jpg",
+          "file": "asset/human/sheets/claude.jpg",
           "role": "detail reference"
         }
       ],
@@ -141,11 +141,11 @@
       "approvedRevision": "gemini",
       "references": [
         {
-          "file": "asset/mini_character/gemini.jpg",
+          "file": "asset/human/sheets/gemini.jpg",
           "role": "character"
         },
         {
-          "file": "asset/mini2_character/gpt.jpg",
+          "file": "asset/human/notes/gpt.jpg",
           "role": "style"
         }
       ],
@@ -159,11 +159,11 @@
       "approvedRevision": "doubao",
       "references": [
         {
-          "file": "asset/original_character/doubao.jpg",
+          "file": "asset/human/original/doubao.jpg",
           "role": "character and clothing only"
         },
         {
-          "file": "asset/mini2_character/claude.jpg",
+          "file": "asset/human/notes/claude.jpg",
           "role": "2D chibi style"
         }
       ],

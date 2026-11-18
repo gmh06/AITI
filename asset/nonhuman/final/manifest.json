@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "status": "finalized-per-user-instruction",
+  "finalizedDate": "2026-11-18",
+  "finalizationBasis": "The first four characters were finalized per user instruction. DeepSeek, Claude and Kimi were then explicitly approved with the message 都同意; all seven sheets are archived as final.",
+  "generator": "built-in image_gen",
+  "layout": {
+    "topLeft": "FRONT",
+    "topRight": "LEFT",
+    "bottomLeft": "BACK",
+    "bottomRight": "RIGHT"
+  },
+  "promptsFile": "prompts.json",
+  "historyFile": "history.json",
+  "assets": [
+    {
+      "model": "gpt",
+      "title": "GPT 白龙",
+      "file": "gpt.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "v2",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1374079,
+      "sha256": "289e1b3bbb33e42c45d8c57602e2544317a5647fc2dba1ef67e8e10b19fa091b",
+      "promptKey": "gpt",
+      "design": "完整四足白龙，紫眼，象牙白分节角，小型淡紫膜翼，长鳞尾；白紫鳞片无毛发，左角银结流苏与小紫菱石；无服装。",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/v2/gpt-four-views-v2.png"
+    },
+    {
+      "model": "deepseek",
+      "title": "DeepSeek 蓝色鲸鱼",
+      "file": "deepseek.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "remaining-v1",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1268824,
+      "sha256": "3b5e39316ea7db5e4233054aa2b27de661b0afaa16082803fdc221800241ae29",
+      "promptKey": "deepseek",
+      "design": "胖圆蓝鲸、短胸鳍、水平尾鳍；靛蓝到浅蓝渐变、白腹与蓝眼，无饰品，自然悬浮游动。",
+      "approvedDate": "2026-11-18",
+      "approvalMessage": "都同意",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/remaining-v1/deepseek-four-views-v1.png"
+    },
+    {
+      "model": "claude",
+      "title": "Claude Clawd",
+      "file": "claude.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "remaining-v1",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1150624,
+      "sha256": "d7aad21156d1388d6b1fc9fd174eb4f049c78b2633688ff7c9d351f6b5159fe5",
+      "promptKey": "claude",
+      "design": "保留 Clawd 的橙色横向方块轮廓、深色竖眼、两侧短肢和四条短腿；圆角厚体、细线淡彩，一侧仅留小橙花。",
+      "approvedDate": "2026-11-18",
+      "approvalMessage": "都同意",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/remaining-v1/claude-four-views-v1.png"
+    },
+    {
+      "model": "kimi",
+      "title": "Kimi 小蓝球与月亮",
+      "file": "kimi.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "remaining-v1",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1259581,
+      "sha256": "ec56f911ed15bc5f34b9e5e0747cdca83df304efb9ac508c1d41b34f14816c46",
+      "promptKey": "kimi",
+      "design": "光滑小蓝球坐在有厚度的银白弯月内侧，月亮从后下方承托；浅色眼睛带淡紫高光，无手脚或服装，组合空间关系固定。",
+      "approvedDate": "2026-11-18",
+      "approvalMessage": "都同意",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/remaining-v1/kimi-four-views-v1.png"
+    },
+    {
+      "model": "gemini",
+      "title": "Gemini 猫",
+      "file": "gemini.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "v2",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1302779,
+      "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059",
+      "promptKey": "gemini",
+      "design": "自然短毛猫，蓝紫粉毛色与正常猫尾；正面画面左眼紫红、右眼金色，左侧面金眼、右侧面紫红眼；左耳四芒星和细项链小星坠；无服装或人类发型。",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/v2/gemini-four-views-v2.png"
+    },
+    {
+      "model": "grok",
+      "title": "Grok 黑色小恶魔精灵",
+      "file": "grok.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "v6",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1678331,
+      "sha256": "332da2daf59ad52e4502ea7900fe130718fa2ce6550ea1e7bd065af38cc8481e",
+      "promptKey": "grok",
+      "design": "光滑无毛的黑色小恶魔，蓝眼，小而瘦的躯干、大酒红蝙蝠翼、单条细长尖尾；保留黑金小王冠，移除新月；双角偏黄象牙白、哑光天然角质，保留适度短小尖牙；无服装。",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/v6/grok-four-views-v6.png"
+    },
+    {
+      "model": "glm",
+      "title": "GLM 狐狸",
+      "file": "glm.png",
+      "status": "finalized-per-user-instruction",
+      "sourceRevision": "v3",
+      "format": "PNG",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1747391,
+      "sha256": "3eb7b188f72540c375b5ce9a5107b61e2c293cc9088d0606a5b025fa8028c531",
+      "promptKey": "glm",
+      "design": "自然黑白狐狸，蓝灰眼，白脸颊与胸部毛色，黑毛白尖尾；额上黑色眼罩与细带；移除耳侧铃铛、挂绳、方牌，无服装、长发或鬃毛。",
+      "archivedSourceFile": "asset/nonhuman_character/four_views/v3/glm-four-views-v3.png"
+    }
+  ],
+  "approvalRecords": [
+    {
+      "date": "2026-11-18",
+      "models": [
+        "deepseek",
+        "claude",
+        "kimi"
+      ],
+      "userMessage": "都同意",
+      "meaning": "User explicitly approved all three remaining character sheets."
+    }
+  ],
+  "updatedDate": "2026-11-18",
+  "pathNote": "file names identify the retained final PNGs. archivedSourceFile is a historical version identifier; its pixels are retained in the final PNG with the recorded SHA-256."
+}

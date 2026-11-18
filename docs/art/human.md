@@ -1,21 +1,21 @@
 # AITI 卡片形象 · 已确认生图规范
 
-8 张卡片插画均已确认。正式文件统一位于 [asset/card_character/final](../asset/card_character/final/)，均为 1024 × 1536 PNG、竖版 2:3。
+8 张卡片插画均已确认。正式文件统一位于 [asset/human/cards/final](../../asset/human/cards/final)，均为 1024 × 1536 PNG、竖版 2:3。
 
-- [manifest.json](../asset/card_character/final/manifest.json)：8 张成品的文件名、确认版本、尺寸和 SHA-256。
-- [prompts.json](../asset/card_character/final/prompts.json)：按最终结果整理的中英文 prompt、参考图和文字要求，可用于后续修改或再生成。
-- [generation_history.json](../asset/card_character/final/generation_history.json)：实际执行过的 prompt、修改记录和历史产物元数据。历史产物名只用于追溯，不作为正式成品的文件依赖。
+- [manifest.json](../../asset/human/cards/final/manifest.json)：8 张成品的文件名、确认版本、尺寸和 SHA-256。
+- [prompts.json](../../asset/human/cards/final/prompts.json)：按最终结果整理的中英文 prompt、参考图和文字要求，可用于后续修改或再生成。
+- [history.json](../../asset/human/cards/final/history.json)：实际执行过的 prompt、修改记录和历史产物元数据。历史产物名只用于追溯，不作为正式成品的文件依赖。
 
 ## 0. 成品文件
 
-- [gpt.png](../asset/card_character/final/gpt.png)：审阅。
-- [deepseek.png](../asset/card_character/final/deepseek.png)：抱膝望天，采用恢复第一版清晰画风的版本。
-- [glm.png](../asset/card_character/final/glm.png)：上手。
-- [grok.png](../asset/card_character/final/grok.png)：看戏，采用已确认的浅发色与局部裙摆调整。
-- [kimi.png](../asset/card_character/final/kimi.png)：抱书，深蓝服装、银白头发、两处 K 标志。
-- [claude.png](../asset/card_character/final/claude.png)：点案。
-- [gemini.png](../asset/card_character/final/gemini.png)：等夸。
-- [doubao.png](../asset/card_character/final/doubao.png)：端茶，采用最终 Q 版比例。
+- [gpt.png](../../asset/human/cards/final/gpt.png)：审阅。
+- [deepseek.png](../../asset/human/cards/final/deepseek.png)：抱膝望天，采用恢复第一版清晰画风的版本。
+- [glm.png](../../asset/human/cards/final/glm.png)：上手。
+- [grok.png](../../asset/human/cards/final/grok.png)：看戏，采用已确认的浅发色与局部裙摆调整。
+- [kimi.png](../../asset/human/cards/final/kimi.png)：抱书，深蓝服装、银白头发、两处 K 标志。
+- [claude.png](../../asset/human/cards/final/claude.png)：点案。
+- [gemini.png](../../asset/human/cards/final/gemini.png)：等夸。
+- [doubao.png](../../asset/human/cards/final/doubao.png)：端茶，采用最终 Q 版比例。
 
 ## 1. 通用画面要求
 
@@ -27,10 +27,10 @@
 
 ## 2. 参考图
 
-- GPT、DeepSeek、Claude：`asset/mini2_character/` 中同名人物小记为主，`asset/mini_character/` 四视图用于补查细节。
-- GLM、Grok、Gemini：`asset/mini_character/` 中同名四视图为角色参考；统一画风参照 `asset/mini2_character/gpt.jpg`。
-- Kimi：`asset/original_character/kimi.jpg` 核对深蓝配色和 K 标志，`asset/mini_character/kimi.jpg` 补充造型，GPT 小记用于统一画风。
-- 豆包：`asset/original_character/doubao.jpg` 仅取人物与服装特征，画风参照 `asset/mini2_character/claude.jpg`，不保留手机界面或 3D 质感。
+- GPT、DeepSeek、Claude：`asset/human/notes/` 中同名人物小记为主，`asset/human/sheets/` 四视图用于补查细节。
+- GLM、Grok、Gemini：`asset/human/sheets/` 中同名四视图为角色参考；统一画风参照 `asset/human/notes/gpt.jpg`。
+- Kimi：`asset/human/original/kimi.jpg` 核对深蓝配色和 K 标志，`asset/human/sheets/kimi.jpg` 补充造型，GPT 小记用于统一画风。
+- 豆包：`asset/human/original/doubao.jpg` 仅取人物与服装特征，画风参照 `asset/human/notes/claude.jpg`，不保留手机界面或 3D 质感。
 
 这些原始设定图属于支撑素材，继续保留；它们与生成试稿分开管理。
 
@@ -45,7 +45,7 @@
 
 ## 4. GPT · 审阅
 
-参考图：`asset/mini2_character/gpt.jpg`（主，Q版小记）；`asset/mini_character/gpt.jpg`（细节补查）
+参考图：`asset/human/notes/gpt.jpg`（主，Q版小记）；`asset/human/sheets/gpt.jpg`（细节补查）
 
 **中文 Prompt**
 
@@ -69,7 +69,7 @@
 
 ## 5. DeepSeek · 抱膝望天
 
-参考图：`asset/mini2_character/deepseek.jpg`（角色设计）；`asset/card_character/final/deepseek.png`（已确认抱膝姿态与清晰画风）；`asset/mini_character/deepseek.jpg`（细节补查）；GPT、Claude 定稿（统一线稿与上色）。当前确认版本为 `deepseek-style-v10`。
+参考图：`asset/human/notes/deepseek.jpg`（角色设计）；`asset/human/cards/final/deepseek.png`（已确认抱膝姿态与清晰画风）；`asset/human/sheets/deepseek.jpg`（细节补查）；GPT、Claude 定稿（统一线稿与上色）。当前确认版本为 `deepseek-style-v10`。
 
 画风保持第一版的清晰细线与干净色块；发束、高光、金色纹样、荷叶边和手部细节边界分明，避免水彩晕染、碎色块和模糊边缘。
 
@@ -97,7 +97,7 @@
 
 ## 6. GLM · 上手
 
-参考图：`asset/mini_character/glm.jpg`
+参考图：`asset/human/sheets/glm.jpg`
 
 **中文 Prompt**
 
@@ -121,7 +121,7 @@
 
 ## 7. Grok · 看戏
 
-参考图：`asset/mini_character/grok.jpg`
+参考图：`asset/human/sheets/grok.jpg`
 
 **中文 Prompt**
 
@@ -147,7 +147,7 @@
 
 ## 8. Kimi · 抱书
 
-参考图：`asset/original_character/kimi.jpg`（原始配色与 K 标志）；`asset/mini_character/kimi.jpg`（造型）；`asset/mini2_character/gpt.jpg`（统一 Q 版画风）。
+参考图：`asset/human/original/kimi.jpg`（原始配色与 K 标志）；`asset/human/sheets/kimi.jpg`（造型）；`asset/human/notes/gpt.jpg`（统一 Q 版画风）。
 
 **中文 Prompt**
 
@@ -171,7 +171,7 @@
 
 ## 9. Claude · 点案
 
-参考图：`asset/mini2_character/claude.jpg`（主，Q版小记）；`asset/mini_character/claude.jpg`（细节补查）
+参考图：`asset/human/notes/claude.jpg`（主，Q版小记）；`asset/human/sheets/claude.jpg`（细节补查）
 
 **中文 Prompt**
 
@@ -195,7 +195,7 @@
 
 ## 10. Gemini · 等夸
 
-参考图：`asset/mini_character/gemini.jpg`
+参考图：`asset/human/sheets/gemini.jpg`
 
 **中文 Prompt**
 
@@ -219,7 +219,7 @@
 
 ## 11. 豆包 · 端茶（3D → 2D 转换）
 
-参考图：`asset/original_character/doubao.jpg`（**成人版、3D 黏土风、手机截图**）
+参考图：`asset/human/original/doubao.jpg`（**成人版、3D 黏土风、手机截图**）
 
 **转换原则**：参考图只取「是什么」，不取「怎么画」。画风必须变成与另外七张一致的 2D 日系 Q 版；固定元素一个都不能丢。
 
@@ -261,7 +261,7 @@
 - Grok 两侧裙边充分遮盖，中央保留交叠腿部；发色为极浅香槟金。
 - Kimi 服装为深藏青蓝，头发近雪白，两处 K 清晰。
 - 逐字检查指定文案和标点，禁止额外文字；DeepSeek 六点底边与文字底部对齐、渐小渐淡，且不添加气泡。
-- 生成方式为内置 image_gen；实际执行记录与最后采用的版本标识保存在 generation_history.json 和 manifest.json，正式使用时只引用 final 目录中的 8 张图。
+- 生成方式为内置 image_gen；实际执行记录与最后采用的版本标识保存在 history.json 和 manifest.json，正式使用时只引用 final 目录中的 8 张图。
 
 ## 13. 后续物料信息
 
