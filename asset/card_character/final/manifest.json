@@ -19,12 +19,13 @@
     {
       "model": "deepseek",
       "file": "deepseek.png",
-      "sha256": "fe08dda26c5d8f8c0f2481e4c838568a476837407c86f246f393180fa2ff5135",
+      "sha256": "efae1689ba6d60d548b1b7dedc2191a58ad8d8e445958586dc31c176e3c4837e",
       "width": 1024,
       "height": 1536,
-      "approvedRevision": "deepseek-v9",
+      "approvedRevision": "deepseek-style-v10",
       "promptKey": "deepseek",
-      "bytes": 1822394
+      "bytes": 1552905,
+      "approvedDate": "2026-11-18"
     },
     {
       "model": "glm",
@@ -86,5 +87,6 @@
       "promptKey": "doubao",
       "bytes": 1386751
     }
-  ]
+  ],
+  "updatedDate": "2026-11-18"
 }

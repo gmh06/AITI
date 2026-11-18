@@ -9,7 +9,7 @@
 ## 0. 成品文件
 
 - [gpt.png](../asset/card_character/final/gpt.png)：审阅。
-- [deepseek.png](../asset/card_character/final/deepseek.png)：抱膝望天。
+- [deepseek.png](../asset/card_character/final/deepseek.png)：抱膝望天，采用恢复第一版清晰画风的版本。
 - [glm.png](../asset/card_character/final/glm.png)：上手。
 - [grok.png](../asset/card_character/final/grok.png)：看戏，采用已确认的浅发色与局部裙摆调整。
 - [kimi.png](../asset/card_character/final/kimi.png)：抱书，深蓝服装、银白头发、两处 K 标志。
@@ -69,7 +69,9 @@
 
 ## 5. DeepSeek · 抱膝望天
 
-参考图：`asset/mini2_character/deepseek.jpg`（角色设计）；`asset/card_character/final/deepseek.png`（已确认抱膝姿态）；`asset/mini_character/deepseek.jpg`（细节补查）。
+参考图：`asset/mini2_character/deepseek.jpg`（角色设计）；`asset/card_character/final/deepseek.png`（已确认抱膝姿态与清晰画风）；`asset/mini_character/deepseek.jpg`（细节补查）；GPT、Claude 定稿（统一线稿与上色）。当前确认版本为 `deepseek-style-v10`。
+
+画风保持第一版的清晰细线与干净色块；发束、高光、金色纹样、荷叶边和手部细节边界分明，避免水彩晕染、碎色块和模糊边缘。
 
 **中文 Prompt**
 

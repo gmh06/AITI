@@ -112,7 +112,7 @@
         1536
       ],
       "bytes": 1822394,
-      "retainedAs": "deepseek.png"
+      "retainedAs": null
     },
     {
       "historicalArtifactId": "deepseek",
@@ -234,6 +234,17 @@
       ],
       "bytes": 1654095,
       "retainedAs": null
+    },
+    {
+      "historicalArtifactId": "deepseek-style-v10",
+      "originalFilename": "deepseek-style-v10.png",
+      "sha256": "efae1689ba6d60d548b1b7dedc2191a58ad8d8e445958586dc31c176e3c4837e",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1552905,
+      "retainedAs": "deepseek.png"
     }
   ],
   "generationLogSnapshot": {
@@ -733,5 +744,53 @@
     "verifiedDate": "2026-11-18",
     "verification": "Intermediate directory is absent; all approved final image hashes remain unchanged."
   },
-  "outputSourceFormat": "Historical generated-image filenames; local machine directory prefixes omitted."
+  "outputSourceFormat": "Historical generated-image filenames; local machine directory prefixes omitted.",
+  "approvedUpdates": [
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "approvedRevision": "deepseek-style-v10",
+      "approvedDate": "2026-11-18",
+      "mode": "built-in image_gen",
+      "source": "exec-07e96b2b-d3a5-42ae-8400-d2ef61f87c87.png",
+      "replaces": {
+        "approvedRevision": "deepseek-v9",
+        "sha256": "fe08dda26c5d8f8c0f2481e4c838568a476837407c86f246f393180fa2ff5135"
+      },
+      "sha256": "efae1689ba6d60d548b1b7dedc2191a58ad8d8e445958586dc31c176e3c4837e",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1552905,
+      "inputs": [
+        {
+          "historicalArtifactId": "deepseek-first",
+          "sha256": "1fe87943e676acc9dbe513d96fd655ec919fb72de2b962cd0f4439f5de2fbaa2",
+          "role": "authoritative base artwork and crisp first-version rendering"
+        },
+        {
+          "historicalArtifactId": "deepseek-v9",
+          "sha256": "fe08dda26c5d8f8c0f2481e4c838568a476837407c86f246f393180fa2ff5135",
+          "role": "approved caption, fading baseline dots and absence of mouth bubble"
+        },
+        {
+          "file": "gpt.png",
+          "sha256": "539d35e9f62cc637762f0b4a54fa73c8f7a6045777f0380cce7551d9fae074e1",
+          "role": "supplementary clean fine-line series style reference"
+        },
+        {
+          "file": "claude.png",
+          "sha256": "ff34dc8b6b1b9097dd982dc3d9f251cbc40aed9a7012739ba391208045154a0a",
+          "role": "supplementary clean fine-line series style reference"
+        }
+      ],
+      "changes": [
+        "restore crisp first-version character rendering",
+        "retain hugging-knees pose",
+        "retain no mouth bubble and six fading shrinking baseline dots"
+      ],
+      "prompt": "Use case: compositing / precise-object-edit.\nCreate ONE corrected DeepSeek AITI illustration, 1024x1536 portrait.\nINPUT ROLES:\nImage 1 is the authoritative BASE and original FIRST version: preserve its exact character artwork and crisp original rendering.\nImage 2 is the latest approved version: use ONLY its caption and six fading baseline dots, and its absence of a mouth bubble. Do not copy its blurred, mottled, watercolor-like rendering.\nImages 3 and 4 (GPT and Claude) are supplementary references for the series' clean, fine-line anime illustration finish; do not copy their designs or colors.\n\nMain request: restore the FIRST version's clean, precise 2D anime chibi character rendering, avoiding the accumulated muddy/patchy repainting of Image 2. Use Image 1's character artwork as unchanged as possible. Fine continuous colored outlines, clearly separated curved hair locks, smooth clean indigo-to-cyan hair colors with deliberate crisp highlights, readable gold embroidery, neatly defined white ruffles and fingers, clear eyes. Preserve subtle soft shading INSIDE well-defined shapes. No watercolor wash, smeared boundaries, mottled paint patches, fuzzy details, impasto, paper texture, over-sharpening halos, heavy black outlines, or added micro-detail.\n\nONLY TWO CONTENT CHANGES relative to Image 1:\n1. Remove the tiny transparent bubble at the mouth, leaving the same tiny pursed mouth and puffed cheeks.\n2. Replace the punctuation after the exact words \"嗯，用户现在\" with exactly SIX small separate round blue-grey dots. Their sizes, darkness and visual opacity decrease progressively left to right; even the sixth is faintly visible. All SIX LOWER EDGES align horizontally with the bottom edge of the Chinese characters (around y267-269), as in Image 2. No middle-height ellipsis, no wave, no rising arch, no additional thought circles. Keep the caption's existing location, thin typeface and single-line layout.\n\nINVARIANTS: same raised knees together with arms hugging them, same hands and shoes, head angle, upward blank thoughtful gaze, eyes, face, blue curved HAIR ahoge, white maid headband, whale-fin ears, blue bows, whale tail, navy/gold/white dress and whale apron emblem. Exactly the original silhouette, proportions, framing, low seated placement and white background. No crossed-leg pose, no halo, no extra props or text. Do not redesign the face, hair, hands, costume or pose. Output one complete card, not a comparison sheet."
+    }
+  ]
 }
