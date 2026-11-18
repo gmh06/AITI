@@ -1,4 +1,4 @@
-# AITI 非人形角色 · 四视图终版
+# AITI 非人形角色 · 设定与卡片动作
 
 归档日期：2026年11月18日。七款非人形角色均已确认，使用内置 `image_gen` 生成的终版图片与完整 prompt 已集中保存到 [final](final/README.md)。豆包沿用现有成品。
 
@@ -29,3 +29,18 @@
 - 中间稿已按目录整理清理；完整编辑过程与历史路径保存在上述生成记录中。
 
 原角色参考及已确认卡片插画保持原状。完整方案说明见 [非人形形象设定](../../docs/art/nonhuman.md)。
+
+## 纪念卡片动作终版
+
+八款动作插画（包含沿用人形的豆包）已于2026年11月19日全部确认，使用内置 `image_gen` 生成，正式归档在 [cards/final](cards/final/)，均为白底、1024 × 1536 PNG、竖版 2:3。图片按确认版本原样复制，无裁切、缩放或二次压缩。
+
+- [GPT](cards/final/gpt.png)：审查图纸，已修正多余前爪。
+- [DeepSeek](cards/final/deepseek.png)：悬停思考，保留指定文字和渐淡六点。
+- [GLM](cards/final/glm.png)：困倦赶工，已修正紫色键帽错位。
+- [Grok](cards/final/grok.png)：尾尖戳破气球，保留英文圆角文字条。
+- [Kimi](cards/final/kimi.png)：精读长折页，已修正月牙与纸张粘连。
+- [Claude](cards/final/claude.png)：短肢抵按方案，明确拍板。
+- [Gemini](cards/final/gemini.png)：仰脸踩奶，保留异色瞳。
+- [豆包](cards/final/doubao.png)：双手递奶茶，保留两行卷角便签。
+
+[正式清单](cards/final/manifest.json)记录统一文件名、采用版本与校验值；[完整 prompt](cards/final/prompts.json)给出按终版整理的描述；[生成与编辑记录](cards/final/history.json)保留八次生成和三次局部修正的完整实际 prompt 与输入输出校验值。整合描述与实际执行记录明确区分，原稿路径作为历史标识，原稿继续本地保留。

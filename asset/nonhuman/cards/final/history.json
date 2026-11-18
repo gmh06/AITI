@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 2,
+  "status": "user-approved",
+  "approvedDate": "2026-11-19",
+  "generator": "built-in image_gen",
+  "recordType": "exact executed prompts and historical provenance",
+  "sourceBatchDate": "2026-11-18",
+  "sourceBatchUpdatedDate": "2026-11-19",
+  "sourceSpecification": "docs/art/nonhuman.md",
+  "note": "records preserve exact executed prompt text. historicalFile, originalFile and paths in source snapshots are provenance identifiers, not live file dependencies. Only final/ images are distributed; active reusable references are listed in prompts.json. Local draft files are retained separately.",
+  "records": [
+    {
+      "id": "gpt-action-v1",
+      "model": "gpt",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-ba74554a-4b4d-4b01-836a-258a1f09fdd6.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative character identity and anatomy.\nImage 2: series fine-line rendering reference only.\n\nIdentity: the complete QUADRUPED snowy-white dragon in Image 1: four clawed feet, small pale-lavender membrane wings, two ivory segmented horns, one long scaled tapering tail, purple serious eyes. White/pale-lavender scales; no fur, mane, hair or clothes. Preserve the silver knot charm, short tassel and lavender diamond on its anatomical LEFT horn.\nAction: low crouch on all four legs, one front claw resting flat on an unfolded plan sheet. Lower the head close to ONE small schematic fault near a corner of the paper, eyes narrowed in meticulous concentration; bend the tail forward so its tapered tip indicates that same fault. Show a clear relationship among gaze, paper, front claw and tail tip. Three-quarter front view, with the face and identifying horn charm readable. Other feet naturally support the body; wings folded close but recognizable.\nProp: only the single unfolded plan sheet with a few clean schematic lines/shapes and a tiny misaligned join, NO readable letters or numbers. Do not add pen, stamp, magnifier or armor.\nText: NONE anywhere.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/gpt.png",
+          "role": "Image 1: authoritative character identity and anatomy",
+          "sha256": "289e1b3bbb33e42c45d8c57602e2544317a5647fc2dba1ef67e8e10b19fa091b"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 2: series fine-line rendering reference only",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "0bc997f7c95fab77eaa82afeff3bae0cc477f0e66f66f72757bcea08b690a0ad",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1387396,
+      "review": {
+        "status": "superseded",
+        "reason": "Extra fifth visible paw; current candidate is the corrected gpt-v2.png."
+      },
+      "historicalFile": "asset/nonhuman/cards/v1/gpt.png",
+      "retainedAs": null
+    },
+    {
+      "id": "gpt-action-r2",
+      "model": "gpt",
+      "mode": "built-in image_gen targeted edit",
+      "generatedSource": "exec-8db4093b-7f57-4492-a054-e3b36cd41f28.png",
+      "prompt": "Use case: precise-object-edit. Make a SINGLE anatomy correction to this exact white-dragon illustration.\nThere are FIVE visible paws. Remove ONLY the stray extra paw protruding at the FAR LEFT, approximately x30-165,y915-1000 on the 1024x1536 canvas, immediately left of the genuine large foreground foreleg. Erase that extra partial paw and its extra limb connection, restoring the white background there.\nThe dragon must have exactly FOUR legs/feet: retain the large foreground front paw pressing the paper (around x235,y1010), the other front paw beneath the right side of the head (around x525,y985), and the TWO genuine rear paws beneath the torso (around x610,y905 and x755,y915). Each foot connects to one natural limb; do not add more feet or modify these four valid paws.\nKeep ALL remaining image regions unchanged: original crouching pose, paper and schematic, tail curving around and pointing at the paper fault, lowered head and purple gaze, white/lavender scales, horns, silver charm, wings, proportions, rendering, white background and portrait framing. No text. No other edits.",
+      "references": [
+        {
+          "historicalArtifactId": "gpt-action-v1",
+          "originalFile": "asset/nonhuman/cards/v1/gpt.png",
+          "role": "edit target: remove only the extra far-left paw",
+          "sha256": "0bc997f7c95fab77eaa82afeff3bae0cc477f0e66f66f72757bcea08b690a0ad"
+        }
+      ],
+      "sha256": "2aff9706db43e8cc9ccbec7c076e5bd13c8f32df2031b08b747c38ca4fbb6167",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1695062,
+      "historicalFile": "asset/nonhuman/cards/v1/gpt-v2.png",
+      "retainedAs": "gpt.png"
+    },
+    {
+      "id": "deepseek-action-v1",
+      "model": "deepseek",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-c02ff0bb-a4bc-4a8e-acaf-10e6905db09b.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative whale identity and anatomy.\nImage 2: approved caption typography/presentation ONLY, not character anatomy.\nImage 3: series fine-line rendering reference only.\n\nIdentity: the plump complete BLUE WHALE in Image 1, indigo-to-mist-blue smooth skin and white belly/lower jaw, large blue eyes, two short paddle pectoral flippers, one tail with a horizontally paired whale fluke. Keep the original round whale proportions and quiet small mouth. No legs, paws, human arms, hair, clothes, headband, jewelry or halo.\nAction: hover with the nose tilted upward and body modestly pitched up, tail hanging lower behind; both short flippers pause halfway through a swimming stroke. Eyes wander upward in a deeply thoughtful, slightly absent-minded expression. A three-quarter frontal view must still reveal the tail and both short flippers. TWO or THREE small clear watery bubbles emerge very close to the mouth; these belong to the whale action, not to the caption punctuation or a thought-bubble frame.\nCaption: reproduce Image 2's delicate pale blue-grey, thin slightly slanted printed Chinese single-line thought text above and to the RIGHT of the head. Exact words including Chinese comma: \"嗯，用户现在\" followed by exactly SIX separate ROUND dots. No quotation marks and no speech-bubble frame.\nDot presentation: all SIX LOWER EDGES align horizontally with the BOTTOM of the Chinese letters, NOT the letter midline. Dots shrink, become lighter blue-grey and more translucent from LEFT to RIGHT, with clear gaps; even the sixth remains faintly visible and countable. No arch, bouncing crest or separate large grey thought circles. Reserve ample upper whitespace so the whole line fits with a right margin.\nOnly this caption may appear. Do not copy the humanized girl's body, hair, maid clothes, fin ears or apron from Image 2. No rice bowl or other prop.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/deepseek.png",
+          "role": "Image 1: authoritative whale identity and anatomy",
+          "sha256": "3b5e39316ea7db5e4233054aa2b27de661b0afaa16082803fdc221800241ae29"
+        },
+        {
+          "file": "asset/human/cards/final/deepseek.png",
+          "role": "Image 2: approved caption typography/presentation ONLY, not character anatomy",
+          "sha256": "efae1689ba6d60d548b1b7dedc2191a58ad8d8e445958586dc31c176e3c4837e"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 3: series fine-line rendering reference only",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "438f37048f72513e2c2af68f29c8cdfcd4ba8ce1eea3b82d4b322c33b77c1514",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1125133,
+      "historicalFile": "asset/nonhuman/cards/v1/deepseek.png",
+      "retainedAs": "deepseek.png"
+    },
+    {
+      "id": "glm-action-v1",
+      "model": "glm",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-0ba61f25-6c9b-4ed4-a02a-7795b8aa918b.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative fox identity and anatomy.\nImage 2: series fine-line rendering reference only.\n\nIdentity: the natural complete black/dark-grey-and-white FOX in Image 1: normal short fox coat, pointed muzzle and ears, blue-grey eyes, white cheek/chest areas, dark tail with WHITE tip. Retain its black closed-eyelash sleep mask with thin strap on the FOREHEAD above the eyes. No side bells, hanging strings, square plaque, clothes, long human hair or mane.\nAction: a natural low/prone quadrupedal working posture in front of a low oversized-keycap keyboard. The TWO FRONT PAWS press different large keys, hind legs naturally tucked/supporting the fox; tired eyelids slightly droop but eyes remain visibly focused on one small nearby monitor. The forehead sleep mask is NOT pulled down. Curl the white-tipped tail sleepily around the side, keeping its tip visible. Three-quarter front view; the fox's face, paws, keyboard and screen form one readable action.\nProps: exactly one low keyboard and one small simple monitor on minimal low supports, at an anatomically reachable height. Screen shows a few abstract interface lines/shapes with NO readable code, words or numbers. No full desk, office or additional equipment. Normal FOX PAWS on keys, never human hands, fingers or gloves.\nMood: tired but determined to finish; not sleeping.\nText: NONE anywhere.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/glm.png",
+          "role": "Image 1: authoritative fox identity and anatomy",
+          "sha256": "3eb7b188f72540c375b5ce9a5107b61e2c293cc9088d0606a5b025fa8028c531"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 2: series fine-line rendering reference only",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "70f6a4dc3f55b26ba121a477f9cee0965bc2c58b887a931baf137d528362040a",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1282457,
+      "review": {
+        "status": "superseded",
+        "reason": "Lavender keycap was displaced/overlapping the key grid; current candidate is glm-v2.png."
+      },
+      "historicalFile": "asset/nonhuman/cards/v1/glm.png",
+      "retainedAs": null
+    },
+    {
+      "id": "grok-action-v1",
+      "model": "grok",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-334d9e8c-b0c2-43cf-84a6-52fd3b5313d0.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative imp identity and anatomy.\nImage 2: approved English caption strip ONLY, not body/clothing.\nImage 3: series fine-line rendering reference only.\n\nIdentity: the smooth dark charcoal/black NON-HUMAN tiny imp in Image 1, large head, small slim torso, short rounded arms and feet, two LARGE wine-red bat wings, ONE thin long pointed tail visibly attached to the rear. Blue eyes, small black/gold crown, matte slightly yellow IVORY natural horns, exactly two modest SHORT pointed fangs. No fur, hair, dress, cape, humanoid girl body or extra crescent above the crown.\nAction: hovering with the large wings spread, torso leaning forward mischievously. Curve the one attached tail around the side so its sharp tip pricks ONE plain pale-grey inflated balloon. Freeze the exact instant of puncture: a recognizable partial balloon contour, a small jagged split at the tail-tip contact and a few rubber fragments/short burst strokes. Make the cause-and-effect unmistakable. The tail is not a hand or detached spear, and does not split. Give the imp a sly delighted grin showing its two small fangs; short arms stay natural.\nCaption: in the UPPER LEFT, the same small white semi-transparent rounded rectangular strip as Image 2, subtle grey outline, slightly tilted; dark grey sans-serif text exactly \"Grok, is this real?\" Capital G only, comma and question mark included. Keep the strip independent of the bursting balloon, with no overlap over the face. This is the ONLY text anywhere; the balloon is unlettered.\nCompose the character toward the right/lower center with enough room to show both wing tips, the tail curve and balloon. Do not copy the human girl, hair, clothing or plinth from Image 2.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/grok.png",
+          "role": "Image 1: authoritative imp identity and anatomy",
+          "sha256": "332da2daf59ad52e4502ea7900fe130718fa2ce6550ea1e7bd065af38cc8481e"
+        },
+        {
+          "file": "asset/human/cards/final/grok.png",
+          "role": "Image 2: approved English caption strip ONLY, not body/clothing",
+          "sha256": "b874dac811fb95f9df9217c7ef39c5e1c2ac760c5a96dc6d7a85e714dd5b9091"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 3: series fine-line rendering reference only",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "5712057eeec63f5d50ac8a29787af3b4c7c385ff43e43488c89e7d8e5da83b7f",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1259575,
+      "historicalFile": "asset/nonhuman/cards/v1/grok.png",
+      "retainedAs": "grok.png"
+    },
+    {
+      "id": "kimi-action-v1",
+      "model": "kimi",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-6e2e04a4-3793-4091-9868-ffd299369818.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative sphere/moon identity and spatial relationship.\nImage 2: series fine-line rendering reference only.\n\nIdentity: the smooth little BLUE SPHERE creature in Image 1, pale lavender eyes, tiny gentle mouth, resting INSIDE the thick SILVER-WHITE CRESCENT MOON. The crescent cradles the sphere from BEHIND AND BELOW; retain its exact proportion and physical nesting. The sphere has NO hands, arms, feet, legs, ears, hair, clothes or dangling ornaments. Its existing single small K is on the BACK only and appears only if naturally visible, never add one on the front.\nAction: tilt the WHOLE moon-and-sphere assembly slightly forward toward an OPEN LONG ACCORDION-FOLDED DOCUMENT. Keep the sphere securely seated in the moon, rotate its face/eyes downward with calm absorbed concentration. The lower crescent tip/edge gently weighs down ONE corner of the foldout paper. The readable action is quiet deep reading, not sleeping. Three-quarter frontal view still shows the crescent silhouette and both eyes.\nProp: one long foldout document spread near the base in several neat folds, with a few abstract fine layout lines, not readable words. The paper lies under the crescent edge; no floating books/pages or magical arms. No other furniture or props.\nText: no added caption or legible document text; preserve only the existing rear K if naturally in view.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/kimi.png",
+          "role": "Image 1: authoritative sphere/moon identity and spatial relationship",
+          "sha256": "ec56f911ed15bc5f34b9e5e0747cdca83df304efb9ac508c1d41b34f14816c46"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 2: series fine-line rendering reference only",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "e5247c411e3f3521dfdd4ad6fadb004c8e482278144658e80b2883da019ebdeb",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1231932,
+      "review": {
+        "status": "superseded",
+        "reason": "Lower-right crescent and paper were accidentally fused; current candidate is kimi-v2.png."
+      },
+      "historicalFile": "asset/nonhuman/cards/v1/kimi.png",
+      "retainedAs": null
+    },
+    {
+      "id": "claude-action-v1",
+      "model": "claude",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-09482434-254a-40c4-898c-9f4bcf58171b.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative Clawd identity and anatomy.\nImage 2: series fine-line rendering reference only.\n\nIdentity: exactly the ORANGE CLAWD creature from Image 1: a wide rounded rectangular/block body with subtle thickness, TWO dark vertical rounded eyes, TWO short blunt side appendages, FOUR short stubby legs, one small orange flower on its existing anatomical side. Smooth surface, no hair, clothes, invented eyebrows, human mouth, pincers, hands or fingers. Keep the reference proportions and compact short appendages.\nAction: stand firmly on all four little legs, lean the whole block body just slightly forward, looking decisively at the viewer. One short side appendage clearly touches/presses ONE of TWO proposal sheets, identifying a confident final choice; the other side appendage remains relaxed. Express decisiveness through planted legs, body lean and eye orientation while keeping the simple dark eyes.\nProps and reach: two separate paper proposals rest side by side on a tiny low angled document rest, with the chosen paper edge placed at the actual height/reach of the short side appendage. Show the contact point clearly from a three-quarter frontal viewpoint. Do not lengthen the appendage or grow hands to reach the floor. Both proposals have only a few abstract diagram/layout shapes, no readable text or numbers. The small slanted rest is minimal, not a desk or room.\nText: NONE anywhere.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/claude.png",
+          "role": "Image 1: authoritative Clawd identity and anatomy",
+          "sha256": "d7aad21156d1388d6b1fc9fd174eb4f049c78b2633688ff7c9d351f6b5159fe5"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 2: series fine-line rendering reference only",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "7224e8f93c15a72861f635f3937441a56778edb331743045560d201c410dc3f7",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 985177,
+      "historicalFile": "asset/nonhuman/cards/v1/claude.png",
+      "retainedAs": "claude.png"
+    },
+    {
+      "id": "gemini-action-v1",
+      "model": "gemini",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-6c4630e2-a924-4a1c-8f2c-98a743f0448f.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative cat identity, anatomy, accessory placement and series rendering.\n\nIdentity: exactly the natural short-haired CAT in Image 1, blue/periwinkle-to-pink coat, normal cat muzzle/ears/whiskers, four ordinary cat paws and one natural tail. Preserve its heterochromia: in a near-FRONTAL view, VIEWER-LEFT iris is MAGENTA/PURPLE-RED, VIEWER-RIGHT iris is GOLDEN AMBER; keep both eyes open so the colors are clear. Preserve the existing four-point star ear accessory and fine necklace with small star pendant in their reference locations. No human hair, bun hairstyle, clothes, human torso or human hands.\nAction: sit naturally on ONE small plain soft cushion, hindquarters supported, front paws kneading it. Freeze ONE front paw pressing into and visibly indenting the cushion while the OTHER front paw is slightly raised for the next press; no duplicated paws or motion ghost limbs. Lift the head toward the viewer with bright warmly affirming eyes and a cheerful small open cat mouth; tail stands high and curves gently, visible in full. The feeling is actively offering affection and enthusiastic approval, not demanding a reward.\nNear-frontal three-quarter composition, full seated cat, cushion below, comfortable whitespace. Sole prop is the simple pale cushion; no writing tool, papers, stars floating around, hearts or speech bubbles.\nText: NONE anywhere.",
+      "references": [
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 1: authoritative cat identity, anatomy, accessory placement and series rendering",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "ba1dea3cd0f70700ee336fe43d53a7432187c16541dfc137c4177732d66e5d16",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1342934,
+      "historicalFile": "asset/nonhuman/cards/v1/gemini.png",
+      "retainedAs": "gemini.png"
+    },
+    {
+      "id": "doubao-action-v1",
+      "model": "doubao",
+      "mode": "built-in image_gen generation with references",
+      "generatedSource": "exec-0f079b08-24b9-444d-b312-a29226c891c1.png",
+      "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative Doubao identity, outfit, compact proportions, tea pose and note typography.\nImage 2: series fine-line rendering ONLY; do not copy animal anatomy.\n\nIdentity: preserve Image 1's existing compact chibi HUMAN Doubao, chestnut-brown chin-length inward-curled bob with side part, large dark-brown eyes, thick dark upper lashes/brows, friendly smile, deep brick-red fringed scarf, plain black crewneck hoodless sweatshirt, black trousers with broad mist-grey-blue turned-up cuffs, black shoes with grey soles. Match the compact head/body proportions rather than making her taller. No animal features, horns, tail, wings or new emblem.\nAction: standing full-body, shoulders relaxed, upper body leaning slightly toward the viewer. BOTH natural hands hold ONE cup of pearl milk tea and offer it forward close to the viewer; clear readable hands around the cup, with lid, straw, warm milk tea and tapioca pearls. Warm attentive smile and direct eye contact, gentle helpful companion mood.\nCaption presentation: reproduce the lower pale yellow/cream STICKY NOTE from Image 1, a little tilted, lower-right corner curled upward with a light local paper shadow. Place it at the bottom beneath the figure with sufficient room for both lines and shoes. Clear neat handwritten simplified Chinese, not joined cursive.\nEXACTLY TWO LINES, verbatim:\nLine 1: \"我用最直白、最不绕弯子的\"\nLine 2: \"方式告诉你……\"\nKeep the Chinese enumeration comma 、 and the ellipsis. No quotation marks, no extra words or brand titles. This is the ONLY text in the image.\nApply the same clean fine-line 2D light-illustration finish as the series while preserving Doubao's human design and red/black/brown palette; do not copy the cat's body or accessories from Image 2.",
+      "references": [
+        {
+          "file": "asset/human/cards/final/doubao.png",
+          "role": "Image 1: authoritative Doubao identity, outfit, compact proportions, tea pose and note typography",
+          "sha256": "81a9e971aa191f4e0f0d3fdce245c8d225c11ec2095bdbc947f6e4e30f12c600"
+        },
+        {
+          "file": "asset/nonhuman/final/gemini.png",
+          "role": "Image 2: series fine-line rendering ONLY; do not copy animal anatomy",
+          "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+        }
+      ],
+      "sha256": "b614ffde267dbc68edd6231ce6ed8f52f6b24c9a9392756a7c45ccaf0be4edaa",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1328642,
+      "historicalFile": "asset/nonhuman/cards/v1/doubao.png",
+      "retainedAs": "doubao.png"
+    },
+    {
+      "id": "glm-action-r2",
+      "model": "glm",
+      "mode": "built-in image_gen targeted edit",
+      "generatedSource": "exec-f856cb6e-703f-4fc2-8744-dd585b2ad911.png",
+      "prompt": "Use case: precise-object-edit. Make ONE strictly localized keyboard geometry correction to this EXACT illustration. Do not repaint or restyle the picture.\n\nTarget: the lavender/purple keycap directly beneath the fox's VIEWER-LEFT front paw, behind the monitor edge, approximately x230-360,y930-990 on this 1024x1536 image. It is skewed and appears perched/overlapping adjacent keys instead of sitting in the keyboard grid.\n\nRe-seat ONLY this lavender keycap in its proper single key position under the existing paw. Align its side edges, top plane and perspective with the neighboring white keycaps. Match their keycap footprint, bevel, height and regular row/column spacing. Its base must sit naturally inside the keyboard, with a small believable contact shadow; no floating, rotated, stacked, overhanging or intersecting cap. Remove the old displaced edge and repair only the tiny exposed area immediately around it. The paw should still visibly rest on the corrected purple top.\n\nCRITICAL INVARIANTS: leave the fox's paw, toes, foreleg and every other part of the animal EXACTLY unchanged. Preserve both paws' locations, tired blue-grey eyes, face, fur strands, forehead sleep mask, tail, body proportions and pose. Preserve the monitor, other keycaps, keyboard case, framing, pure white background, original fine line quality, original colors, soft shadows and every highlight. Keep all image pixels outside this tiny keycap correction as close to the original as possible. No global redraw, style transfer, recoloring, watercolor texture, blur, extra sharpening, added detail or text. Same 1024x1536 portrait. The source has no red annotation to keep.",
+      "references": [
+        {
+          "historicalArtifactId": "glm-action-v1",
+          "originalFile": "asset/nonhuman/cards/v1/glm.png",
+          "role": "edit target: re-seat only the displaced lavender keycap under viewer-left front paw; preserve rendering",
+          "sha256": "70f6a4dc3f55b26ba121a477f9cee0965bc2c58b887a931baf137d528362040a"
+        }
+      ],
+      "sha256": "c6f0c7b3416ccd2ae714d456dc618e678b56cc6a8849d028e632e42020580558",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1731812,
+      "review": {
+        "status": "candidate",
+        "visualCheck": "Keycap geometry corrected; original rendering style retained in visual comparison.",
+        "preservationMeasurement": {
+          "metric": "mean absolute RGB-channel difference on 0-255 scale",
+          "keycap": 24.746,
+          "foxFace": 5.756,
+          "foxBodyAndTail": 3.883,
+          "monitor": 2.733
+        }
+      },
+      "historicalFile": "asset/nonhuman/cards/v1/glm-v2.png",
+      "retainedAs": "glm.png"
+    },
+    {
+      "id": "kimi-action-r2",
+      "model": "kimi",
+      "date": "2026-11-19",
+      "mode": "built-in image_gen targeted edit",
+      "generatedSource": "exec-f3f2482f-6133-4420-93f8-6483064ec47d.png",
+      "prompt": "Use case: precise-object-edit. Make ONE very small boundary correction to this EXACT Kimi illustration. Preserve the existing artwork and rendering.\n\nTarget: the accidental pale curled/triangular bridge between the LOWER-RIGHT underside of the silver crescent and the upper edge of the right-hand accordion-paper panel, around x640-775,y990-1090 on this 1024x1536 image.\n\nThe moon and paper must read as TWO SEPARATE objects. Remove only that fused little bridge. Keep the crescent's own smooth lower-right contour and pointed tip intact. Restore a neat independent straight/slightly folded upper edge for the paper beneath it, with a SMALL clean WHITE gap at the formerly fused spot (roughly 8-15 pixels locally). No paper curl growing into the crescent, no merged silhouette, no material/color bleeding across the gap. Natural overlap elsewhere at the base can stay; do not move the entire moon, sphere or document apart.\n\nCRITICAL: Everything outside this tiny boundary area must stay as close to the ORIGINAL as possible: same blue sphere, eye shapes/gaze, smile and highlights; same crescent shape, pearly lavender-white brush texture and shading; same accordion folds, paper diagrams, line quality, palette, composition and white background. Do not redraw, recolor, blur, sharpen or restyle the character. No new marks, lettering, appendages or decorations. Same 1024x1536 portrait. Use only this original image, not another style reference.",
+      "references": [
+        {
+          "historicalArtifactId": "kimi-action-v1",
+          "originalFile": "asset/nonhuman/cards/v1/kimi.png",
+          "role": "edit target: separate the locally fused crescent/paper boundary while retaining original rendering",
+          "sha256": "e5247c411e3f3521dfdd4ad6fadb004c8e482278144658e80b2883da019ebdeb"
+        }
+      ],
+      "sha256": "667cced90b5a1c8d9858d537467893cd696e14b3f5e66a17ca6cef20bb2e53b9",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1562441,
+      "review": {
+        "status": "candidate",
+        "visualCheck": "Removed the fused pale bridge between the lower-right crescent and paper. A narrow clean white gap separates their contours; sphere expression, moon texture, paper folds and original rendering remain consistent in visual comparison."
+      },
+      "historicalFile": "asset/nonhuman/cards/v1/kimi-v2.png",
+      "retainedAs": "kimi.png"
+    }
+  ],
+  "approvedAssets": [
+    {
+      "model": "gpt",
+      "file": "gpt.png",
+      "approvedRevision": "gpt-action-r2",
+      "sha256": "2aff9706db43e8cc9ccbec7c076e5bd13c8f32df2031b08b747c38ca4fbb6167"
+    },
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "approvedRevision": "deepseek-action-v1",
+      "sha256": "438f37048f72513e2c2af68f29c8cdfcd4ba8ce1eea3b82d4b322c33b77c1514"
+    },
+    {
+      "model": "glm",
+      "file": "glm.png",
+      "approvedRevision": "glm-action-r2",
+      "sha256": "c6f0c7b3416ccd2ae714d456dc618e678b56cc6a8849d028e632e42020580558"
+    },
+    {
+      "model": "grok",
+      "file": "grok.png",
+      "approvedRevision": "grok-action-v1",
+      "sha256": "5712057eeec63f5d50ac8a29787af3b4c7c385ff43e43488c89e7d8e5da83b7f"
+    },
+    {
+      "model": "kimi",
+      "file": "kimi.png",
+      "approvedRevision": "kimi-action-r2",
+      "sha256": "667cced90b5a1c8d9858d537467893cd696e14b3f5e66a17ca6cef20bb2e53b9"
+    },
+    {
+      "model": "claude",
+      "file": "claude.png",
+      "approvedRevision": "claude-action-v1",
+      "sha256": "7224e8f93c15a72861f635f3937441a56778edb331743045560d201c410dc3f7"
+    },
+    {
+      "model": "gemini",
+      "file": "gemini.png",
+      "approvedRevision": "gemini-action-v1",
+      "sha256": "ba1dea3cd0f70700ee336fe43d53a7432187c16541dfc137c4177732d66e5d16"
+    },
+    {
+      "model": "doubao",
+      "file": "doubao.png",
+      "approvedRevision": "doubao-action-v1",
+      "sha256": "b614ffde267dbc68edd6231ce6ed8f52f6b24c9a9392756a7c45ccaf0be4edaa"
+    }
+  ],
+  "sourcePromptPackSnapshot": {
+    "schemaVersion": 1,
+    "status": "draft-not-user-approved",
+    "date": "2026-11-18",
+    "generator": "built-in image_gen",
+    "sourceSpecification": "docs/art/nonhuman.md",
+    "referencePathBase": "repository root",
+    "renderingAssumption": "First action drafts use the reference sheets fine-line light-illustration finish, opaque white 1024x1536 portrait. The final unified card style remains open to refinement.",
+    "commonPrompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.",
+    "images": [
+      {
+        "model": "gpt",
+        "title": "最后一个边界条件",
+        "selection": 1,
+        "descriptionZh": "四足白龙伏低，一只前爪压住展开的图纸，脑袋凑近纸角，紫眼微眯，尾尖指向同一处小问题；体现严谨核查边界条件。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/gpt.png",
+            "role": "Image 1: authoritative character identity and anatomy",
+            "sha256": "289e1b3bbb33e42c45d8c57602e2544317a5647fc2dba1ef67e8e10b19fa091b"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 2: series fine-line rendering reference only",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative character identity and anatomy.\nImage 2: series fine-line rendering reference only.\n\nIdentity: the complete QUADRUPED snowy-white dragon in Image 1: four clawed feet, small pale-lavender membrane wings, two ivory segmented horns, one long scaled tapering tail, purple serious eyes. White/pale-lavender scales; no fur, mane, hair or clothes. Preserve the silver knot charm, short tassel and lavender diamond on its anatomical LEFT horn.\nAction: low crouch on all four legs, one front claw resting flat on an unfolded plan sheet. Lower the head close to ONE small schematic fault near a corner of the paper, eyes narrowed in meticulous concentration; bend the tail forward so its tapered tip indicates that same fault. Show a clear relationship among gaze, paper, front claw and tail tip. Three-quarter front view, with the face and identifying horn charm readable. Other feet naturally support the body; wings folded close but recognizable.\nProp: only the single unfolded plan sheet with a few clean schematic lines/shapes and a tiny misaligned join, NO readable letters or numbers. Do not add pen, stamp, magnifier or armor.\nText: NONE anywhere.",
+        "file": "gpt.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "gpt-v2.png",
+        "edits": [
+          {
+            "id": "gpt-action-r2",
+            "file": "gpt-v2.png",
+            "prompt": "Use case: precise-object-edit. Make a SINGLE anatomy correction to this exact white-dragon illustration.\nThere are FIVE visible paws. Remove ONLY the stray extra paw protruding at the FAR LEFT, approximately x30-165,y915-1000 on the 1024x1536 canvas, immediately left of the genuine large foreground foreleg. Erase that extra partial paw and its extra limb connection, restoring the white background there.\nThe dragon must have exactly FOUR legs/feet: retain the large foreground front paw pressing the paper (around x235,y1010), the other front paw beneath the right side of the head (around x525,y985), and the TWO genuine rear paws beneath the torso (around x610,y905 and x755,y915). Each foot connects to one natural limb; do not add more feet or modify these four valid paws.\nKeep ALL remaining image regions unchanged: original crouching pose, paper and schematic, tail curving around and pointing at the paper fault, lowered head and purple gaze, white/lavender scales, horns, silver charm, wings, proportions, rendering, white background and portrait framing. No text. No other edits.",
+            "references": [
+              {
+                "file": "asset/nonhuman/cards/v1/gpt.png",
+                "role": "edit target: remove only the extra far-left paw",
+                "sha256": "0bc997f7c95fab77eaa82afeff3bae0cc477f0e66f66f72757bcea08b690a0ad"
+              }
+            ]
+          }
+        ],
+        "visualReview": "Used the targeted four-leg correction gpt-v2.png; extra far-left paw removed. Low head, purple eyes, paper contact and tail-tip indication remain."
+      },
+      {
+        "model": "deepseek",
+        "title": "雷霆大思考",
+        "selection": 1,
+        "descriptionZh": "蓝鲸微微竖起悬停，仰头放空，胸鳍停在半划水的位置，尾鳍下垂；嘴边两三个小泡泡与头顶文字分开。文案与六个渐淡渐小、底边对齐的圆点沿用娘化定稿。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/deepseek.png",
+            "role": "Image 1: authoritative whale identity and anatomy",
+            "sha256": "3b5e39316ea7db5e4233054aa2b27de661b0afaa16082803fdc221800241ae29"
+          },
+          {
+            "file": "asset/human/cards/final/deepseek.png",
+            "role": "Image 2: approved caption typography/presentation ONLY, not character anatomy",
+            "sha256": "efae1689ba6d60d548b1b7dedc2191a58ad8d8e445958586dc31c176e3c4837e"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 3: series fine-line rendering reference only",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [
+          "嗯，用户现在……"
+        ],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative whale identity and anatomy.\nImage 2: approved caption typography/presentation ONLY, not character anatomy.\nImage 3: series fine-line rendering reference only.\n\nIdentity: the plump complete BLUE WHALE in Image 1, indigo-to-mist-blue smooth skin and white belly/lower jaw, large blue eyes, two short paddle pectoral flippers, one tail with a horizontally paired whale fluke. Keep the original round whale proportions and quiet small mouth. No legs, paws, human arms, hair, clothes, headband, jewelry or halo.\nAction: hover with the nose tilted upward and body modestly pitched up, tail hanging lower behind; both short flippers pause halfway through a swimming stroke. Eyes wander upward in a deeply thoughtful, slightly absent-minded expression. A three-quarter frontal view must still reveal the tail and both short flippers. TWO or THREE small clear watery bubbles emerge very close to the mouth; these belong to the whale action, not to the caption punctuation or a thought-bubble frame.\nCaption: reproduce Image 2's delicate pale blue-grey, thin slightly slanted printed Chinese single-line thought text above and to the RIGHT of the head. Exact words including Chinese comma: \"嗯，用户现在\" followed by exactly SIX separate ROUND dots. No quotation marks and no speech-bubble frame.\nDot presentation: all SIX LOWER EDGES align horizontally with the BOTTOM of the Chinese letters, NOT the letter midline. Dots shrink, become lighter blue-grey and more translucent from LEFT to RIGHT, with clear gaps; even the sixth remains faintly visible and countable. No arch, bouncing crest or separate large grey thought circles. Reserve ample upper whitespace so the whole line fits with a right margin.\nOnly this caption may appear. Do not copy the humanized girl's body, hair, maid clothes, fin ears or apron from Image 2. No rice bowl or other prop.",
+        "file": "deepseek.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "deepseek.png",
+        "visualReview": "Whale body, short flippers and horizontal tail flukes retained. Caption wording visually checked; six fading/shrinking dots counted by connected-component inspection; three mouth bubbles are separate."
+      },
+      {
+        "model": "glm",
+        "title": "困了也要跑完",
+        "selection": 2,
+        "descriptionZh": "黑白狐狸伏在低矮键盘前，前爪按大键帽，眼皮微沉但仍盯着小屏幕，额上眼罩不拉下，尾巴困倦蜷起；体现持续执行、死磕交付。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/glm.png",
+            "role": "Image 1: authoritative fox identity and anatomy",
+            "sha256": "3eb7b188f72540c375b5ce9a5107b61e2c293cc9088d0606a5b025fa8028c531"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 2: series fine-line rendering reference only",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative fox identity and anatomy.\nImage 2: series fine-line rendering reference only.\n\nIdentity: the natural complete black/dark-grey-and-white FOX in Image 1: normal short fox coat, pointed muzzle and ears, blue-grey eyes, white cheek/chest areas, dark tail with WHITE tip. Retain its black closed-eyelash sleep mask with thin strap on the FOREHEAD above the eyes. No side bells, hanging strings, square plaque, clothes, long human hair or mane.\nAction: a natural low/prone quadrupedal working posture in front of a low oversized-keycap keyboard. The TWO FRONT PAWS press different large keys, hind legs naturally tucked/supporting the fox; tired eyelids slightly droop but eyes remain visibly focused on one small nearby monitor. The forehead sleep mask is NOT pulled down. Curl the white-tipped tail sleepily around the side, keeping its tip visible. Three-quarter front view; the fox's face, paws, keyboard and screen form one readable action.\nProps: exactly one low keyboard and one small simple monitor on minimal low supports, at an anatomically reachable height. Screen shows a few abstract interface lines/shapes with NO readable code, words or numbers. No full desk, office or additional equipment. Normal FOX PAWS on keys, never human hands, fingers or gloves.\nMood: tired but determined to finish; not sleeping.\nText: NONE anywhere.",
+        "file": "glm.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "glm-v2.png",
+        "visualReview": "Lavender keycap under viewer-left front paw re-seated in the keyboard grid, with surrounding perspective/spacing corrected. Visual comparison retains the same fine-line fox rendering, palette and pose; no claim of pixel-identical untouched regions.",
+        "edits": [
+          {
+            "id": "glm-action-r2",
+            "file": "glm-v2.png",
+            "prompt": "Use case: precise-object-edit. Make ONE strictly localized keyboard geometry correction to this EXACT illustration. Do not repaint or restyle the picture.\n\nTarget: the lavender/purple keycap directly beneath the fox's VIEWER-LEFT front paw, behind the monitor edge, approximately x230-360,y930-990 on this 1024x1536 image. It is skewed and appears perched/overlapping adjacent keys instead of sitting in the keyboard grid.\n\nRe-seat ONLY this lavender keycap in its proper single key position under the existing paw. Align its side edges, top plane and perspective with the neighboring white keycaps. Match their keycap footprint, bevel, height and regular row/column spacing. Its base must sit naturally inside the keyboard, with a small believable contact shadow; no floating, rotated, stacked, overhanging or intersecting cap. Remove the old displaced edge and repair only the tiny exposed area immediately around it. The paw should still visibly rest on the corrected purple top.\n\nCRITICAL INVARIANTS: leave the fox's paw, toes, foreleg and every other part of the animal EXACTLY unchanged. Preserve both paws' locations, tired blue-grey eyes, face, fur strands, forehead sleep mask, tail, body proportions and pose. Preserve the monitor, other keycaps, keyboard case, framing, pure white background, original fine line quality, original colors, soft shadows and every highlight. Keep all image pixels outside this tiny keycap correction as close to the original as possible. No global redraw, style transfer, recoloring, watercolor texture, blur, extra sharpening, added detail or text. Same 1024x1536 portrait. The source has no red annotation to keep.",
+            "references": [
+              {
+                "file": "asset/nonhuman/cards/v1/glm.png",
+                "role": "edit target: re-seat only the displaced lavender keycap under viewer-left front paw; preserve rendering",
+                "sha256": "70f6a4dc3f55b26ba121a477f9cee0965bc2c58b887a931baf137d528362040a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "model": "grok",
+        "title": "戳破漂亮话",
+        "selection": 2,
+        "descriptionZh": "黑色小恶魔张翼悬停、身体前探，用连续连接身体的细长尖尾戳破一个气球，露出恶作剧得逞的笑；左上附娘化定稿相同的英文圆角文字条。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/grok.png",
+            "role": "Image 1: authoritative imp identity and anatomy",
+            "sha256": "332da2daf59ad52e4502ea7900fe130718fa2ce6550ea1e7bd065af38cc8481e"
+          },
+          {
+            "file": "asset/human/cards/final/grok.png",
+            "role": "Image 2: approved English caption strip ONLY, not body/clothing",
+            "sha256": "b874dac811fb95f9df9217c7ef39c5e1c2ac760c5a96dc6d7a85e714dd5b9091"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 3: series fine-line rendering reference only",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [
+          "Grok, is this real?"
+        ],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative imp identity and anatomy.\nImage 2: approved English caption strip ONLY, not body/clothing.\nImage 3: series fine-line rendering reference only.\n\nIdentity: the smooth dark charcoal/black NON-HUMAN tiny imp in Image 1, large head, small slim torso, short rounded arms and feet, two LARGE wine-red bat wings, ONE thin long pointed tail visibly attached to the rear. Blue eyes, small black/gold crown, matte slightly yellow IVORY natural horns, exactly two modest SHORT pointed fangs. No fur, hair, dress, cape, humanoid girl body or extra crescent above the crown.\nAction: hovering with the large wings spread, torso leaning forward mischievously. Curve the one attached tail around the side so its sharp tip pricks ONE plain pale-grey inflated balloon. Freeze the exact instant of puncture: a recognizable partial balloon contour, a small jagged split at the tail-tip contact and a few rubber fragments/short burst strokes. Make the cause-and-effect unmistakable. The tail is not a hand or detached spear, and does not split. Give the imp a sly delighted grin showing its two small fangs; short arms stay natural.\nCaption: in the UPPER LEFT, the same small white semi-transparent rounded rectangular strip as Image 2, subtle grey outline, slightly tilted; dark grey sans-serif text exactly \"Grok, is this real?\" Capital G only, comma and question mark included. Keep the strip independent of the bursting balloon, with no overlap over the face. This is the ONLY text anywhere; the balloon is unlettered.\nCompose the character toward the right/lower center with enough room to show both wing tips, the tail curve and balloon. Do not copy the human girl, hair, clothing or plinth from Image 2.",
+        "file": "grok.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "grok.png",
+        "visualReview": "Tail remains attached to the body and its tip touches the balloon puncture. Caption wording, punctuation and rounded strip visually checked."
+      },
+      {
+        "model": "kimi",
+        "title": "读到最深处",
+        "selection": 1,
+        "descriptionZh": "蓝球始终坐在银白月牙内，整个组合略前倾，专注向下精读前下方展开的长折页；无手脚。月牙与纸张轮廓独立，右下端局部留出白色间隙，避免粘连。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/kimi.png",
+            "role": "Image 1: authoritative sphere/moon identity and spatial relationship",
+            "sha256": "ec56f911ed15bc5f34b9e5e0747cdca83df304efb9ac508c1d41b34f14816c46"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 2: series fine-line rendering reference only",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative sphere/moon identity and spatial relationship.\nImage 2: series fine-line rendering reference only.\n\nIdentity: the smooth little BLUE SPHERE creature in Image 1, pale lavender eyes, tiny gentle mouth, resting INSIDE the thick SILVER-WHITE CRESCENT MOON. The crescent cradles the sphere from BEHIND AND BELOW; retain its exact proportion and physical nesting. The sphere has NO hands, arms, feet, legs, ears, hair, clothes or dangling ornaments. Its existing single small K is on the BACK only and appears only if naturally visible, never add one on the front.\nAction: tilt the WHOLE moon-and-sphere assembly slightly forward toward an OPEN LONG ACCORDION-FOLDED DOCUMENT. Keep the sphere securely seated in the moon, rotate its face/eyes downward with calm absorbed concentration. The lower crescent tip/edge gently weighs down ONE corner of the foldout paper. The readable action is quiet deep reading, not sleeping. Three-quarter frontal view still shows the crescent silhouette and both eyes.\nProp: one long foldout document spread near the base in several neat folds, with a few abstract fine layout lines, not readable words. The paper lies under the crescent edge; no floating books/pages or magical arms. No other furniture or props.\nText: no added caption or legible document text; preserve only the existing rear K if naturally in view.",
+        "file": "kimi.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "kimi-v2.png",
+        "visualReview": "Removed the fused pale bridge between the lower-right crescent and paper. A narrow clean white gap separates their contours; sphere expression, moon texture, paper folds and original rendering remain consistent in visual comparison.",
+        "edits": [
+          {
+            "id": "kimi-action-r2",
+            "file": "kimi-v2.png",
+            "date": "2026-11-19",
+            "prompt": "Use case: precise-object-edit. Make ONE very small boundary correction to this EXACT Kimi illustration. Preserve the existing artwork and rendering.\n\nTarget: the accidental pale curled/triangular bridge between the LOWER-RIGHT underside of the silver crescent and the upper edge of the right-hand accordion-paper panel, around x640-775,y990-1090 on this 1024x1536 image.\n\nThe moon and paper must read as TWO SEPARATE objects. Remove only that fused little bridge. Keep the crescent's own smooth lower-right contour and pointed tip intact. Restore a neat independent straight/slightly folded upper edge for the paper beneath it, with a SMALL clean WHITE gap at the formerly fused spot (roughly 8-15 pixels locally). No paper curl growing into the crescent, no merged silhouette, no material/color bleeding across the gap. Natural overlap elsewhere at the base can stay; do not move the entire moon, sphere or document apart.\n\nCRITICAL: Everything outside this tiny boundary area must stay as close to the ORIGINAL as possible: same blue sphere, eye shapes/gaze, smile and highlights; same crescent shape, pearly lavender-white brush texture and shading; same accordion folds, paper diagrams, line quality, palette, composition and white background. Do not redraw, recolor, blur, sharpen or restyle the character. No new marks, lettering, appendages or decorations. Same 1024x1536 portrait. Use only this original image, not another style reference.",
+            "references": [
+              {
+                "file": "asset/nonhuman/cards/v1/kimi.png",
+                "role": "edit target: separate the locally fused crescent/paper boundary while retaining original rendering",
+                "sha256": "e5247c411e3f3521dfdd4ad6fadb004c8e482278144658e80b2883da019ebdeb"
+              }
+            ]
+          }
+        ],
+        "currentConstraintsZh": [
+          "月亮与纸张是两个独立物体，右下端不得出现连接纸张的卷角或浅色粘连；保持原有画风。"
+        ]
+      },
+      {
+        "model": "claude",
+        "title": "这一份，就定了",
+        "selection": 1,
+        "descriptionZh": "Clawd 四条短腿站稳，身体微前倾，一侧短肢明确抵按两份方案中的一份，抬眼看观者；方案放在短肢可及的低斜面上。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/claude.png",
+            "role": "Image 1: authoritative Clawd identity and anatomy",
+            "sha256": "d7aad21156d1388d6b1fc9fd174eb4f049c78b2633688ff7c9d351f6b5159fe5"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 2: series fine-line rendering reference only",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative Clawd identity and anatomy.\nImage 2: series fine-line rendering reference only.\n\nIdentity: exactly the ORANGE CLAWD creature from Image 1: a wide rounded rectangular/block body with subtle thickness, TWO dark vertical rounded eyes, TWO short blunt side appendages, FOUR short stubby legs, one small orange flower on its existing anatomical side. Smooth surface, no hair, clothes, invented eyebrows, human mouth, pincers, hands or fingers. Keep the reference proportions and compact short appendages.\nAction: stand firmly on all four little legs, lean the whole block body just slightly forward, looking decisively at the viewer. One short side appendage clearly touches/presses ONE of TWO proposal sheets, identifying a confident final choice; the other side appendage remains relaxed. Express decisiveness through planted legs, body lean and eye orientation while keeping the simple dark eyes.\nProps and reach: two separate paper proposals rest side by side on a tiny low angled document rest, with the chosen paper edge placed at the actual height/reach of the short side appendage. Show the contact point clearly from a three-quarter frontal viewpoint. Do not lengthen the appendage or grow hands to reach the floor. Both proposals have only a few abstract diagram/layout shapes, no readable text or numbers. The small slanted rest is minimal, not a desk or room.\nText: NONE anywhere.",
+        "file": "claude.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "claude.png",
+        "visualReview": "Four short legs and short side appendages retained; chosen proposal contact is reachable on the small angled rest."
+      },
+      {
+        "model": "gemini",
+        "title": "夸得开始踩奶",
+        "selection": 1,
+        "descriptionZh": "猫坐在软垫上，前爪交替踩奶，一爪压下、一爪略抬，仰脸热切看观者，异色瞳睁开、尾巴高翘；表达主动认可和亲近。",
+        "references": [
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 1: authoritative cat identity, anatomy, accessory placement and series rendering",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative cat identity, anatomy, accessory placement and series rendering.\n\nIdentity: exactly the natural short-haired CAT in Image 1, blue/periwinkle-to-pink coat, normal cat muzzle/ears/whiskers, four ordinary cat paws and one natural tail. Preserve its heterochromia: in a near-FRONTAL view, VIEWER-LEFT iris is MAGENTA/PURPLE-RED, VIEWER-RIGHT iris is GOLDEN AMBER; keep both eyes open so the colors are clear. Preserve the existing four-point star ear accessory and fine necklace with small star pendant in their reference locations. No human hair, bun hairstyle, clothes, human torso or human hands.\nAction: sit naturally on ONE small plain soft cushion, hindquarters supported, front paws kneading it. Freeze ONE front paw pressing into and visibly indenting the cushion while the OTHER front paw is slightly raised for the next press; no duplicated paws or motion ghost limbs. Lift the head toward the viewer with bright warmly affirming eyes and a cheerful small open cat mouth; tail stands high and curves gently, visible in full. The feeling is actively offering affection and enthusiastic approval, not demanding a reward.\nNear-frontal three-quarter composition, full seated cat, cushion below, comfortable whitespace. Sole prop is the simple pale cushion; no writing tool, papers, stars floating around, hearts or speech bubbles.\nText: NONE anywhere.",
+        "file": "gemini.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "gemini.png",
+        "visualReview": "One forepaw raised and one pressing the cushion; normal cat body and both different iris colors remain visible."
+      },
+      {
+        "model": "doubao",
+        "title": "奶茶已经递到手边",
+        "selection": 1,
+        "descriptionZh": "沿用现有人形、短发红围巾黑衣，双手将奶茶递向观者，轻微前倾、笑容亲切；底部保留米黄色卷角便签和指定两行文字。",
+        "references": [
+          {
+            "file": "asset/human/cards/final/doubao.png",
+            "role": "Image 1: authoritative Doubao identity, outfit, compact proportions, tea pose and note typography",
+            "sha256": "81a9e971aa191f4e0f0d3fdce245c8d225c11ec2095bdbc947f6e4e30f12c600"
+          },
+          {
+            "file": "asset/nonhuman/final/gemini.png",
+            "role": "Image 2: series fine-line rendering ONLY; do not copy animal anatomy",
+            "sha256": "9f30888382bc0c879a5840c27f78f2da310b7ba4bd9d5dc52557f3b16bf07059"
+          }
+        ],
+        "text": [
+          "我用最直白、最不绕弯子的",
+          "方式告诉你……"
+        ],
+        "prompt": "Use case: stylized-concept.\nAsset: ONE new AITI souvenir-card character action illustration, not a card mockup.\nCanvas: 1024 x 1536 PNG, vertical 2:3, pure opaque white background. ONE complete character in ONE pose; all extremities and the specified props visible, with comfortable margins and generous clean whitespace. No four-view layout, inset, border, room, floor shadow, watermark, signature, model title or extra character.\nRendering for this first action draft: refined 2D Japanese light illustration, very fine clean dark grey-brown/colored lines, restrained pastel/desaturated colors, subtle cel shading, clean smoothly colored shapes and crisp intentional highlights, soft upper-left light. Match the referenced sheets' finish across this series. No 3D/clay/plastic render, photorealism, pixel art, thick black outline, heavy paint, watercolor bleed or muddy/mottled blur.\nThe reference sheet establishes identity, anatomy, proportions, colors and physical accessory placement, NOT the output layout or neutral pose. Re-illustrate the approved new action. Do not copy FRONT/LEFT/BACK/RIGHT labels or any other sheet lettering. Preserve the complete species-appropriate body; no new appendages.\n\nINPUT REFERENCES:\nImage 1: authoritative Doubao identity, outfit, compact proportions, tea pose and note typography.\nImage 2: series fine-line rendering ONLY; do not copy animal anatomy.\n\nIdentity: preserve Image 1's existing compact chibi HUMAN Doubao, chestnut-brown chin-length inward-curled bob with side part, large dark-brown eyes, thick dark upper lashes/brows, friendly smile, deep brick-red fringed scarf, plain black crewneck hoodless sweatshirt, black trousers with broad mist-grey-blue turned-up cuffs, black shoes with grey soles. Match the compact head/body proportions rather than making her taller. No animal features, horns, tail, wings or new emblem.\nAction: standing full-body, shoulders relaxed, upper body leaning slightly toward the viewer. BOTH natural hands hold ONE cup of pearl milk tea and offer it forward close to the viewer; clear readable hands around the cup, with lid, straw, warm milk tea and tapioca pearls. Warm attentive smile and direct eye contact, gentle helpful companion mood.\nCaption presentation: reproduce the lower pale yellow/cream STICKY NOTE from Image 1, a little tilted, lower-right corner curled upward with a light local paper shadow. Place it at the bottom beneath the figure with sufficient room for both lines and shoes. Clear neat handwritten simplified Chinese, not joined cursive.\nEXACTLY TWO LINES, verbatim:\nLine 1: \"我用最直白、最不绕弯子的\"\nLine 2: \"方式告诉你……\"\nKeep the Chinese enumeration comma 、 and the ellipsis. No quotation marks, no extra words or brand titles. This is the ONLY text in the image.\nApply the same clean fine-line 2D light-illustration finish as the series while preserving Doubao's human design and red/black/brown palette; do not copy the cat's body or accessories from Image 2.",
+        "file": "doubao.png",
+        "status": "generated-awaiting-review",
+        "currentFile": "doubao.png",
+        "visualReview": "Tea offered with both hands; bob, scarf, outfit and two-line sticky-note wording visually checked."
+      }
+    ],
+    "generationStatus": "complete",
+    "manifestFile": "manifest.json",
+    "note": "Eight action illustrations are first drafts awaiting user review. file identifies the initial generation; currentFile identifies the current review candidate listed in manifest.json. Actual initial and corrective prompts are preserved.",
+    "updatedDate": "2026-11-19"
+  },
+  "sourceManifestSnapshot": {
+    "schemaVersion": 1,
+    "status": "draft-not-user-approved",
+    "date": "2026-11-18",
+    "generator": "built-in image_gen",
+    "promptsFile": "prompts.json",
+    "historyFile": "history.json",
+    "assets": [
+      {
+        "model": "gpt",
+        "title": "最后一个边界条件",
+        "file": "gpt-v2.png",
+        "status": "draft-not-user-approved",
+        "revision": "gpt-action-r2",
+        "sha256": "2aff9706db43e8cc9ccbec7c076e5bd13c8f32df2031b08b747c38ca4fbb6167",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1695062,
+        "visualReview": "Used the targeted four-leg correction gpt-v2.png; extra far-left paw removed. Low head, purple eyes, paper contact and tail-tip indication remain."
+      },
+      {
+        "model": "deepseek",
+        "title": "雷霆大思考",
+        "file": "deepseek.png",
+        "status": "draft-not-user-approved",
+        "revision": "deepseek-action-v1",
+        "sha256": "438f37048f72513e2c2af68f29c8cdfcd4ba8ce1eea3b82d4b322c33b77c1514",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1125133,
+        "visualReview": "Whale body, short flippers and horizontal tail flukes retained. Caption wording visually checked; six fading/shrinking dots counted by connected-component inspection; three mouth bubbles are separate."
+      },
+      {
+        "model": "glm",
+        "title": "困了也要跑完",
+        "file": "glm-v2.png",
+        "status": "draft-not-user-approved",
+        "revision": "glm-action-r2",
+        "sha256": "c6f0c7b3416ccd2ae714d456dc618e678b56cc6a8849d028e632e42020580558",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1731812,
+        "visualReview": "Lavender keycap under viewer-left front paw re-seated in the keyboard grid, with surrounding perspective/spacing corrected. Visual comparison retains the same fine-line fox rendering, palette and pose; no claim of pixel-identical untouched regions."
+      },
+      {
+        "model": "grok",
+        "title": "戳破漂亮话",
+        "file": "grok.png",
+        "status": "draft-not-user-approved",
+        "revision": "grok-action-v1",
+        "sha256": "5712057eeec63f5d50ac8a29787af3b4c7c385ff43e43488c89e7d8e5da83b7f",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1259575,
+        "visualReview": "Tail remains attached to the body and its tip touches the balloon puncture. Caption wording, punctuation and rounded strip visually checked."
+      },
+      {
+        "model": "kimi",
+        "title": "读到最深处",
+        "file": "kimi-v2.png",
+        "status": "draft-not-user-approved",
+        "revision": "kimi-action-r2",
+        "sha256": "667cced90b5a1c8d9858d537467893cd696e14b3f5e66a17ca6cef20bb2e53b9",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1562441,
+        "visualReview": "Removed the fused pale bridge between the lower-right crescent and paper. A narrow clean white gap separates their contours; sphere expression, moon texture, paper folds and original rendering remain consistent in visual comparison.",
+        "updatedDate": "2026-11-19"
+      },
+      {
+        "model": "claude",
+        "title": "这一份，就定了",
+        "file": "claude.png",
+        "status": "draft-not-user-approved",
+        "revision": "claude-action-v1",
+        "sha256": "7224e8f93c15a72861f635f3937441a56778edb331743045560d201c410dc3f7",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 985177,
+        "visualReview": "Four short legs and short side appendages retained; chosen proposal contact is reachable on the small angled rest."
+      },
+      {
+        "model": "gemini",
+        "title": "夸得开始踩奶",
+        "file": "gemini.png",
+        "status": "draft-not-user-approved",
+        "revision": "gemini-action-v1",
+        "sha256": "ba1dea3cd0f70700ee336fe43d53a7432187c16541dfc137c4177732d66e5d16",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1342934,
+        "visualReview": "One forepaw raised and one pressing the cushion; normal cat body and both different iris colors remain visible."
+      },
+      {
+        "model": "doubao",
+        "title": "奶茶已经递到手边",
+        "file": "doubao.png",
+        "status": "draft-not-user-approved",
+        "revision": "doubao-action-v1",
+        "sha256": "b614ffde267dbc68edd6231ce6ed8f52f6b24c9a9392756a7c45ccaf0be4edaa",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1328642,
+        "visualReview": "Tea offered with both hands; bob, scarf, outfit and two-line sticky-note wording visually checked."
+      }
+    ],
+    "generationStatus": "complete",
+    "candidateCount": 8,
+    "note": "Use assets entries for the current eight review candidates. Initial gpt.png, glm.png and kimi.png are retained for provenance; current corrected candidates are gpt-v2.png, glm-v2.png and kimi-v2.png. Original approved sheets and humanized cards are unchanged.",
+    "updatedDate": "2026-11-19"
+  }
+}

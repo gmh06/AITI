@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "status": "user-approved",
+  "approvedDate": "2026-11-19",
+  "generator": "built-in image_gen",
+  "format": "PNG",
+  "width": 1024,
+  "height": 1536,
+  "promptsFile": "prompts.json",
+  "historyFile": "history.json",
+  "sourceSpecification": "docs/art/nonhuman.md",
+  "approvalMessage": "现在这8个模型的图都可以了，你整理好落盘并推送到仓库里",
+  "assets": [
+    {
+      "model": "gpt",
+      "title": "最后一个边界条件",
+      "file": "gpt.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "gpt-action-r2",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1695062,
+      "sha256": "2aff9706db43e8cc9ccbec7c076e5bd13c8f32df2031b08b747c38ca4fbb6167"
+    },
+    {
+      "model": "deepseek",
+      "title": "雷霆大思考",
+      "file": "deepseek.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "deepseek-action-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1125133,
+      "sha256": "438f37048f72513e2c2af68f29c8cdfcd4ba8ce1eea3b82d4b322c33b77c1514"
+    },
+    {
+      "model": "glm",
+      "title": "困了也要跑完",
+      "file": "glm.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "glm-action-r2",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1731812,
+      "sha256": "c6f0c7b3416ccd2ae714d456dc618e678b56cc6a8849d028e632e42020580558"
+    },
+    {
+      "model": "grok",
+      "title": "戳破漂亮话",
+      "file": "grok.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "grok-action-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1259575,
+      "sha256": "5712057eeec63f5d50ac8a29787af3b4c7c385ff43e43488c89e7d8e5da83b7f"
+    },
+    {
+      "model": "kimi",
+      "title": "读到最深处",
+      "file": "kimi.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "kimi-action-r2",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1562441,
+      "sha256": "667cced90b5a1c8d9858d537467893cd696e14b3f5e66a17ca6cef20bb2e53b9"
+    },
+    {
+      "model": "claude",
+      "title": "这一份，就定了",
+      "file": "claude.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "claude-action-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 985177,
+      "sha256": "7224e8f93c15a72861f635f3937441a56778edb331743045560d201c410dc3f7"
+    },
+    {
+      "model": "gemini",
+      "title": "夸得开始踩奶",
+      "file": "gemini.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "gemini-action-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1342934,
+      "sha256": "ba1dea3cd0f70700ee336fe43d53a7432187c16541dfc137c4177732d66e5d16"
+    },
+    {
+      "model": "doubao",
+      "title": "奶茶已经递到手边",
+      "file": "doubao.png",
+      "status": "user-approved",
+      "approvedDate": "2026-11-19",
+      "approvedRevision": "doubao-action-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1328642,
+      "sha256": "b614ffde267dbc68edd6231ce6ed8f52f6b24c9a9392756a7c45ccaf0be4edaa"
+    }
+  ]
+}
