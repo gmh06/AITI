@@ -24,4 +24,4 @@ AITI 是清华大学计算机科学与技术系第44届学生节「Beyond Contex
 
 [活动策划案](docs/Activity_draft.md)说明参与流程、结果页与卡片、系统功能、现场安排及传播方案；[项目简报](docs/PROJECT_BRIEF.md)汇总活动背景与已确认的方案。
 
-网站与系统的设计文档见[系统总览](docs/system/overview.md)：网站形态与边界、[页面与交互](docs/system/pages.md)（含揭晓动画分镜）、[内容与版本](docs/system/content.md)、[技术方案](docs/system/tech.md)、[实施计划](docs/system/plan.md)。
+网页编写与部署的文档：[现实约束与要求](docs/system/requirements.md)记录必须满足的条件与产品边界；[系统设计](docs/system/design.md)定义行为、数据、构建与部署，界面视觉另行设计；[测试与验收](docs/system/verification.md)定义自动化测试和真机验收。
