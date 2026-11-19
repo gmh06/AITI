@@ -42,7 +42,7 @@ web/
    ├─ data/
    │  ├─ personalities.ts    # 16 个代号
    │  ├─ questions.ts        # 10 道题
-   │  └─ dimensions.ts       # 4 个维度与档位
+   │  └─ dimensions.ts       # 4 个维度、极名与条长换算
    ├─ lib/
    │  ├─ score.ts            # 计分与代号计算
    │  └─ crop.ts             # 8 个取景参数
