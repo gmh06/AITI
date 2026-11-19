@@ -4,7 +4,7 @@
 
 ## 方案状态与文档关系
 
-原卡片插画的制作进度冻结，成品及生图记录继续保留在 [asset/human/cards/final](../../asset/human/cards/final/)，原规范见 [卡片形象与生图规范](human.md)。本方案与原拟人／娘化版本平级维护。
+人形与非人形两套形象互为替代方案，并行推进，都作为纪念卡片上使用的形象；两套各有一份完整的八张动作插画。人形成品及生图记录继续保留在 [asset/human/cards/final](../../asset/human/cards/final/)，规范见 [卡片形象与生图规范](human.md)。
 
 七个模型的非人形四视图均已确认，图片及完整 prompt 统一归档为终版；豆包沿用现有人形。DeepSeek、Claude、Kimi 的四视图在生成后获用户“都同意”确认。八款纪念卡片动作插画及三款附文呈现已于11月19日全部确认，正式图片与完整 prompt 归档在 [asset/nonhuman/cards/final](../../asset/nonhuman/cards/final/)。人格代号与性格描述继续以 [模型人格设定](../model_character.md)为准。
 
