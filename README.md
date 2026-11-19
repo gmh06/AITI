@@ -29,4 +29,4 @@ AITI 是一项趣味 AI 人格测试活动，计划在学生节前的路演中�
 - [AITI 设计总览](AITI设计总览.md)：测试结构，以及人格分类、模型人格设定和题库计分规则的阅读入口。
 - [结果页文案](docs/result_page.md)：16 个人格的结果页描述文案及对应模型。
 - [原卡片形象与生图规范](docs/art/human.md)：已确认的人形方案插画及生图记录，与非人形方案互为替代、并行推进，两套均用于纪念卡片。
-- [模型形象设定 · 非人形方案](docs/art/nonhuman.md)：七款非人形角色与八款卡片动作插画均已确认；[四视图终版](asset/nonhuman/final/README.md)及[八款动作插画、prompt 与生成记录](asset/nonhuman/cards/final/)已归档，豆包沿用现有人形，与原版平级维护。
+- [模型形象设定 · 非人形方案](docs/art/nonhuman.md)：七款非人形角色与八款卡片动作插画均已确认，**网站上线采用本方案**；[四视图终版](asset/nonhuman/final/README.md)及[八款动作插画、prompt 与生成记录](asset/nonhuman/cards/final/)已归档，豆包沿用现有人形，与原版平级维护。
