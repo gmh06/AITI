@@ -640,7 +640,7 @@ code {
   -webkit-mask-image: radial-gradient(closest-side, black 52%, transparent);
   mask-image: radial-gradient(closest-side, black 52%, transparent);
 }
-.reveal-noise span { position: absolute; inset: 0 -128px -128px 0; background: #c6ceeb; background-size: 128px 128px; }
+.reveal-noise span { position: absolute; inset: 0 -128px -128px 0; background: #33383e; background-size: 128px 128px; }
 .reveal-ring-position { aspect-ratio: 1; transform: translate(-50%, -50%); }
 .reveal-ring {
   position: absolute;

@@ -33,8 +33,8 @@ function getNoiseTexture() {
   if (!ctx) return undefined
   const pixels = ctx.createImageData(128, 128)
   for (let i = 0; i < pixels.data.length; i += 4) {
-    const shade = 150 + Math.random() * 105
-    pixels.data.set([shade * .88, shade * .92, shade, 255], i)
+    const shade = 24 + Math.random() * 76
+    pixels.data.set([shade * .82, shade * .90, shade, 255], i)
   }
   ctx.putImageData(pixels, 0, 0)
   noiseTexture = canvas.toDataURL()
