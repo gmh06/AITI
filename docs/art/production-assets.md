@@ -33,6 +33,6 @@
 
 在 draw.io 中分别放置角色图、背景、官方字标、可编辑文字、卡框和二维码。当前卡面采用无附文形象，不叠加 DeepSeek、Grok、豆包原有的思绪文字、英文条或便签；这些内容继续保留在历史素材与记录中。八款角色及现有道具作为完整插画引用，等比例放入承托区域，不以裁切角色来隐藏溢出。
 
-当前卡面采用并行的铭文版与全彩 Q 版正面，两套均有分层 draw.io 文件，卡背共用 Beyond Context 学生节版式和 AITI 二维码预留区。[当前卡面与历史版本索引](../../asset/design/card-studies/README.md)
+当前卡面采用并行的铭文版与全彩 Q 版正面，两套均有分层 draw.io 文件。卡背共用 Beyond Context 学生节版式和 AITI 测试入口二维码。[当前卡面与历史版本索引](../../asset/design/card-studies/README.md)
 
 [历史 v5 卡面](../../asset/design/card-studies/v5/README.md)采用满版去地板城市背景与浅透明正圆。AITI 与模型名内嵌为独立矢量轮廓，原字符串与字体来源保留供重新构建。
