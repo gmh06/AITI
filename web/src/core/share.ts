@@ -152,7 +152,10 @@ export async function createSharePoster(personality: Personality, dimensions: Di
   const context = canvas.getContext('2d', { alpha: false })
   if (!context) throw new Error('This browser does not support the share-card canvas.')
 
-  const text = personality.shareDescription?.trim()
+  const { description } = personality
+  const text = (typeof description === 'string'
+    ? description
+    : description.map((segment) => segment.text).join('')).trim()
   let fontSize = 28
   let lines: string[] = []
   if (text) {

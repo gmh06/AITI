@@ -36,5 +36,4 @@ export interface Personality {
   model: string
   modelId: ModelId
   description: Text
-  shareDescription?: string
 }

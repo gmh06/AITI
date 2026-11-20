@@ -33,7 +33,6 @@ describe('published quiz content', () => {
     ['Personality codes', ({ personalities }) => { delete personalities.LDRS }],
     ['Personality structure', ({ personalities }) => { Object.assign(personalities.LDRS, { modelId: 'gtp' }) }],
     ['Personality structure', ({ personalities }) => { personalities.LDRS.description = '`未转换的代码`' }],
-    ['Share description', ({ personalities }) => { Object.assign(personalities.LDRS, { shareDescription: [{ text: '文案' }] }) }],
     ['Model distribution', ({ personalities }) => { personalities.LDRS.modelId = 'claude' }],
   ]
 

@@ -205,6 +205,18 @@ test('downloads the visible home background and defers character art until the r
 test('opens the share poster before retest and downloads the generated JPEG', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 })
   await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.addInitScript(() => {
+    const fillText = CanvasRenderingContext2D.prototype.fillText
+    CanvasRenderingContext2D.prototype.fillText = function (
+      this: CanvasRenderingContext2D, ...args: Parameters<CanvasRenderingContext2D['fillText']>
+    ) {
+      if (this.canvas.width === 1080 && this.textBaseline === 'top') {
+        const { dataset } = document.documentElement
+        dataset.posterDescription = (dataset.posterDescription ?? '') + args[0]
+      }
+      fillText.apply(this, args)
+    }
+  })
   const posterAssets: string[] = []
   page.on('request', (request) => {
     if (/\/assets\/poster-[^/]+\.(webp|png)$/.test(new URL(request.url()).pathname)) {
@@ -214,6 +226,8 @@ test('opens the share poster before retest and downloads the generated JPEG', as
   await start(page)
   await answerQuiz(page)
 
+  const description = await page.locator('.result .description').innerText()
+  expect(description.trim()).not.toBe('')
   await expect(page.locator('.result-actions button')).toHaveText(['保存图片', '再测一次'])
   expect(posterAssets).toHaveLength(0)
   const trigger = page.getByRole('button', { name: '保存图片' })
@@ -224,6 +238,8 @@ test('opens the share poster before retest and downloads the generated JPEG', as
   const poster = dialog.getByRole('img', { name: '情绪甜心 · 豆包 宣传图' })
   await expect(poster).toBeVisible()
   await expect.poll(() => poster.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1080)
+  const drawnDescription = await page.locator('html').getAttribute('data-poster-description')
+  expect(drawnDescription?.replace(/\s/gu, '')).toBe(description.replace(/\s/gu, ''))
   expect(posterAssets.filter((asset) => /poster-(gpt|deepseek|glm|grok|kimi|claude|gemini|doubao)-/.test(asset)))
     .toEqual([expect.stringMatching(/poster-doubao-/)])
   const pendingDownload = page.waitForEvent('download')

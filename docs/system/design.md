@@ -61,7 +61,7 @@ web/
 
 ## 二、内容数据
 
-只有两类内容从文档导入：10 道题（题干、选项、权重；【】括起的题目标题不导入），以及 16 个人格的名称、对应模型和结果页描述。分享卡文案直接填写在同一人格条目的 `shareDescription` 字段里。维度名、极名和界面文字写在代码里：
+只有两类内容从文档导入：10 道题（题干、选项、权重；【】括起的题目标题不导入），以及 16 个人格的名称、对应模型和描述。结果页与分享卡共用同一人格条目的 `description`。维度名、极名和界面文字写在代码里：
 
 | 内容 | 位置 | 来源 |
 | :--- | :--- | :--- |
@@ -125,8 +125,7 @@ interface Personality {                     // personalities.json 是 Record<Cod
   persona: string                           // '硬核工程师'
   model: string                             // 'GPT'
   modelId: ModelId
-  description: Text                         // 结果页正文
-  shareDescription?: string                  // 分享卡正文，留空时省略
+  description: Text                         // 结果页与分享卡共用正文
 }
 
 type Text = string | Segment[]
@@ -242,7 +241,7 @@ interface DimensionView {
 ### 1. 合成
 
 1. 加载共用的霓虹底图、字标、二维码及该结果的透明角色图。角色单独绘制在底图上方。
-2. 在 1080 × 1440 的画布上绘制人格名称、本次得分对应的四维条和两端标签。文案读取 `web/src/content/personalities.json` 中该人格的 `shareDescription`，空白时省略。结果页读取 `description`。
+2. 在 1080 × 1440 的画布上绘制人格名称、本次得分对应的四维条和两端标签。正文和结果页共用 `web/src/content/personalities.json` 中该人格的 `description`。描述为富文本片段时，按顺序拼接各片段的文字供画布排版。
 3. 画布底部绘制学生节信息和指向 `https://gmh06.github.io/AITI/` 的二维码。较长的文案自动换行，必要时增加画布高度，确保文案和底部信息栏各有空间。
 4. 导出 JPEG 并以 `<img>` 显示在预览窗口中。
 

@@ -56,11 +56,6 @@ export function validateContent(
         !MODEL_IDS.includes(personality.modelId) || !cleanText(personality.description)) {
       throw new Error(`Personality structure: ${code}`)
     }
-    const { shareDescription } = personality
-    if (shareDescription !== undefined &&
-        (typeof shareDescription !== 'string' || (shareDescription !== '' && !cleanText(shareDescription)))) {
-      throw new Error(`Share description: ${code}`)
-    }
   }
   if (MODEL_IDS.some((modelId) => Object.values(personalities).filter((item) => item.modelId === modelId).length !== 2)) {
     throw new Error('Model distribution')
