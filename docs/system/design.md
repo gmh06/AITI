@@ -61,7 +61,7 @@ web/
 
 ## 二、内容数据
 
-只有两类内容从文档导入：10 道题（题目、场景、选项、权重），以及 16 个人格的名称、对应模型和描述长文。它们存为 JSON。其余文字写在代码里，直接手写：
+只有两类内容从文档导入：10 道题（题干、选项、权重；【】括起的题目标题不导入），以及 16 个人格的名称、对应模型和描述长文。它们存为 JSON。其余文字写在代码里，直接手写：
 
 | 内容 | 位置 | 来源 |
 | :--- | :--- | :--- |
@@ -114,8 +114,7 @@ interface Dimension {                       // dimensions.ts 导出 Dimension[]�
 
 interface Question {                        // questions.json 是 Question[]，10 项按题号排列
   id: number                                // 1..10
-  title: string                             // '凌晨两点的 FIT 楼机房'
-  scene: Text
+  scene: Text                               // 题干，界面上作为本题标题；文档中以【】括起的题目标题不导入
   options: Record<'A' | 'B' | 'C' | 'D', {
     text: Text
     weights: Partial<Record<Pole, 1 | 2>>   // 如 { "H": 2, "Q": 1 }

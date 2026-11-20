@@ -13,7 +13,7 @@
 
 内容与文档不再比对，也没有发布前的逐条核对清单。但首次导入有一次人工审阅，在提交第一版 JSON 之前完成：
 
-- [ ] 运行 `scripts/import-content.ts` 后，对生成的 JSON 与 [tests_design.md](../tests_design.md)、[result_page.md](../result_page.md) 逐项抽查：10 道题的标题、场景、选项，40 个选项的权重，16 个人格的名称、对应模型和描述
+- [ ] 运行 `scripts/import-content.ts` 后，对生成的 JSON 与 [tests_design.md](../tests_design.md)、[result_page.md](../result_page.md) 逐项抽查：10 道题的题干、选项（文档中【】括起的标题不导入），40 个选项的权重，16 个人格的名称、对应模型和描述
 - [ ] 手写的 `dimensions.ts` 中的 4 个维度名、8 个极名和计分表，对照 [aiti_personality.md](../aiti_personality.md) 和 [tests_design.md](../tests_design.md) 第一节逐项核对
 - [ ] 描述中的强调和等宽片段（如 `Segmentation Fault`、`git diff`）已转成 `Segment[]`，文本里没有残留 `**` 或反引号
 - [ ] 审阅时发现的差异，以文档为准改脚本后重新生成，不手改 JSON，也不让模型重新输入文案
