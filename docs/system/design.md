@@ -240,9 +240,9 @@ interface DimensionView {
 
 ### 1. 合成
 
-1. 加载共用的霓虹底图、字标、二维码及该结果的透明角色图。角色单独绘制在底图上方。
-2. 在 1080 × 1440 的画布上绘制人格名称、本次得分对应的四维条和两端标签。正文和结果页共用 `web/src/content/personalities.json` 中该人格的 `description`。描述为富文本片段时，按顺序拼接各片段的文字供画布排版。
-3. 画布底部绘制学生节信息和指向 `https://gmh06.github.io/AITI/` 的二维码。较长的文案自动换行，必要时增加画布高度，确保文案和底部信息栏各有空间。
+1. 打开保存窗口时加载铭文卡纸纹、原字标、模型字样、当前角色图、主视觉衍生城市图和卡背二维码。顶部左侧为 Beyond Context，右侧为 AITI。上半部左列依次为人格名、四字母代号和模型名，右列为角色。
+2. 在宽 1080、起始高 1440 像素的画布上，将低透明度主视觉铺在中间内容区。四维条在上，正文在下，段落首行缩进两个字。正文和结果页共用 `web/src/content/personalities.json` 中该人格的 `description`。描述为富文本片段时，按顺序拼接各片段的文字供画布排版。
+3. 画布底部以铭文卡字体绘制学生节信息，配卡背同款圆角二维码，指向 `https://gmh06.github.io/AITI/`。较长的文案自动换行，必要时增加画布高度，确保文案和底部信息栏各有空间。
 4. 导出 JPEG 并以 `<img>` 显示在预览窗口中。
 
 ### 2. 保存
@@ -264,11 +264,14 @@ interface DimensionView {
 | 资源 | 来源 | 输出 | 单张上限 |
 | :--- | :--- | :--- | :--- |
 | 角色图 ×8 | DeepSeek、Grok、豆包取 `asset/nonhuman/cards/textfree/`，其余取 `asset/nonhuman/cards/final/` | WebP，保持原宽 1024，质量 80 | 150 KB |
-| 宣传图底图 | `design/share-study/backgrounds/neon/01-cyan-canyon-clear-v2.png` | 1080 × 1440 WebP | 250 KB |
+| 分享卡纸纹、字标和模型字样 | `asset/design/card-studies/engraved-v1/fronts.drawio` | 纸纹 WebP、透明字标 PNG | 250 KB |
+| 分享卡内容衬底和二维码 | `asset/design/backgrounds/v3/city-landscape.png`、铭文卡背的 `aiti-qr.png` | 城市背景 WebP、二维码 PNG | 250 KB |
 | 宣传图透明角色 ×8 | `asset/nonhuman/cards/transparent/v1/` | 保留角色与道具，最长边 400 px 的 WebP | 150 KB |
 | 主视觉 | `asset/Festival/` | 是否使用及尺寸随界面设计确定 | 随用途确定 |
 
 揭晓用角色图缺失时，开发模式使用占位图并告警。发布构建仅在设置 `AITI_ALLOW_PLACEHOLDER=1` 时允许揭晓用占位图，上线前须去掉该变量。
+
+分享卡的人格名、代号和活动信息用站酷庆科黄油体，四维标签与正文用得意黑。两份字体子集随站点发布，打开保存窗口时加载。文案新增字符时，可用 `tools/art/prepare-share-fonts.py` 更新字形覆盖。
 
 `check-budget` 在构建后检查首屏 JS（gzip ≤ 150 KB）和 CSS（gzip ≤ 20 KB），超出时构建失败。
 

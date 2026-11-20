@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "AITI Engraved";
+  src: url("../../assets/style/engraved-heading.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AITI Share";
+  src: url("../../assets/style/share-reading.woff2") format("woff2");
+}
+
 .poster-save-actions {
   flex-wrap: wrap;
   align-items: center;

@@ -50,7 +50,7 @@ export function ShareDialog({ code, personality, dimensions, onClose }: ShareDia
       try {
         const { createSharePoster } = await import('../core/share')
         if (!active) return
-        const poster = await createSharePoster(personality, dimensions)
+        const poster = await createSharePoster(code, personality, dimensions)
         if (!active) return
         const file = new File([poster], `AITI-${code}.jpg`, { type: poster.type })
         const url = wechat ? await readDataUrl(file) : (objectUrl = URL.createObjectURL(file))

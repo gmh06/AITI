@@ -27,6 +27,18 @@ mkdirSync(shareDirectory, { recursive: true })
 const framedArt: { scenes: { id: string; foreground: { sourceRect: [number, number, number, number] } }[] } = JSON.parse(
   readFileSync(new URL('asset/design/card-studies/v5/scenes.json', repository), 'utf8'),
 )
+const engravedDirectory = new URL('asset/design/card-studies/engraved-v1/', repository)
+const engravedFronts = readFileSync(new URL('fronts.drawio', engravedDirectory), 'utf8')
+const engravedPages = new Map(Array.from(engravedFronts.matchAll(
+  /<diagram id="engraved-([a-z]+)"[^>]*>([\s\S]*?)<\/diagram>/g,
+), ([, model, page]) => [model, page]))
+
+function engravedLayer(model: string, layer: string) {
+  const pattern = new RegExp(`<mxCell [^>]*?\\bid="${layer}" [^>]*?image=data:image/png,([A-Za-z0-9+/=]+)`)
+  const png = engravedPages.get(model)?.match(pattern)?.[1]
+  if (!png) throw new Error(`Missing engraved card layer: ${model}/${layer}`)
+  return Buffer.from(png, 'base64')
+}
 
 await Promise.all(MODEL_IDS.map(async (model) => {
   const entry = sources.characters.find((source) => source.model === model)
@@ -46,24 +58,35 @@ await Promise.all(MODEL_IDS.map(async (model) => {
   const frame = framedArt.scenes.find(({ id }) => id === model)
   if (!frame) throw new Error(`Missing share-card framing for ${model}.`)
   const [left, top, cropWidth, cropHeight] = frame.foreground.sourceRect
-  await sharp(fileURLToPath(new URL(entry.transparent, repository)))
-    .extract({ left, top, width: cropWidth, height: cropHeight })
-    .resize({ width: 400, height: 400, fit: 'inside' })
-    .webp({ quality: 88 })
-    .toFile(fileURLToPath(new URL(`poster-${model}.webp`, shareDirectory)))
+  await Promise.all([
+    sharp(fileURLToPath(new URL(entry.transparent, repository)))
+      .extract({ left, top, width: cropWidth, height: cropHeight })
+      .resize({ width: 400, height: 400, fit: 'inside' })
+      .webp({ quality: 88 })
+      .toFile(fileURLToPath(new URL(`poster-${model}.webp`, shareDirectory))),
+    sharp(engravedLayer(model, 'model')).png()
+      .toFile(fileURLToPath(new URL(`poster-name-${model}.png`, shareDirectory))),
+  ])
 }))
 
 await Promise.all([
-  sharp(fileURLToPath(new URL('design/share-study/backgrounds/neon/01-cyan-canyon-clear-v2.png', repository)))
-    .resize(1080, 1440)
-    .webp({ quality: 88 })
+  // Sample an area of the engraved card's paper without lettering or linework.
+  sharp(engravedLayer('gpt', 'frame'))
+    .extract({ left: 510, top: 70, width: 252, height: 125 })
+    .extend({ top: 0, bottom: 125, left: 0, right: 252, extendWith: 'mirror' })
+    .webp({ quality: 90 })
     .toFile(fileURLToPath(new URL('poster-background.webp', shareDirectory))),
-  sharp(fileURLToPath(new URL('asset/Festival/BeyondContext/6.png', repository)))
-    .resize({ width: 440 })
-    .png()
+  sharp(fileURLToPath(new URL('asset/design/backgrounds/v3/city-landscape.png', repository)))
+    .resize({ width: 1280 })
+    .webp({ quality: 84 })
+    .toFile(fileURLToPath(new URL('poster-city.webp', shareDirectory))),
+  sharp(engravedLayer('gpt', 'title')).png()
     .toFile(fileURLToPath(new URL('poster-wordmark.png', shareDirectory))),
-  sharp(fileURLToPath(new URL('asset/design/typography/v1/aiti.svg', repository)), { density: 192 })
-    .resize({ width: 96 })
+  sharp(engravedLayer('gpt', 'aiti')).png()
     .png()
     .toFile(fileURLToPath(new URL('poster-aiti.png', shareDirectory))),
+  sharp(fileURLToPath(new URL('aiti-qr.png', engravedDirectory)))
+    .resize({ width: 222, kernel: 'nearest' })
+    .png()
+    .toFile(fileURLToPath(new URL('poster-qr.png', shareDirectory))),
 ])

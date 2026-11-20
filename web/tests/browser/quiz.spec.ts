@@ -213,6 +213,10 @@ test('opens the share poster before retest and downloads the generated JPEG', as
       if (this.canvas.width === 1080 && this.textBaseline === 'top') {
         const { dataset } = document.documentElement
         dataset.posterDescription = (dataset.posterDescription ?? '') + args[0]
+        dataset.posterBodyPositions = [dataset.posterBodyPositions, args[1]].filter(Boolean).join(',')
+      }
+      if (this.canvas.width === 1080 && /^[A-Z]( [A-Z]){3}$/.test(args[0])) {
+        document.documentElement.dataset.posterCode = args[0].replaceAll(' ', '')
       }
       fillText.apply(this, args)
     }
@@ -240,6 +244,11 @@ test('opens the share poster before retest and downloads the generated JPEG', as
   await expect.poll(() => poster.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1080)
   const drawnDescription = await page.locator('html').getAttribute('data-poster-description')
   expect(drawnDescription?.replace(/\s/gu, '')).toBe(description.replace(/\s/gu, ''))
+  await expect(page.locator('html')).toHaveAttribute('data-poster-code', 'HQUA')
+  const positions = await page.locator('html').getAttribute('data-poster-body-positions')
+  const [firstLine, nextLine] = (positions ?? '').split(',').map(Number)
+  expect(firstLine - nextLine).toBe(68)
+  expect(posterAssets.some((asset) => /poster-qr-[^/]+\.png$/.test(asset))).toBe(true)
   expect(posterAssets.filter((asset) => /poster-(gpt|deepseek|glm|grok|kimi|claude|gemini|doubao)-/.test(asset)))
     .toEqual([expect.stringMatching(/poster-doubao-/)])
   const pendingDownload = page.waitForEvent('download')
