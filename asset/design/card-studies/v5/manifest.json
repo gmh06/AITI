@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "version": "v5",
+  "status": "saved-card-front-version",
+  "constraints": {
+    "visibleLabels": [
+      "Beyond Context",
+      "AITI",
+      "modelName"
+    ],
+    "noCharacterCaptions": true,
+    "floorExcluded": true,
+    "backingShape": "true-circle",
+    "completeForegroundInsideBacking": true,
+    "noCharacterClipping": true,
+    "characterSourceRectsUnchanged": true
+  },
+  "method": "Analytic composition of existing illustrations, editable vector/text/frame layers and original raster inputs; no new generated character art.",
+  "source": "scenes.json",
+  "drawio": "refined.drawio",
+  "layoutWidth": 600,
+  "layoutHeight": 900,
+  "previewWidth": 1200,
+  "previewHeight": 1800,
+  "layers": [
+    "paper",
+    "scene",
+    "backing",
+    "character",
+    "brand",
+    "information"
+  ],
+  "assets": [
+    {
+      "model": "gpt",
+      "file": "gpt.png",
+      "name": "GPT"
+    },
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "name": "DeepSeek"
+    },
+    {
+      "model": "glm",
+      "file": "glm.png",
+      "name": "GLM"
+    },
+    {
+      "model": "grok",
+      "file": "grok.png",
+      "name": "Grok"
+    },
+    {
+      "model": "kimi",
+      "file": "kimi.png",
+      "name": "Kimi"
+    },
+    {
+      "model": "claude",
+      "file": "claude.png",
+      "name": "Claude"
+    },
+    {
+      "model": "gemini",
+      "file": "gemini.png",
+      "name": "Gemini"
+    },
+    {
+      "model": "doubao",
+      "file": "doubao.png",
+      "name": "豆包"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "asset/design/backgrounds/v3/city-tall.png",
+      "width": 887,
+      "height": 1774,
+      "sha256": "6868c2242ce0ba2f35fff0daabafe3711e660be26bffe8ea8097b4db20b4ac85"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/gpt.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b5135d577898147376e1c84acb8a62093f67a59e2b53328448ba05f3160f35d9"
+    },
+    {
+      "file": "asset/Festival/BeyondContext/4.png",
+      "width": 3976,
+      "height": 1269,
+      "sha256": "89c24f85aee05bfe297d8142b05791898dcef955b62eac9b78c0cbd61364caea"
+    },
+    {
+      "file": "asset/design/typography/v1/aiti.svg",
+      "sha256": "0a9675d0da726e388293ed4712d1cca8f5253702beeaef6be903a489e2114ec5"
+    },
+    {
+      "file": "asset/design/typography/v1/aiti.json",
+      "sha256": "98d790904cb36d8f661b97d23abc9591ea8dbd2c86be823bc6bd0962987ed46f"
+    },
+    {
+      "file": "asset/design/typography/v1/gpt.svg",
+      "sha256": "feee2607c083c996c836cc27b03166dcf5512854165e93e4a0bbf72b7a50adc8"
+    },
+    {
+      "file": "asset/design/typography/v1/gpt.json",
+      "sha256": "aff7c3f665940c016788f77f3ed2fee3c803added5d8a8ca1773d201e3bc2b5e"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/deepseek.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "bf2ba48f4403159355e9c59c39bb3f71087766ab23f450e99edc1d29e3d3c2ab"
+    },
+    {
+      "file": "asset/design/typography/v1/deepseek.svg",
+      "sha256": "1bae9ccbe99f640c7b885dc0746edd44ea15d0a9c751d81c02b64196a06d298e"
+    },
+    {
+      "file": "asset/design/typography/v1/deepseek.json",
+      "sha256": "812615e4ccb693d64dc84d088cb56fde8f4e54fb70bfab5635db5ddc57cbb173"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/glm.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "62e71976a3bfe3166621df585e8d9c0b3ccbffea312532a3de3b0e3baaaaa426"
+    },
+    {
+      "file": "asset/design/typography/v1/glm.svg",
+      "sha256": "a0b549bf0f87157d25ef9f0c7e6ae90f9252ac20e34b5cef903584a0f76fadf5"
+    },
+    {
+      "file": "asset/design/typography/v1/glm.json",
+      "sha256": "6566ee1ecc72e975c4a82246a56e14a27bb10a2bf298fd11847903d181b5197d"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/grok.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6c7753ac3cc2c1b647c01f63e6b5fc4407723d1a7fe75ca34f86eae2a08507fa"
+    },
+    {
+      "file": "asset/design/typography/v1/grok.svg",
+      "sha256": "64e926b324c9daa4d8bc9bd74877e4911936bdeb2b4f8661ebfac3c742158730"
+    },
+    {
+      "file": "asset/design/typography/v1/grok.json",
+      "sha256": "04d873c3cbd15c6678466e3495082ed2e0fbe4f5fac71cff9d53c01881246c56"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/kimi.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "fade397249d0b3435619d2f343d897b8908afbec769996c8ec9554159452ae22"
+    },
+    {
+      "file": "asset/design/typography/v1/kimi.svg",
+      "sha256": "ef290d1f3dbc579ede77038ae705f30cf2505129913184a0461aea4c2d2eba4b"
+    },
+    {
+      "file": "asset/design/typography/v1/kimi.json",
+      "sha256": "60e23a95051a418c89d47b072747d3096982a0ea1840d4f2cd723e55f66ade58"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/claude.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5949579f706d1b70ae0043cbf144eef823835946c17044d39b8f9fc6224aaefc"
+    },
+    {
+      "file": "asset/design/typography/v1/claude.svg",
+      "sha256": "208629d666672b05a96fbfd884979b0d6fbd4c23cff33b875ef89997ddabc1be"
+    },
+    {
+      "file": "asset/design/typography/v1/claude.json",
+      "sha256": "c18034775103733d301c5ddfed9bf55898d9f3a9f88e481ae291ce72d46ebc7e"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/gemini.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b355bef94dbf31211c7820c40f1b0ed2df1439c53648d997ee4d47ab738a1740"
+    },
+    {
+      "file": "asset/design/typography/v1/gemini.svg",
+      "sha256": "47fde9b7f801abfa99467f966e78e286c45f4c2907dacbe5cd9d05d77c993650"
+    },
+    {
+      "file": "asset/design/typography/v1/gemini.json",
+      "sha256": "c21e3504d771b01a40762b326b350526b7e99aa4711bbcd26e8043ee5304690d"
+    },
+    {
+      "file": "asset/nonhuman/cards/transparent/v1/doubao.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "19b0dcf94a3d360d84d034325b6379b929cde5624f7c490ff573c985e91f7141"
+    },
+    {
+      "file": "asset/design/typography/v1/doubao.svg",
+      "sha256": "da3590f684513456075c5b1a272e28a0c675b07651c6544ada05296992293fe3"
+    },
+    {
+      "file": "asset/design/typography/v1/doubao.json",
+      "sha256": "282b33bdb9cb2a5ef27cd379b435bdc6bedd9b87256753daf7490e71c9f14c72"
+    }
+  ]
+}

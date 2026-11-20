@@ -1,0 +1,16 @@
+{
+  "id": "gpt-transparent-v1",
+  "model": "gpt",
+  "file": "gpt.png",
+  "source": "asset/nonhuman/cards/final/gpt.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep exactly four connected legs/paws, the silver knot on the horn, the entire pale white/lavender dragon and the schematic paper underneath. White scales, wing membranes and the white paper are foreground, not background. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-296ff708-57a9-4d27-9547-cd7f02f558be.png",
+  "sourceSha256": "2aff9706db43e8cc9ccbec7c076e5bd13c8f32df2031b08b747c38ca4fbb6167",
+  "sha256": "b5135d577898147376e1c84acb8a62093f67a59e2b53328448ba05f3160f35d9",
+  "bytes": 1549412,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}

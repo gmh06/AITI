@@ -1,0 +1,29 @@
+{
+  "id": "landscape-content",
+  "file": "landscape-content.png",
+  "titleZh": "横版背景 · 左侧内容留白",
+  "targetWidth": 2048,
+  "targetHeight": 1152,
+  "ratio": "16:9",
+  "quietZones": [
+    {
+      "role": "headline-instructions-or-content",
+      "x": 0.07,
+      "y": 0.14,
+      "w": 0.52,
+      "h": 0.69
+    }
+  ],
+  "spec": "Create a WIDE LANDSCAPE 2048 x 1152 background, exactly 16:9, as an optional text/QR content composition background. Put the richest city architecture and foreground spires in the rightmost third and along the extreme outer edges, with cyan depth and wet reflections. The left-to-center region around x=7%..59%, y=14%..83% should be a broad low-detail luminous pale icy-blue/cyan atmospheric area for later independently placed title/instructions/content. Blend it naturally into the detailed right-hand city, no hard vertical split and no drawn white card. Keep strong facade lines, holographic panels and window noise outside that left content area. No text, labels, character or QR. Preserve the same indigo-blue painted edges and magenta/warm attached building accents.",
+  "intent": "generate-with-reference",
+  "source": "asset/design/backgrounds/v3/city-portrait-clean.png",
+  "prompt": "Use case: stylized-concept. Image 1 is a CLEAN blue/cyan futuristic city illustration used as the style, visual-world and palette reference. Generate a matching standalone BACKGROUND PLATE, not a finished card or webpage. Preserve its recognizable hand-painted digital concept-art language: confidently blocked tall spires, layered city-canyon depth, visible broad painted strokes, flecked/splattered outer-edge texture, indigo and blue-violet building shadows, luminous cyan/azure air, restrained magenta building lights, sparse warm amber windows, atmospheric ground mist and wet-stone reflections. Avoid photorealism, smooth 3D, pastel stationery, generic gradient-only backgrounds and muddy blurred forms. No people, animals, mascots, letters, numbers, title, wordmark, readable code, logos, watermark, QR, text placeholders, card outlines, layout guides or embedded content blocks. Very important: the SKY contains ONLY sky and natural atmospheric brushwork; NO gray/beige elongated capsules, floating flying blobs, aircraft, spacecraft, comets, meteors, fish, streaking debris or attached pink glowing tips. Tiny building lights stay attached to buildings. Decorative holographic scenery, when present, stays near building edges and contains abstract line/block geometry with NO readable glyphs. Create a WIDE LANDSCAPE 2048 x 1152 background, exactly 16:9, as an optional text/QR content composition background. Put the richest city architecture and foreground spires in the rightmost third and along the extreme outer edges, with cyan depth and wet reflections. The left-to-center region around x=7%..59%, y=14%..83% should be a broad low-detail luminous pale icy-blue/cyan atmospheric area for later independently placed title/instructions/content. Blend it naturally into the detailed right-hand city, no hard vertical split and no drawn white card. Keep strong facade lines, holographic panels and window noise outside that left content area. No text, labels, character or QR. Preserve the same indigo-blue painted edges and magenta/warm attached building accents.",
+  "generatedSource": "exec-4b741eb8-b208-472d-b739-34d74eb98f51.png",
+  "transparent_background": false,
+  "sourceSha256": "805ab2a0f1fe2a0727cfe72b2a6e605b4586d9e31c5fb1a523b81c0c144dc0c2",
+  "sha256": "591e334a0dc9d0682729ee5efdf457494c5991e998d3123f2d157a18e95e93fe",
+  "bytes": 2125515,
+  "width": 1672,
+  "height": 941,
+  "status": "generated-awaiting-review"
+}

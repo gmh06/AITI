@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "coordinateSystem": "1024 x 1536 original image pixels; rectangle rotation around its center in degrees",
+  "method": "Editable draw.io pages with original raster and separate opaque white vector masks; deterministic PNG export from the same geometry",
+  "outputs": [
+    {"model":"deepseek","source":"asset/nonhuman/cards/final/deepseek.png","file":"deepseek.png","mask":{"x":470,"y":190,"width":520,"height":110,"rotation":0}},
+    {"model":"grok","source":"asset/nonhuman/cards/final/grok.png","file":"grok.png","mask":{"x":20,"y":90,"width":450,"height":155,"rotation":0}},
+    {"model":"doubao","source":"asset/nonhuman/cards/final/doubao.png","file":"doubao.png","mask":{"x":45,"y":1220,"width":940,"height":350,"rotation":-3.4}}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "deepseek-transparent-v1",
+  "model": "deepseek",
+  "source": "asset/nonhuman/cards/textfree/deepseek.png",
+  "file": "deepseek.png",
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the entire blue-white whale, both flippers, the tail flukes and ALL THREE small mouth bubbles on the upper right as one compositing asset. Preserve white belly and white patches. Do not add thought dots or captions. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "input": [
+    "asset/nonhuman/cards/textfree/deepseek.png"
+  ],
+  "transparent_background": true,
+  "generatedSource": "exec-8f343557-0cb9-4550-8853-0d0734ee41a2.png",
+  "sha256": "bf2ba48f4403159355e9c59c39bb3f71087766ab23f450e99edc1d29e3d3c2ab",
+  "bytes": 1126618,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "sourceSha256": "147bc095a2c66d6ca02b714f6b52da13c0515b2ef01656605dd5e1333b4e5f7f",
+  "status": "generated-awaiting-review"
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "status": "generated-awaiting-review",
+  "generator": "built-in image_gen",
+  "images": [
+    {
+      "id": "context-atmosphere-v1",
+      "file": "context-atmosphere.png",
+      "references": [
+        {
+          "file": "asset/Festival/background/3.jpg",
+          "role": "festival navy/cyan atmospheric architecture reference only; do NOT copy lettering, people, scene or poster composition"
+        },
+        {
+          "file": "asset/nonhuman/cards/final/gemini.png",
+          "role": "delicate low-saturation illustration compatibility only; do NOT include the cat"
+        }
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Asset type: reusable TEXT-FREE environmental background layer for AITI, a Tsinghua CS student festival activity themed Beyond Context. Image 1 is a palette and ambient-space reference ONLY: navy blue, soft cyan light, a sense of opening toward a larger space. Do not reproduce its lettering, people, buildings or finished poster. Image 2 is a softness/palette compatibility reference ONLY; do NOT include the cat, cushion, stars or any character. Create ONE portrait 1024 x 1536 illustration background: spacious airy near-white central field covering roughly the middle two thirds, fading gently toward very pale icy cyan and lavender atmosphere at the perimeter; only at the outer lower edges, a few understated distant futuristic architectural silhouettes and fine light trails suggesting depth and a larger world beyond the visible frame. Crisp restrained digital illustration, low saturation, subtle clean light, no watercolor grain or muddy blur. Keep central area quiet and luminous for later independent character compositing. No characters, mascot, animals, humans, logos, wordmarks, letters, numbers, QR, symbols that resemble writing, captions, rectangular UI panels, badges, frames, card border, title, fixed copy space boxes, or integrated layout. This is a single seamless background plate, not a card, poster, collage, template sheet or completed design. Keep navy confined to sparse edge accents; no heavy dark rectangle behind the central subject. Do not embed Beyond Context text; official existing wordmarks will be placed separately in draw.io."
+    }
+  ]
+}

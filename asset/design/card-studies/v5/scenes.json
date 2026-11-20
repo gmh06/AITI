@@ -1,0 +1,1547 @@
+{
+  "schemaVersion": 3,
+  "date": "2026-11-20",
+  "status": "saved-card-front-version",
+  "nominalSize": [
+    600,
+    900
+  ],
+  "renderScale": 2,
+  "method": "Analytic draw.io composition with a true circular translucent backing and portable outlined display typography.",
+  "notes": [
+    "Only official Beyond Context wordmark, AITI and model name are visible.",
+    "Official wordmark at upper left, AITI at upper right, model name at lower left.",
+    "Equal-width-and-height circle; complete caption-free character and props fitted uniformly inside.",
+    "Full city viewport above the floor, unchanged from v4.",
+    "Lettering is independent vector art; original strings and font sources remain in the scene and outline metadata."
+  ],
+  "scenes": [
+    {
+      "id": "gpt",
+      "model": "gpt",
+      "title": "GPT · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#9A88BC",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 93.39831758270563,
+        "y": 299.751662478251,
+        "w": 414.02977156425794,
+        "h": 328.49667504349804,
+        "sourceRect": [
+          13,
+          395,
+          1002,
+          795
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/gpt.png",
+          "x": 93.39831758270563,
+          "y": 299.751662478251,
+          "w": 414.02977156425794,
+          "h": 328.49667504349804,
+          "sourceRect": [
+            13,
+            395,
+            1002,
+            795
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "GPT",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/gpt.svg",
+          "outlineFile": "asset/design/typography/v1/gpt.json",
+          "w": 139.49511854951186,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "GPT",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            513.0,
+            792.5
+          ],
+          "radius": 614.7094182102798
+        },
+        "fitScale": 0.41320336483458875,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "deepseek",
+      "model": "deepseek",
+      "title": "DeepSeek · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#668ACA",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 116.66839549464996,
+        "y": 275.67669339178155,
+        "w": 366.6632090107001,
+        "h": 377.10040431669773,
+        "sourceRect": [
+          102,
+          413,
+          808,
+          831
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/deepseek.png",
+          "x": 116.66839549464996,
+          "y": 275.67669339178155,
+          "w": 366.6632090107001,
+          "h": 377.10040431669773,
+          "sourceRect": [
+            102,
+            413,
+            808,
+            831
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "DeepSeek",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/deepseek.svg",
+          "outlineFile": "asset/design/typography/v1/deepseek.json",
+          "w": 258.75639658848615,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "DeepSeek",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            506.0,
+            828.0
+          ],
+          "radius": 559.728914590967
+        },
+        "fitScale": 0.4537911002607674,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "glm",
+      "model": "glm",
+      "title": "GLM · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#7A7B8D",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 63.22634045847795,
+        "y": 308.0815333938901,
+        "w": 474.4740261653984,
+        "h": 312.300286753397,
+        "sourceRect": [
+          0,
+          438,
+          1024,
+          674
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/glm.png",
+          "x": 63.22634045847795,
+          "y": 308.0815333938901,
+          "w": 474.4740261653984,
+          "h": 312.300286753397,
+          "sourceRect": [
+            0,
+            438,
+            1024,
+            674
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "GLM",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/glm.svg",
+          "outlineFile": "asset/design/typography/v1/glm.json",
+          "w": 142.37276129712896,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "GLM",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            511.0,
+            774.5
+          ],
+          "radius": 548.1775306059268
+        },
+        "fitScale": 0.4633535411771469,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "grok",
+      "model": "grok",
+      "title": "Grok · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#A16483",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 84.41368023468584,
+        "y": 224.6248449502374,
+        "w": 431.5974401607077,
+        "h": 479.1751107296046,
+        "sourceRect": [
+          7,
+          270,
+          1016,
+          1128
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/grok.png",
+          "x": 84.41368023468584,
+          "y": 224.6248449502374,
+          "w": 431.5974401607077,
+          "h": 479.1751107296046,
+          "sourceRect": [
+            7,
+            270,
+            1016,
+            1128
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "Grok",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/grok.svg",
+          "outlineFile": "asset/design/typography/v1/grok.json",
+          "w": 152.65279583875162,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "Grok",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            514.5,
+            833.5
+          ],
+          "radius": 597.9275500427167
+        },
+        "fitScale": 0.42480063007943675,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "kimi",
+      "model": "kimi",
+      "title": "Kimi · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#6D7EB8",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 107.66652288572575,
+        "y": 253.43174627444017,
+        "w": 385.10111557643626,
+        "h": 421.5706687990074,
+        "sourceRect": [
+          45,
+          306,
+          887,
+          971
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/kimi.png",
+          "x": 107.66652288572575,
+          "y": 253.43174627444017,
+          "w": 385.10111557643626,
+          "h": 421.5706687990074,
+          "sourceRect": [
+            45,
+            306,
+            887,
+            971
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "Kimi",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/kimi.svg",
+          "outlineFile": "asset/design/typography/v1/kimi.json",
+          "w": 117.45318595578674,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "Kimi",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            488.0,
+            791.0
+          ],
+          "radius": 585.0359577971205
+        },
+        "fitScale": 0.43416134788775224,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "claude",
+      "model": "claude",
+      "title": "Claude · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#D48C5D",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 67.31695687324859,
+        "y": 335.0371103615427,
+        "w": 465.86594241489223,
+        "h": 258.42563543830397,
+        "sourceRect": [
+          47,
+          511,
+          932,
+          517
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/claude.png",
+          "x": 67.31695687324859,
+          "y": 335.0371103615427,
+          "w": 465.86594241489223,
+          "h": 258.42563543830397,
+          "sourceRect": [
+            47,
+            511,
+            932,
+            517
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "Claude",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/claude.svg",
+          "outlineFile": "asset/design/typography/v1/claude.json",
+          "w": 210.33094928478545,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "Claude",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            512.5,
+            769.0
+          ],
+          "radius": 508.1461820816558
+        },
+        "fitScale": 0.49985616138936934,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "gemini",
+      "model": "gemini",
+      "title": "Gemini · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#AC91CD",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 139.58117282111849,
+        "y": 230.85292059362087,
+        "w": 321.21644733811456,
+        "h": 466.29415881275827,
+        "sourceRect": [
+          58,
+          158,
+          848,
+          1231
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/gemini.png",
+          "x": 139.58117282111849,
+          "y": 230.85292059362087,
+          "w": 321.21644733811456,
+          "h": 466.29415881275827,
+          "sourceRect": [
+            58,
+            158,
+            848,
+            1231
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "Gemini",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/gemini.svg",
+          "outlineFile": "asset/design/typography/v1/gemini.json",
+          "w": 195.87646293888167,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "Gemini",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            481.5,
+            773.5
+          ],
+          "radius": 670.5509689336578
+        },
+        "fitScale": 0.3787929803515502,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    },
+    {
+      "id": "doubao",
+      "model": "doubao",
+      "title": "豆包 · 圆形承托讨论稿",
+      "width": 600,
+      "height": 900,
+      "accent": "#B87865",
+      "frame": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "foreground": {
+        "x": 173.43552381589754,
+        "y": 212.38808758605657,
+        "w": 253.56239235513678,
+        "h": 503.6572648148187,
+        "sourceRect": [
+          170,
+          56,
+          585,
+          1162
+        ]
+      },
+      "ops": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "fill": "#1E4272",
+          "opacity": 1,
+          "radius": 0,
+          "layer": "paper"
+        },
+        {
+          "type": "image",
+          "file": "asset/design/backgrounds/v3/city-tall.png",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 900,
+          "sourceRect": [
+            0,
+            0,
+            887,
+            1330.5
+          ],
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 155,
+          "fill": "#17345E",
+          "opacity": 0.18,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 775,
+          "w": 600,
+          "h": 125,
+          "fill": "#122D51",
+          "opacity": 0.35,
+          "radius": 0,
+          "layer": "scene"
+        },
+        {
+          "type": "ellipse",
+          "x": 26,
+          "y": 190,
+          "w": 548,
+          "h": 548,
+          "fill": "#F4FAFF",
+          "opacity": 0.77,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 1.2,
+          "layer": "backing"
+        },
+        {
+          "type": "image",
+          "file": "asset/nonhuman/cards/transparent/v1/doubao.png",
+          "x": 173.43552381589754,
+          "y": 212.38808758605657,
+          "w": 253.56239235513678,
+          "h": 503.6572648148187,
+          "sourceRect": [
+            170,
+            56,
+            585,
+            1162
+          ],
+          "radius": 0,
+          "layer": "character"
+        },
+        {
+          "type": "image",
+          "file": "asset/Festival/BeyondContext/4.png",
+          "x": 44,
+          "y": 40,
+          "w": 258,
+          "h": 82.35,
+          "sourceRect": [
+            0.13114754098364756,
+            0,
+            3975.7377049180327,
+            1269
+          ],
+          "radius": 0,
+          "layer": "brand",
+          "fit": "cover"
+        },
+        {
+          "type": "lettering",
+          "value": "AITI",
+          "fontFamily": "Audiowide",
+          "file": "asset/design/typography/v1/aiti.svg",
+          "outlineFile": "asset/design/typography/v1/aiti.json",
+          "w": 79.09902370990237,
+          "h": 28,
+          "fill": "#FFFFFF",
+          "x": 476.9009762900976,
+          "y": 48,
+          "layer": "brand"
+        },
+        {
+          "type": "lettering",
+          "value": "豆包",
+          "fontFamily": "ZCOOL QingKe HuangYou",
+          "file": "asset/design/typography/v1/doubao.svg",
+          "outlineFile": "asset/design/typography/v1/doubao.json",
+          "w": 66.04575163398692,
+          "h": 43,
+          "fill": "#FFFFFF",
+          "x": 44,
+          "y": 813,
+          "layer": "information"
+        }
+      ],
+      "name": "豆包",
+      "containment": {
+        "backingType": "circle",
+        "center": [
+          300,
+          464
+        ],
+        "radius": 274,
+        "nativeSilhouetteCircle": {
+          "center": [
+            462.0,
+            636.5
+          ],
+          "radius": 586.0096153055948
+        },
+        "fitScale": 0.43343998693185776,
+        "minimumMargin": 20,
+        "alphaThreshold": 16,
+        "sourceRectUnchanged": true,
+        "method": "Enclose the approved crop silhouette, including all props; uniform scale, no circle clipping."
+      },
+      "backingGeometry": {
+        "type": "circle",
+        "x": 26,
+        "y": 190,
+        "w": 548,
+        "h": 548
+      },
+      "backgroundViewport": {
+        "file": "asset/design/backgrounds/v3/city-tall.png",
+        "sourceRect": [
+          0,
+          0,
+          887,
+          1330.5
+        ],
+        "sourceHeight": 1774,
+        "floorExcluded": true
+      }
+    }
+  ],
+  "layers": [
+    "paper",
+    "scene",
+    "backing",
+    "character",
+    "brand",
+    "information"
+  ],
+  "constraints": {
+    "visibleLabels": [
+      "Beyond Context",
+      "AITI",
+      "modelName"
+    ],
+    "noCharacterCaptions": true,
+    "floorExcluded": true,
+    "backingShape": "true-circle",
+    "completeForegroundInsideBacking": true,
+    "noCharacterClipping": true,
+    "characterSourceRectsUnchanged": true
+  },
+  "variant": "panel",
+  "previewLabels": false
+}

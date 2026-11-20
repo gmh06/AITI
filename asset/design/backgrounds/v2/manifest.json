@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "status": "generated-awaiting-review",
+  "generator": "built-in image_gen",
+  "promptsFile": "prompts.json",
+  "historyFile": "history.json",
+  "assets": [
+    {
+      "file": "context-atmosphere.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2247369,
+      "sha256": "ff031d7e4fb38353ec7fd5d109ae3aaf494108003238b2dd7aa88dc08267c938",
+      "revision": "context-atmosphere-v2"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-19",
+  "rgbaImages": 8,
+  "whiteVariants": [
+    {
+      "model": "deepseek",
+      "changedOutsideMask": 0
+    },
+    {
+      "model": "grok",
+      "changedOutsideMask": 0
+    },
+    {
+      "model": "doubao",
+      "changedOutsideMask": 0
+    }
+  ],
+  "unchangedApprovedOriginals": 23,
+  "drawioPages": 3,
+  "backgrounds": 1,
+  "assets": [
+    {
+      "model": "gpt",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 1090871,
+      "foregroundMeanAbsoluteRGBChange": 6.374
+    },
+    {
+      "model": "deepseek",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 1231777,
+      "foregroundMeanAbsoluteRGBChange": 4.1043
+    },
+    {
+      "model": "glm",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 1171168,
+      "foregroundMeanAbsoluteRGBChange": 8.2681
+    },
+    {
+      "model": "grok",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 803572,
+      "foregroundMeanAbsoluteRGBChange": 7.4993
+    },
+    {
+      "model": "kimi",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 1080577,
+      "foregroundMeanAbsoluteRGBChange": 5.6315
+    },
+    {
+      "model": "claude",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 1268593,
+      "foregroundMeanAbsoluteRGBChange": 6.6535
+    },
+    {
+      "model": "gemini",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 919907,
+      "foregroundMeanAbsoluteRGBChange": 5.7769
+    },
+    {
+      "model": "doubao",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixels": 1140290,
+      "foregroundMeanAbsoluteRGBChange": 7.423
+    }
+  ],
+  "visualReview": "Light and dark composite previews inspected; subjects, action props and ornaments retained. Generated cutouts may change edge/color pixels; use white sources for original-pixel animation requirements."
+}

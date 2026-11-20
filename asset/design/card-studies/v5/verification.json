@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-20",
+  "version": "v5",
+  "cards": 8,
+  "drawioPages": 8,
+  "onlyThreeLabels": true,
+  "allBackingsTrueCircles": true,
+  "characterSourceRectsUnchanged": true,
+  "characterAspectRatiosPreserved": true,
+  "visibleForegroundInsideCircle": true,
+  "silhouetteAlphaThreshold": 16,
+  "noCircleClipping": true,
+  "floorExcluded": true,
+  "verifiedInputHashes": 28,
+  "verifiedFontAndLicenseFiles": 4,
+  "verifiedEmbeddedAssets": 40,
+  "priorStudyInputHashesUnchanged": 10,
+  "visualReview": "Eight-card overview and three-card close view inspected: legible labels, circular backing, centered complete characters and props.",
+  "sceneSha256": "bb7b0db99c7fa4383b68ec2e087ee90352a095208fc9633f7ed1b789ee3554b7",
+  "drawioSha256": "de9734f76e5372c1007e8030b8957d0e57364e2a8e32a75aae88df4ec6137fa9",
+  "outputs": [
+    {
+      "model": "gpt",
+      "file": "gpt.png",
+      "sha256": "071caeb87fb4e1f6b13aceb3d86cef1c247424454afa3010844fe33495b60bdc",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.4132
+    },
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "sha256": "5da97a360838eb47e8c81ea9c9e03072d8f2aaa118e52d48fe0687748a476e35",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.45379
+    },
+    {
+      "model": "glm",
+      "file": "glm.png",
+      "sha256": "cae533dda828e8079e9c67b1b695efc32530b17447beac55747730257fef910e",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.46335
+    },
+    {
+      "model": "grok",
+      "file": "grok.png",
+      "sha256": "ade204f3022173b265768ee67c152c065661d803b84867835d5fcc9cc5514a38",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.4248
+    },
+    {
+      "model": "kimi",
+      "file": "kimi.png",
+      "sha256": "1b042b9bba30d7092574ae94a05e24fc36e6d917bb92464752b3cb83eb93a472",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.43416
+    },
+    {
+      "model": "claude",
+      "file": "claude.png",
+      "sha256": "dbc240b1f5cfba0e1879f7ee1d59179ecc3484d1739b162d568cb754b88466dd",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.49986
+    },
+    {
+      "model": "gemini",
+      "file": "gemini.png",
+      "sha256": "04a40b5e96287f86e9d3d9fd0ec06962e1b3836e00f2a1ff2e5810758b026e85",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.37879
+    },
+    {
+      "model": "doubao",
+      "file": "doubao.png",
+      "sha256": "981467a5333fcb9462bffd88ea09e2bc439c5babffd697b512fa517eea8da4e5",
+      "circleDiameter": 548,
+      "minimumVisibleSilhouetteMargin": 20.43344
+    }
+  ],
+  "status": "saved-card-front-version"
+}

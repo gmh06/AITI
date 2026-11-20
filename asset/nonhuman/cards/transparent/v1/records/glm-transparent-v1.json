@@ -1,0 +1,16 @@
+{
+  "id": "glm-transparent-v1",
+  "model": "glm",
+  "file": "glm.png",
+  "source": "asset/nonhuman/cards/final/glm.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete fox, fine white fur, white tail tip, forehead sleep mask, low keyboard and monitor as one asset. Keep the lavender keycap physically seated in its corrected grid position under the left front paw. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-ca74fc22-d147-4f13-872a-c7e0a98c1eae.png",
+  "sourceSha256": "c6f0c7b3416ccd2ae714d456dc618e678b56cc6a8849d028e632e42020580558",
+  "sha256": "62e71976a3bfe3166621df585e8d9c0b3ccbffea312532a3de3b0e3baaaaa426",
+  "bytes": 1381649,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}

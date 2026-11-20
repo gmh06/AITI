@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "generator": "built-in image_gen",
+  "status": "generated-awaiting-review",
+  "promptsFile": "prompts.json",
+  "historyFile": "history.json",
+  "assets": [
+    {
+      "file": "context-atmosphere.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1463798,
+      "sha256": "00b02e643e3842fc2b5945c05da2d9e16c400dbc29cb761c43a71e0faa012fb4",
+      "role": "Text-free background plate; no integrated card or page layout"
+    }
+  ]
+}

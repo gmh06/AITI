@@ -1,0 +1,29 @@
+{
+  "id": "card-character",
+  "file": "card-character.png",
+  "titleZh": "卡面背景 · 中央角色区浅化",
+  "targetWidth": 1024,
+  "targetHeight": 1536,
+  "ratio": "2:3",
+  "quietZones": [
+    {
+      "role": "character",
+      "x": 0.14,
+      "y": 0.15,
+      "w": 0.72,
+      "h": 0.68
+    }
+  ],
+  "spec": "Create a PORTRAIT 1024 x 1536 background, exactly 2:3, for later overlay of one existing character together with its action props. Keep recognizable saturated blue-violet painted architecture and spires anchored to the narrow side edges and bottom corners, with wet-plaza hints near the bottom. Across approximately x=14%..86%, y=15%..83%, create a broad quiet luminous pale icy-blue/cyan atmospheric space with very low-detail distant silhouettes; enough gentle cool color to separate white fur/scales from the background. This is soft atmospheric clearing, NOT a white oval, rectangle, spotlight sticker or empty cutout. Keep high-contrast facade lines, windows, holographic panels, bright magenta lights and dense flecks OUT of the character clearing. Retain the accepted city painting style at the perimeter so it still belongs to the same world.",
+  "intent": "generate-with-reference",
+  "source": "asset/design/backgrounds/v3/city-portrait-clean.png",
+  "prompt": "Use case: stylized-concept. Image 1 is a CLEAN blue/cyan futuristic city illustration used as the style, visual-world and palette reference. Generate a matching standalone BACKGROUND PLATE, not a finished card or webpage. Preserve its recognizable hand-painted digital concept-art language: confidently blocked tall spires, layered city-canyon depth, visible broad painted strokes, flecked/splattered outer-edge texture, indigo and blue-violet building shadows, luminous cyan/azure air, restrained magenta building lights, sparse warm amber windows, atmospheric ground mist and wet-stone reflections. Avoid photorealism, smooth 3D, pastel stationery, generic gradient-only backgrounds and muddy blurred forms. No people, animals, mascots, letters, numbers, title, wordmark, readable code, logos, watermark, QR, text placeholders, card outlines, layout guides or embedded content blocks. Very important: the SKY contains ONLY sky and natural atmospheric brushwork; NO gray/beige elongated capsules, floating flying blobs, aircraft, spacecraft, comets, meteors, fish, streaking debris or attached pink glowing tips. Tiny building lights stay attached to buildings. Decorative holographic scenery, when present, stays near building edges and contains abstract line/block geometry with NO readable glyphs. Create a PORTRAIT 1024 x 1536 background, exactly 2:3, for later overlay of one existing character together with its action props. Keep recognizable saturated blue-violet painted architecture and spires anchored to the narrow side edges and bottom corners, with wet-plaza hints near the bottom. Across approximately x=14%..86%, y=15%..83%, create a broad quiet luminous pale icy-blue/cyan atmospheric space with very low-detail distant silhouettes; enough gentle cool color to separate white fur/scales from the background. This is soft atmospheric clearing, NOT a white oval, rectangle, spotlight sticker or empty cutout. Keep high-contrast facade lines, windows, holographic panels, bright magenta lights and dense flecks OUT of the character clearing. Retain the accepted city painting style at the perimeter so it still belongs to the same world.",
+  "generatedSource": "exec-c3a9a152-c49d-4f76-a51c-916e2c37b8d6.png",
+  "transparent_background": false,
+  "sourceSha256": "805ab2a0f1fe2a0727cfe72b2a6e605b4586d9e31c5fb1a523b81c0c144dc0c2",
+  "sha256": "f0702577db8359aece4b8a6808d8844ac534bab653024c51a7ce9f556ce09481",
+  "bytes": 1908673,
+  "width": 1024,
+  "height": 1536,
+  "status": "generated-awaiting-review"
+}

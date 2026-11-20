@@ -1,0 +1,36 @@
+{
+  "id": "share-portrait",
+  "file": "share-portrait.png",
+  "titleZh": "分享背景 · 竖版上下内容空间",
+  "targetWidth": 1536,
+  "targetHeight": 2048,
+  "ratio": "3:4",
+  "quietZones": [
+    {
+      "role": "upper-character-or-card",
+      "x": 0.12,
+      "y": 0.1,
+      "w": 0.76,
+      "h": 0.42
+    },
+    {
+      "role": "lower-description-and-dimensions",
+      "x": 0.12,
+      "y": 0.55,
+      "w": 0.76,
+      "h": 0.34
+    }
+  ],
+  "spec": "Create a PORTRAIT 1536 x 2048 background, exactly 3:4, for a later share-image composition. Give the broad central body quiet pale icy-cyan atmosphere; the upper central zone around x=12%..88%, y=10%..52% can take a character/card image, and the lower central zone around x=12%..88%, y=55%..89% can take description and dimension bars. These two areas must connect organically as one calm background, NOT look like two drawn rectangular cards or framed panels. Keep the strongest painted city silhouettes, attached magenta lights and flecked blue-violet texture at the outer margins; a subtly reflective lower edge grounds the image. No distracting skyline or strong horizon passing through the middle of either quiet area. This is one flexible city background, no text or layout objects.",
+  "intent": "generate-with-reference",
+  "source": "asset/design/backgrounds/v3/city-portrait-clean.png",
+  "prompt": "Use case: stylized-concept. Image 1 is a CLEAN blue/cyan futuristic city illustration used as the style, visual-world and palette reference. Generate a matching standalone BACKGROUND PLATE, not a finished card or webpage. Preserve its recognizable hand-painted digital concept-art language: confidently blocked tall spires, layered city-canyon depth, visible broad painted strokes, flecked/splattered outer-edge texture, indigo and blue-violet building shadows, luminous cyan/azure air, restrained magenta building lights, sparse warm amber windows, atmospheric ground mist and wet-stone reflections. Avoid photorealism, smooth 3D, pastel stationery, generic gradient-only backgrounds and muddy blurred forms. No people, animals, mascots, letters, numbers, title, wordmark, readable code, logos, watermark, QR, text placeholders, card outlines, layout guides or embedded content blocks. Very important: the SKY contains ONLY sky and natural atmospheric brushwork; NO gray/beige elongated capsules, floating flying blobs, aircraft, spacecraft, comets, meteors, fish, streaking debris or attached pink glowing tips. Tiny building lights stay attached to buildings. Decorative holographic scenery, when present, stays near building edges and contains abstract line/block geometry with NO readable glyphs. Create a PORTRAIT 1536 x 2048 background, exactly 3:4, for a later share-image composition. Give the broad central body quiet pale icy-cyan atmosphere; the upper central zone around x=12%..88%, y=10%..52% can take a character/card image, and the lower central zone around x=12%..88%, y=55%..89% can take description and dimension bars. These two areas must connect organically as one calm background, NOT look like two drawn rectangular cards or framed panels. Keep the strongest painted city silhouettes, attached magenta lights and flecked blue-violet texture at the outer margins; a subtly reflective lower edge grounds the image. No distracting skyline or strong horizon passing through the middle of either quiet area. This is one flexible city background, no text or layout objects.",
+  "generatedSource": "exec-dec52ff2-7bac-4a0c-9473-be8c85d7a049.png",
+  "transparent_background": false,
+  "sourceSha256": "805ab2a0f1fe2a0727cfe72b2a6e605b4586d9e31c5fb1a523b81c0c144dc0c2",
+  "sha256": "f035f1d7d06d87faef2da966109fa6b11221943bf687bdd011641a7607d52397",
+  "bytes": 2006051,
+  "width": 887,
+  "height": 1774,
+  "status": "generated-awaiting-review"
+}

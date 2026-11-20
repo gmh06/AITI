@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "pathBase": "repository root",
+  "note": "White sources retain the approved composition for reveal animation; transparent derivatives are for later compositing. All action props and ornaments remain within their character image.",
+  "characters": [
+    {
+      "model": "gpt",
+      "white": "asset/nonhuman/cards/final/gpt.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/gpt.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "deepseek",
+      "white": "asset/nonhuman/cards/textfree/deepseek.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/deepseek.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "glm",
+      "white": "asset/nonhuman/cards/final/glm.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/glm.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "grok",
+      "white": "asset/nonhuman/cards/textfree/grok.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/grok.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "kimi",
+      "white": "asset/nonhuman/cards/final/kimi.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/kimi.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "claude",
+      "white": "asset/nonhuman/cards/final/claude.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/claude.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "gemini",
+      "white": "asset/nonhuman/cards/final/gemini.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/gemini.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    },
+    {
+      "model": "doubao",
+      "white": "asset/nonhuman/cards/textfree/doubao.png",
+      "transparent": "asset/nonhuman/cards/transparent/v1/doubao.png",
+      "width": 1024,
+      "height": 1536,
+      "propsIncluded": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "claude-transparent-v1",
+  "model": "claude",
+  "file": "claude.png",
+  "source": "asset/nonhuman/cards/final/claude.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete orange Clawd with two short side arms, four short legs, orange flower, both proposal sheets and their low display rest as one asset. The pale proposal paper is opaque foreground. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-7ec7e592-567b-468a-bd66-01f4ff1584b2.png",
+  "sourceSha256": "7224e8f93c15a72861f635f3937441a56778edb331743045560d201c410dc3f7",
+  "sha256": "5949579f706d1b70ae0043cbf144eef823835946c17044d39b8f9fc6224aaefc",
+  "bytes": 1046212,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "status": "generated-awaiting-review",
+  "generator": "built-in image_gen",
+  "referencePathBase": "repository root",
+  "images": [
+    {
+      "id": "gpt-transparent-v1",
+      "model": "gpt",
+      "file": "gpt.png",
+      "source": "asset/nonhuman/cards/final/gpt.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep exactly four connected legs/paws, the silver knot on the horn, the entire pale white/lavender dragon and the schematic paper underneath. White scales, wing membranes and the white paper are foreground, not background. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "deepseek-transparent-v1",
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "source": "asset/nonhuman/cards/textfree/deepseek.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the entire blue-white whale, both flippers, the tail flukes and ALL THREE small mouth bubbles on the upper right as one compositing asset. Preserve white belly and white patches. Do not add thought dots or captions. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "glm-transparent-v1",
+      "model": "glm",
+      "file": "glm.png",
+      "source": "asset/nonhuman/cards/final/glm.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete fox, fine white fur, white tail tip, forehead sleep mask, low keyboard and monitor as one asset. Keep the lavender keycap physically seated in its corrected grid position under the left front paw. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "grok-transparent-v1",
+      "model": "grok",
+      "file": "grok.png",
+      "source": "asset/nonhuman/cards/textfree/grok.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete imp, crown, horns, both wings, one connected tail, the bursting balloon, its ribbon and small flying balloon pieces as one asset. No detached decorative props or new accessories. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "kimi-transparent-v1",
+      "model": "kimi",
+      "file": "kimi.png",
+      "source": "asset/nonhuman/cards/final/kimi.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep blue sphere seated INSIDE the silver-white crescent, and the entire separate fold-out paper below. Preserve the clear small air gap between the lower-right crescent tip and the paper. Moon and paper remain opaque, the gap becomes transparent. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "claude-transparent-v1",
+      "model": "claude",
+      "file": "claude.png",
+      "source": "asset/nonhuman/cards/final/claude.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete orange Clawd with two short side arms, four short legs, orange flower, both proposal sheets and their low display rest as one asset. The pale proposal paper is opaque foreground. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "gemini-transparent-v1",
+      "model": "gemini",
+      "file": "gemini.png",
+      "source": "asset/nonhuman/cards/final/gemini.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep complete cat, normal paws and tail, star ear charm and pendant, and the ENTIRE pale cushion as one asset. Keep viewer-left magenta and viewer-right gold eyes. One front paw presses the cushion, the other is raised. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    },
+    {
+      "id": "doubao-transparent-v1",
+      "model": "doubao",
+      "file": "doubao.png",
+      "source": "asset/nonhuman/cards/textfree/doubao.png",
+      "transparent_background": true,
+      "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete chibi girl, brown bob, red scarf, black clothes, feet, both hands holding one milk-tea cup, and the cup and straw. Keep cup highlights and skin opaque; remove no body parts. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets."
+    }
+  ]
+}

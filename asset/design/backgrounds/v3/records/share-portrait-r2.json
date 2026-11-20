@@ -1,0 +1,36 @@
+{
+  "id": "share-portrait-r2",
+  "file": "share-portrait-r2.png",
+  "titleZh": "分享背景 · 竖版上下内容空间",
+  "targetWidth": 1152,
+  "targetHeight": 1536,
+  "ratio": "3:4",
+  "quietZones": [
+    {
+      "role": "upper-character-or-card",
+      "x": 0.12,
+      "y": 0.1,
+      "w": 0.76,
+      "h": 0.42
+    },
+    {
+      "role": "lower-description-and-dimensions",
+      "x": 0.12,
+      "y": 0.55,
+      "w": 0.76,
+      "h": 0.34
+    }
+  ],
+  "spec": "Create a PORTRAIT 1536 x 2048 background, exactly 3:4, for a later share-image composition. Give the broad central body quiet pale icy-cyan atmosphere; the upper central zone around x=12%..88%, y=10%..52% can take a character/card image, and the lower central zone around x=12%..88%, y=55%..89% can take description and dimension bars. These two areas must connect organically as one calm background, NOT look like two drawn rectangular cards or framed panels. Keep the strongest painted city silhouettes, attached magenta lights and flecked blue-violet texture at the outer margins; a subtly reflective lower edge grounds the image. No distracting skyline or strong horizon passing through the middle of either quiet area. This is one flexible city background, no text or layout objects.",
+  "intent": "generate-with-reference",
+  "source": "asset/design/backgrounds/v3/card-text.png",
+  "prompt": "Use case: stylized-concept. Image 1 is a reference for the existing BLUE/CYAN CITY PALETTE, HAND-PAINTED STYLE and LARGE CALM CONTENT FIELD. Make one new broad PORTRAIT BACKGROUND, THREE units wide and FOUR units high, aspect ratio 3:4, intended 1152 x 1536. Recompose this reference into a broader portrait; do not produce a narrow 1:2 phone image. Preserve indigo/blue-violet painted architecture at the far side edges, attached magenta building lights, a few warm windows, cyan air, painterly brush strokes and flecked outer-edge texture. The entire central body x=12%..88%, y=10%..89% must be a continuous very light icy cyan/blue low-contrast atmospheric field with extremely faint distant silhouettes only. It must support an independently overlaid character in its upper half and a long text/diagram section in its lower half. Keep ALL strong towers, spires, holographic panels, dense windows and perspective/reflection lines OUTSIDE that central body. In particular the lower central half stays quiet and pale, not filled with dark central skyscrapers. Ground reflections confined to the bottommost strip, below y=90%. Keep visible blue/violet city identity on narrow outside margins, do not wash out the whole picture. This is ONLY a flexible illustration background, no card shapes, framed panels, text, labels, glyphs, QR, wordmark, title, logos, people, animals, characters or layout guides. The sky has no gray/beige floating solid blobs, flying capsules, pink-tipped flying debris, aircraft, fish, meteors or comets. Do not place any objects in the calm central field.",
+  "generatedSource": "exec-326fc41a-6b95-404a-8b94-bbe5b229e79f.png",
+  "transparent_background": false,
+  "sourceSha256": "db28c3f31ae361279900fcc69c4cc9a57fb09e0889caa89834b604a0024e9fc8",
+  "sha256": "f22f53ecf5b02c418fdfdf55c2741127743dada96d5c38079b92d29d57ba38c6",
+  "bytes": 1698113,
+  "width": 1086,
+  "height": 1448,
+  "status": "generated-awaiting-review"
+}

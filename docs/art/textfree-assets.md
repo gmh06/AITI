@@ -36,11 +36,18 @@
 4. 角色轮廓、动作与道具位置不变，不重新构图
 5. 背景保持纯白，不出现灰块或噪点
 
-## 五、实现建议
+## 五、已采用的处理方式
 
-- **首选重新生成**：以对应成品卡为构图参考、以 `asset/nonhuman/final/{model}.png` 四视图为形象参考，提示词中明确“画面内不含任何文字、标签、文本框或气泡”。
-- **次选原图修复（inpaint）**：只适用于文字叠在纯白背景上的情况。豆包的便签带厚度与投影，移除后容易留脏，不建议此路径。
-- 两种方式都**不要移动角色或改变构图**，否则动画取景坐标会失效。
+三处附文与角色分离，采用原图叠加白色矢量遮罩去字，不重新生成角色。
+
+- [textfree.drawio](../../asset/nonhuman/cards/textfree/textfree.drawio)：三页可编辑源文件，原图与遮罩分层，原图以内嵌数据保存。
+- [operations.json](../../asset/nonhuman/cards/textfree/operations.json)：记录各页遮罩的位置、尺寸与旋转角度。
+- [导出脚本](../../tools/art/prepare-textfree-assets.ps1)：按同一几何参数导出 1024 × 1536 PNG，保留遮罩外原始像素；已有输出时停止，避免覆盖。
+- [manifest.json](../../asset/nonhuman/cards/textfree/manifest.json)：来源、尺寸、校验值与核验结果。
+
+三张白底去字版已完成，遮罩之外的改动像素均为 0。背景保留原始近白色纹理，不全图重涂；DeepSeek 嘴边的三个小泡泡属于角色动作，继续保留。
+
+另外五款继续使用 `asset/nonhuman/cards/final/{model}.png`。透明底拼接版另行派生，和用于揭晓动画的原坐标白底版区分使用。
 
 ## 六、与动画的关系
 

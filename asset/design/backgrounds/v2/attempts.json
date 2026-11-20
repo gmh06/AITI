@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "attempts": [
+    {
+      "id": "original-size-input",
+      "status": "failed",
+      "promptFile": "prompts.json",
+      "references": [
+        {
+          "file": "asset/Festival/background/1.png",
+          "role": "primary painted environment style, low-angle spires, floating fragments and magenta accents; omit protagonist"
+        },
+        {
+          "file": "asset/Festival/background/2.png",
+          "role": "primary blue/cyan city architecture, light shafts, holographic scenery, wet reflections and paint texture; omit all people and typography"
+        }
+      ],
+      "error": "HTTP 400 invalid_image_file: Invalid input image file. Please check the uploaded image.",
+      "resolution": "Retry same built-in generator and prompt with complete uniformly downsampled reference copies"
+    }
+  ]
+}

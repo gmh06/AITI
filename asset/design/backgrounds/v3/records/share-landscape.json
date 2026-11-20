@@ -1,0 +1,36 @@
+{
+  "id": "share-landscape",
+  "file": "share-landscape.png",
+  "titleZh": "分享背景 · 横版左右内容空间",
+  "targetWidth": 1536,
+  "targetHeight": 1024,
+  "ratio": "3:2",
+  "quietZones": [
+    {
+      "role": "left-content",
+      "x": 0.07,
+      "y": 0.12,
+      "w": 0.4,
+      "h": 0.7
+    },
+    {
+      "role": "right-content",
+      "x": 0.53,
+      "y": 0.12,
+      "w": 0.4,
+      "h": 0.7
+    }
+  ],
+  "spec": "Create a LANDSCAPE 1536 x 1024 background, exactly 3:2, for placing two independently rendered card/content faces side by side later. Keep BOTH left and right main areas quiet and pale cool blue: left x=7%..47%, right x=53%..93%, both y=12%..82%. They are low-detail atmospheric spaces, NOT pre-drawn panels or frames. Keep dark blue-violet city architecture and flecked paint concentrated along the far outer left/right edges and lower corners. The middle divider should be only a very subtle distant cyan architectural rhythm, with no strong dark tower. Leave a shallow quiet strip along the lower middle for later dimension information. Avoid a conspicuous horizon crossing either content area. Maintain visible painted-city identity and a little warm-window/magenta interest at the perimeter.",
+  "intent": "generate-with-reference",
+  "source": "asset/design/backgrounds/v3/city-portrait-clean.png",
+  "prompt": "Use case: stylized-concept. Image 1 is a CLEAN blue/cyan futuristic city illustration used as the style, visual-world and palette reference. Generate a matching standalone BACKGROUND PLATE, not a finished card or webpage. Preserve its recognizable hand-painted digital concept-art language: confidently blocked tall spires, layered city-canyon depth, visible broad painted strokes, flecked/splattered outer-edge texture, indigo and blue-violet building shadows, luminous cyan/azure air, restrained magenta building lights, sparse warm amber windows, atmospheric ground mist and wet-stone reflections. Avoid photorealism, smooth 3D, pastel stationery, generic gradient-only backgrounds and muddy blurred forms. No people, animals, mascots, letters, numbers, title, wordmark, readable code, logos, watermark, QR, text placeholders, card outlines, layout guides or embedded content blocks. Very important: the SKY contains ONLY sky and natural atmospheric brushwork; NO gray/beige elongated capsules, floating flying blobs, aircraft, spacecraft, comets, meteors, fish, streaking debris or attached pink glowing tips. Tiny building lights stay attached to buildings. Decorative holographic scenery, when present, stays near building edges and contains abstract line/block geometry with NO readable glyphs. Create a LANDSCAPE 1536 x 1024 background, exactly 3:2, for placing two independently rendered card/content faces side by side later. Keep BOTH left and right main areas quiet and pale cool blue: left x=7%..47%, right x=53%..93%, both y=12%..82%. They are low-detail atmospheric spaces, NOT pre-drawn panels or frames. Keep dark blue-violet city architecture and flecked paint concentrated along the far outer left/right edges and lower corners. The middle divider should be only a very subtle distant cyan architectural rhythm, with no strong dark tower. Leave a shallow quiet strip along the lower middle for later dimension information. Avoid a conspicuous horizon crossing either content area. Maintain visible painted-city identity and a little warm-window/magenta interest at the perimeter.",
+  "generatedSource": "exec-a0f84d6c-dc6b-451d-b050-6e2537ce8083.png",
+  "transparent_background": false,
+  "sourceSha256": "805ab2a0f1fe2a0727cfe72b2a6e605b4586d9e31c5fb1a523b81c0c144dc0c2",
+  "sha256": "64550c053180d6a235912683d733e9a9a572b2a8734abfae4216c882e6e43250",
+  "bytes": 1972707,
+  "width": 1536,
+  "height": 1024,
+  "status": "generated-awaiting-review"
+}

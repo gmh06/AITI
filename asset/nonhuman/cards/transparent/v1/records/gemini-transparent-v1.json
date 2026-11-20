@@ -1,0 +1,16 @@
+{
+  "id": "gemini-transparent-v1",
+  "model": "gemini",
+  "file": "gemini.png",
+  "source": "asset/nonhuman/cards/final/gemini.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep complete cat, normal paws and tail, star ear charm and pendant, and the ENTIRE pale cushion as one asset. Keep viewer-left magenta and viewer-right gold eyes. One front paw presses the cushion, the other is raised. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-fe34a4ad-363f-4c63-9a28-6bf099537d1a.png",
+  "sourceSha256": "ba1dea3cd0f70700ee336fe43d53a7432187c16541dfc137c4177732d66e5d16",
+  "sha256": "b355bef94dbf31211c7820c40f1b0ed2df1439c53648d997ee4d47ab738a1740",
+  "bytes": 1633487,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}

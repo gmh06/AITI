@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "status": "generated-awaiting-review",
+  "generator": "built-in image_gen",
+  "revision": "context-atmosphere-v2",
+  "supersedes": "asset/design/backgrounds/v1/context-atmosphere.png",
+  "reason": "User requested closer study and emulation of background/1.png and background/2.png: richer blue/cyan city, painted texture, architectural depth; previous version was too pale and empty.",
+  "images": [
+    {
+      "id": "context-atmosphere-v2",
+      "file": "context-atmosphere.png",
+      "transparent_background": false,
+      "references": [
+        {
+          "file": "asset/design/backgrounds/v2/references/background-1.png",
+          "role": "primary painted environment style, low-angle spires, floating fragments and magenta accents; omit protagonist",
+          "originalFile": "asset/Festival/background/1.png",
+          "originalSha256": "2b996a8928a732cc24d9de5cf523f5ae4a9e493977491da15fc106ba2c4c8d45",
+          "sha256": "ba0b57f4acf13acca5b7628edb527ec4f00e1be9ddfa99b7bf235abab9364e99",
+          "width": 2340,
+          "height": 900,
+          "derivation": "Complete original image uniformly downsampled for image-tool input; no crop or content edits"
+        },
+        {
+          "file": "asset/design/backgrounds/v2/references/background-2.png",
+          "role": "primary blue/cyan city architecture, light shafts, holographic scenery, wet reflections and paint texture; omit all people and typography",
+          "originalFile": "asset/Festival/background/2.png",
+          "originalSha256": "1b54b32580965058ca4e4dc8b6e9e7db130c0abd8b87fc15069e3ec2eca19cc4",
+          "sha256": "01bacb0706dcd158032c8d8d525d30666b9b1a1dba17120702f4df4d7e971ce3",
+          "width": 1200,
+          "height": 1697,
+          "derivation": "Complete original image uniformly downsampled for image-tool input; no crop or content edits"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one reusable text-free illustrated environmental background for AITI / Beyond Context. Image 1 (background/1.png) and Image 2 (background/2.png) are the PRIMARY visual references for the environment, painting style and palette, not an edit target. Study and closely emulate their background visual language. Ignore and OMIT all people, foreground protagonists and all lettering in the references.\nVISUAL LANGUAGE: hand-painted 2D anime science-fiction environment / digital concept-art illustration. Preserve expressive brush shapes, slightly rough painted architectural edges, layered atmospheric haze, selectively sharp structural silhouettes and restrained pigment grain/splatter near the outer corners. Strong depth and illustrated material texture. Not a smooth 3D render, glossy product art, flat vector city, blurred abstract gradient, pastel stationery or an empty white card template.\nREFERENCE 1 CONTRIBUTION: low-angle view up between dark indigo futuristic towers, irregular pointed spires and angular/diagonal edge silhouettes, small magenta-pink illuminated accents, a few distant elongated soft-edged floating craft/light fragments in the sky. Use them sparingly in perspective, without crowding the center. No character from this image.\nREFERENCE 2 CONTRIBUTION: towering architectural canyon receding into a luminous cyan/teal central distance; layered skyscrapers and dark foreground masses framing that depth; monumental vertical light shafts, drifting blue mist between buildings, scattered pale cyan holographic panes at different distances, warm tiny amber windows, a wet paved plaza at the bottom reflecting the buildings and cyan/violet glow. The holographic panes are environmental scenery: faint translucent contours and a few abstract nonalphabetic short marks, with NO readable text, code or numerals. Subtle painterly violet speckling at outer edges, not a decorative card border. No typography, people or silhouettes from this image.\nCOLOR: substantial saturated cobalt and medium/deep indigo-blue across the whole scene, dark navy at architectural edges, vivid luminous turquoise/cyan in the distant center, cool violet in reflected haze, sparse pink-magenta accents and a very small amount of warm window light. Keep the rich colored midtones of the supplied originals. The central distance is bright CYAN, not a large white/lavender washed-out field. Optimistic mysterious expansive digital city, not a black oppressive dystopia. Real architecture and atmospheric depth must remain visible throughout the frame.\nCOMPOSITION: one portrait 1024 x 1536 full-bleed city background, eye-level near a wet foreground plaza with buildings soaring upward to suggest a low-angle monumental scale. A clear receding visual corridor around the center and lower middle leaves room for independently composited characters later, but it remains a believable painted city space with perspective, distant structures, mist and reflections; do not reserve a blank white rectangle or blank oval. Build a new coherent city, while faithfully following the reference style and palette. Keep the subject density concentrated more at the lateral buildings than at the center. No isolated central hero object, characters, animals, mascots, logos, wordmarks, title, Beyond Context lettering, AITI lettering, QR, readable text, card frame, rounded layout containers, badges or finished poster composition. Official lettering and all card/page layout will be added as separate editable objects in draw.io later."
+    }
+  ]
+}

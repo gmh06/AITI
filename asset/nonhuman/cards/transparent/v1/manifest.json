@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "generator": "built-in image_gen",
+  "status": "generated-awaiting-review",
+  "format": "PNG",
+  "alpha": true,
+  "propsIncluded": true,
+  "role": "Compositing derivatives, original approved illustrations preserved separately",
+  "promptsFile": "prompts.json",
+  "historyFile": "history.json",
+  "assets": [
+    {
+      "model": "gpt",
+      "file": "gpt.png",
+      "revision": "gpt-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1549412,
+      "sha256": "b5135d577898147376e1c84acb8a62093f67a59e2b53328448ba05f3160f35d9",
+      "source": "asset/nonhuman/cards/final/gpt.png",
+      "sourceSha256": "2aff9706db43e8cc9ccbec7c076e5bd13c8f32df2031b08b747c38ca4fbb6167"
+    },
+    {
+      "model": "deepseek",
+      "file": "deepseek.png",
+      "revision": "deepseek-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1126618,
+      "sha256": "bf2ba48f4403159355e9c59c39bb3f71087766ab23f450e99edc1d29e3d3c2ab",
+      "source": "asset/nonhuman/cards/textfree/deepseek.png",
+      "sourceSha256": "147bc095a2c66d6ca02b714f6b52da13c0515b2ef01656605dd5e1333b4e5f7f"
+    },
+    {
+      "model": "glm",
+      "file": "glm.png",
+      "revision": "glm-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1381649,
+      "sha256": "62e71976a3bfe3166621df585e8d9c0b3ccbffea312532a3de3b0e3baaaaa426",
+      "source": "asset/nonhuman/cards/final/glm.png",
+      "sourceSha256": "c6f0c7b3416ccd2ae714d456dc618e678b56cc6a8849d028e632e42020580558"
+    },
+    {
+      "model": "grok",
+      "file": "grok.png",
+      "revision": "grok-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1519487,
+      "sha256": "6c7753ac3cc2c1b647c01f63e6b5fc4407723d1a7fe75ca34f86eae2a08507fa",
+      "source": "asset/nonhuman/cards/textfree/grok.png",
+      "sourceSha256": "b0055a6ddb63d52bbd4a352c489b812d1ee8ac6e96ab9c51205dffb4292f893f"
+    },
+    {
+      "model": "kimi",
+      "file": "kimi.png",
+      "revision": "kimi-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1348960,
+      "sha256": "fade397249d0b3435619d2f343d897b8908afbec769996c8ec9554159452ae22",
+      "source": "asset/nonhuman/cards/final/kimi.png",
+      "sourceSha256": "667cced90b5a1c8d9858d537467893cd696e14b3f5e66a17ca6cef20bb2e53b9"
+    },
+    {
+      "model": "claude",
+      "file": "claude.png",
+      "revision": "claude-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1046212,
+      "sha256": "5949579f706d1b70ae0043cbf144eef823835946c17044d39b8f9fc6224aaefc",
+      "source": "asset/nonhuman/cards/final/claude.png",
+      "sourceSha256": "7224e8f93c15a72861f635f3937441a56778edb331743045560d201c410dc3f7"
+    },
+    {
+      "model": "gemini",
+      "file": "gemini.png",
+      "revision": "gemini-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1633487,
+      "sha256": "b355bef94dbf31211c7820c40f1b0ed2df1439c53648d997ee4d47ab738a1740",
+      "source": "asset/nonhuman/cards/final/gemini.png",
+      "sourceSha256": "ba1dea3cd0f70700ee336fe43d53a7432187c16541dfc137c4177732d66e5d16"
+    },
+    {
+      "model": "doubao",
+      "file": "doubao.png",
+      "revision": "doubao-transparent-v1",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1318392,
+      "sha256": "19b0dcf94a3d360d84d034325b6379b929cde5624f7c490ff573c985e91f7141",
+      "source": "asset/nonhuman/cards/textfree/doubao.png",
+      "sourceSha256": "f33b5f628ea0c6bb81f7f6ab332b10e13926eb59a33df8834fc3fe13dfa8c7b0"
+    }
+  ]
+}

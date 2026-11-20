@@ -1,0 +1,16 @@
+{
+  "id": "grok-transparent-v1",
+  "model": "grok",
+  "file": "grok.png",
+  "source": "asset/nonhuman/cards/textfree/grok.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete imp, crown, horns, both wings, one connected tail, the bursting balloon, its ribbon and small flying balloon pieces as one asset. No detached decorative props or new accessories. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-e0de0cda-c062-4eec-8314-ff959322a725.png",
+  "sourceSha256": "b0055a6ddb63d52bbd4a352c489b812d1ee8ac6e96ab9c51205dffb4292f893f",
+  "sha256": "6c7753ac3cc2c1b647c01f63e6b5fc4407723d1a7fe75ca34f86eae2a08507fa",
+  "bytes": 1519487,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "doubao-transparent-v1",
+  "model": "doubao",
+  "file": "doubao.png",
+  "source": "asset/nonhuman/cards/textfree/doubao.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep the complete chibi girl, brown bob, red scarf, black clothes, feet, both hands holding one milk-tea cup, and the cup and straw. Keep cup highlights and skin opaque; remove no body parts. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-e0996384-b0ef-4480-a1d5-e3ea59f918a7.png",
+  "sourceSha256": "f33b5f628ea0c6bb81f7f6ab332b10e13926eb59a33df8834fc3fe13dfa8c7b0",
+  "sha256": "19b0dcf94a3d360d84d034325b6379b929cde5624f7c490ff573c985e91f7141",
+  "bytes": 1318392,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}

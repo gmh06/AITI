@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-20",
+  "selectedAssets": 8,
+  "generationRecords": 9,
+  "retainedAlternative": 1,
+  "drawioPages": 8,
+  "drawioImagesEmbeddedAndHashMatched": true,
+  "originalAssetsUnchanged": 25,
+  "localLinksChecked": 49,
+  "visualReview": "All eight current backgrounds inspected individually and together; no gray airborne capsules or pink-tipped flying blobs. Native PNG dimensions preserved. Quiet regions are composition options, not a final card/page layout.",
+  "assets": [
+    {
+      "file": "city-portrait-clean.png",
+      "width": 1024,
+      "height": 1536,
+      "nativeRatio": "2:3",
+      "quietZones": 0
+    },
+    {
+      "file": "city-landscape.png",
+      "width": 1672,
+      "height": 941,
+      "nativeRatio": "~16:9",
+      "quietZones": 0
+    },
+    {
+      "file": "city-tall.png",
+      "width": 887,
+      "height": 1774,
+      "nativeRatio": "1:2",
+      "quietZones": 0
+    },
+    {
+      "file": "card-character.png",
+      "width": 1024,
+      "height": 1536,
+      "nativeRatio": "2:3",
+      "quietZones": 1
+    },
+    {
+      "file": "card-text.png",
+      "width": 1024,
+      "height": 1536,
+      "nativeRatio": "2:3",
+      "quietZones": 1
+    },
+    {
+      "file": "share-portrait-r2.png",
+      "width": 1086,
+      "height": 1448,
+      "nativeRatio": "3:4",
+      "quietZones": 2
+    },
+    {
+      "file": "share-landscape.png",
+      "width": 1536,
+      "height": 1024,
+      "nativeRatio": "3:2",
+      "quietZones": 2
+    },
+    {
+      "file": "landscape-content.png",
+      "width": 1672,
+      "height": 941,
+      "nativeRatio": "~16:9",
+      "quietZones": 1
+    }
+  ]
+}

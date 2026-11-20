@@ -1,0 +1,20 @@
+{
+  "id": "city-portrait-clean-v3",
+  "file": "city-portrait-clean.png",
+  "titleZh": "完整城市场景 · 竖版 2:3",
+  "intent": "edit",
+  "targetWidth": 1024,
+  "targetHeight": 1536,
+  "ratio": "2:3",
+  "source": "asset/design/backgrounds/v2/context-atmosphere.png",
+  "quietZones": [],
+  "prompt": "Use case: precise-object-edit. Image 1 is the existing city illustration edit target. Keep the 1024 x 1536 portrait canvas, existing composition, city architecture, palette, visible hand-painted strokes, blue-violet splatter texture at the border, cyan atmospheric depth, attached magenta building lights, holographic scenery, warm windows and wet-plaza reflections. Change ONLY the unwanted airborne objects: remove EVERY isolated elongated gray/beige capsule-like flying blob in the upper sky, including the six main ones around (360,145), (250,280), (380,385), (505,350), (720,240), (760,75), AND smaller similar distant marks. Remove their attached pink glowing tips and short motion trails. Replace their footprints seamlessly with the surrounding continuous blue/cyan sky and its broad natural atmospheric brushwork. Do not replace them with birds, drones, meteors, fish, silhouettes, particles or other objects. Sky must feel open and free of airborne solid objects. Preserve normal broad cloud/paint strokes and city fog, and preserve the attached lights on the buildings. Do NOT change the architecture, camera, foreground, saturation, overall painting style or framing. No new text, labels, human figures or drawn red annotation circles.",
+  "generatedSource": "exec-97a8829b-f65d-46be-89ae-a1ba99aad0f8.png",
+  "transparent_background": false,
+  "sourceSha256": "ff031d7e4fb38353ec7fd5d109ae3aaf494108003238b2dd7aa88dc08267c938",
+  "sha256": "805ab2a0f1fe2a0727cfe72b2a6e605b4586d9e31c5fb1a523b81c0c144dc0c2",
+  "bytes": 2071197,
+  "width": 1024,
+  "height": 1536,
+  "status": "generated-awaiting-review"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "kimi-transparent-v1",
+  "model": "kimi",
+  "file": "kimi.png",
+  "source": "asset/nonhuman/cards/final/kimi.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Image 1 is the APPROVED edit target, not a style suggestion. Extract exactly its existing character AND all its existing action props into ONE clean genuinely transparent RGBA PNG. This is a cutout operation, not a redraw or new pose. Preserve the 1024 x 1536 canvas, exact subject placement and scale, contours, anatomy, expression, colors, delicate linework, highlights and crisp shading. No tight cropping, resizing, recentering, restyling, additions or new text. Keep blue sphere seated INSIDE the silver-white crescent, and the entire separate fold-out paper below. Preserve the clear small air gap between the lower-right crescent tip and the paper. Moon and paper remain opaque, the gap becomes transparent. Remove only the near-white page background and empty spaces between objects. Preserve near-white foreground materials; do not simply key out white. Keep fine fur edges and translucent bubble edges with smooth alpha, no white rim, opaque rectangular backdrop, checkerboard painted into the image, drop shadow or ground plane. No captions, labels, logos or floating text. All accessories remain attached to the same full image; do not create separate accessory sheets.",
+  "generatedSource": "exec-23dcd83b-d728-4e9d-96ed-0590c144931f.png",
+  "sourceSha256": "667cced90b5a1c8d9858d537467893cd696e14b3f5e66a17ca6cef20bb2e53b9",
+  "sha256": "fade397249d0b3435619d2f343d897b8908afbec769996c8ec9554159452ae22",
+  "bytes": 1348960,
+  "width": 1024,
+  "height": 1536,
+  "pngColorType": 6,
+  "status": "generated-awaiting-review"
+}
