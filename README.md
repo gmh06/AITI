@@ -18,9 +18,21 @@ AITI 是一项趣味 AI 人格测试活动，计划在学生节前的路演中�
 
 ## 当前进展
 
-活动策划案已整理，并已补充四维人格分类、模型人格设定和 10 道测试题目及计分规则；技术方案确定为纯前端静态站点，尚未实现可运行的测试应用。
+纯前端测试应用位于 `web/`，包含 10 道题、揭晓动画和 16 种人格结果。结果页的「保存图片」打开本次结果的图片预览，可下载或在微信内长按保存。宣传图文案编辑 `web/src/content/personalities.json` 中对应人格的 `shareDescription`。
 
-当前继续完善测试内容、结果呈现和前端实现，并推进活动可行性确认。
+## 本地运行
+
+需要 Node.js 24 LTS。在仓库根目录执行以下命令，打开终端输出的 `/AITI/` 地址。
+
+```sh
+cd web
+npm ci
+npm run dev
+```
+
+`npm test` 运行类型和单元测试。`npm run build` 生成 `web/dist/`，并检查资源大小。`npm run preview` 可以预览构建后的站点。
+
+浏览器验收可先运行 `npx playwright install chromium`，再运行 `npm run test:browser`。使用本机 Chrome 时，可将环境变量 `AITI_BROWSER_CHANNEL` 设为 `chrome`。
 
 ## 项目资料
 

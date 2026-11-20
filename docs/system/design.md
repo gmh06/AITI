@@ -61,7 +61,7 @@ web/
 
 ## 二、内容数据
 
-只有两类内容从文档导入：10 道题（题干、选项、权重；【】括起的题目标题不导入），以及 16 个人格的名称、对应模型和描述长文。它们存为 JSON。其余文字写在代码里，直接手写：
+只有两类内容从文档导入：10 道题（题干、选项、权重；【】括起的题目标题不导入），以及 16 个人格的名称、对应模型和结果页描述。分享卡文案直接填写在同一人格条目的 `shareDescription` 字段里。维度名、极名和界面文字写在代码里：
 
 | 内容 | 位置 | 来源 |
 | :--- | :--- | :--- |
@@ -125,7 +125,8 @@ interface Personality {                     // personalities.json 是 Record<Cod
   persona: string                           // '硬核工程师'
   model: string                             // 'GPT'
   modelId: ModelId
-  description: Text
+  description: Text                         // 结果页正文
+  shareDescription?: string                  // 分享卡正文，留空时省略
 }
 
 type Text = string | Segment[]
@@ -168,6 +169,8 @@ JSON 没有字面量类型，代号缺一个、权重写成 3、模型 ID 拼错
 interface DimensionView {
   dim: Dim
   name: string          // 维度名，如 '认知内核'
+  pos: Dimension['pos'] // 右端的字母和中文极名
+  neg: Dimension['neg'] // 左端的字母和中文极名
   side: 'pos' | 'neg'   // 得分为正取 pos
   letter: string        // 所取极的字母
   poleName: string      // 所取极的中文名
@@ -187,7 +190,6 @@ interface DimensionView {
 | `quiz` | 当前题号 `index`（0～9）、已选答案 | 一页一题 |
 | `reveal` | 计算出的结果 | 揭晓过程 |
 | `result` | 结果 | 结果页 |
-| `card` | 结果 | 电子卡与分享图 |
 
 结果 = 代号 + 四维得分。状态只存在内存中，不写入任何存储，刷新或关闭页面后回到 `intro`。
 
@@ -199,10 +201,8 @@ interface DimensionView {
 | `quiz` | `ANSWER(index, key)` | 记录答案；`index < 9` 时进入下一题，否则计算结果并进入 `reveal` |
 | `quiz` | `BACK` | `index > 0` 时回到上一题，已选答案保留并显示；`index = 0` 时回到 `intro` |
 | `reveal` | `REVEAL_DONE` 或 `BACK` | `result` |
-| `result` | `OPEN_CARD` | `card` |
 | `result` | `BACK` | `intro` |
-| `card` | `BACK` | `result` |
-| `result` / `card` | `RESTART` | `intro`，答案清空 |
+| `result` | `RESTART` | `intro`，答案清空 |
 
 `ANSWER` 带上发出时的题号；题号与当前 `index` 不一致时忽略。快速连点同一题时，只有第一次生效，不依赖时间防抖。
 
@@ -231,72 +231,45 @@ interface DimensionView {
 ### 5. 图片加载
 
 - 首屏不加载任何角色图。
-- 作答第 10 题后立即预加载该结果的角色图；进入 `result` 后预加载该人格的分享图底图。
+- 作答第 10 题后立即预加载该结果的角色图。打开保存窗口后才加载宣传图素材。
 - 图片加载失败时显示失败状态和重试操作，流程不卡住。
 - 题目、人格等内容打包在 JS 中，页面加载后断网仍可答题和看文字结果，只有图片需要网络。
 
 ## 五、分享图
 
-分享图 = 外部提供的底图 + 网页运行时叠加的四维条和极名。16 个人格共用同一套版式，因此四维区域的位置只需定义一次。
+在结果页点击「保存图片」会打开预览窗口。窗口状态保留在结果页内，关闭后回到触发按钮。生成失败时可在窗口内重试。
 
-### 1. 输入格式
+### 1. 合成
 
-网页从 `asset/share/` 读取以下文件。它们由他人制作，本节只约定网页能读取的格式：
+1. 加载共用的霓虹底图、字标、二维码及该结果的透明角色图。角色单独绘制在底图上方。
+2. 在 1080 × 1440 的画布上绘制人格名称、本次得分对应的四维条和两端标签。文案读取 `web/src/content/personalities.json` 中该人格的 `shareDescription`，空白时省略。结果页读取 `description`。
+3. 画布底部绘制学生节信息和指向 `https://gmh06.github.io/AITI/` 的二维码。较长的文案自动换行，必要时增加画布高度，确保文案和底部信息栏各有空间。
+4. 导出 JPEG 并以 `<img>` 显示在预览窗口中。
 
-| 文件 | 内容 |
-| :--- | :--- |
-| `{CODE}.png` ×16 | 底图，四维条和极名处留空，其余内容已画好 |
-| `labels/{字母}.png` ×8 | 8 个极的标签图，透明底，内容为字母和中文极名，如 `L 逻辑工程` |
-| `layout.json` | 版式参数，见下 |
-
-极名读取图片而不由浏览器绘制文字，是因为浏览器只能使用各设备的系统字体，同一张分享图在不同手机上会显示成不同字体。
-
-`layout.json` 的结构：
-
-```ts
-interface ShareLayout {
-  width: number; height: number            // 底图像素尺寸，16 张必须一致
-  bar: { color: string; radius: number }   // 条形填充样式
-  dims: Record<Dim, {
-    pos: { rect: [x: number, y: number, w: number, h: number]; grow: 'left' | 'right' | 'up' | 'down' }
-    neg: { rect: [number, number, number, number]; grow: 'left' | 'right' | 'up' | 'down' }
-    label: [number, number, number, number]  // 极名标签图的放置区域
-  }>
-}
-```
-
-每个维度给出正、负两侧各自的最大条形区域 `rect`，以及条形从哪一侧开始生长 `grow`。运行时按 `side` 选取一侧，按 `ratio` 填充该区域的一部分；标签图按比例缩放后居中放入 `label` 区域。这套参数既能表达从中线向两侧延伸的条，也能表达其他排法，网页不对版式做假设。
-
-`layout.json` 和底图未提供时，网页使用一份占位版式和占位底图，保证合成与保存流程可以先开发和测试。
-
-### 2. 合成与保存
-
-1. 加载该人格的底图和所取 4 个极的标签图。
-2. 创建与底图同尺寸的 canvas，依次绘制底图、4 条条形、4 个标签。
-3. 导出为 JPEG（质量 0.92），并以 `<img>` 显示在电子卡页。
+### 2. 保存
 
 保存方式按环境区分：
 
 | 环境 | 方式 |
 | :--- | :--- |
 | 微信内置浏览器 | 只提示长按图片保存；图片地址用 data URL（微信对 blob URL 的长按识别不可靠，须真机验证） |
-| 支持 `navigator.canShare({ files })` 的浏览器 | 保存按钮调起系统分享面板，用户可存入相册 |
+| 支持 `navigator.canShare({ files })` 的触屏浏览器 | 保存按钮调起系统分享面板，用户可存入相册 |
 | 其余浏览器 | 保存按钮通过 `<a download>` 下载；同时保留长按或右键保存 |
 
 微信的判断依据是 UA 中的 `MicroMessenger`。
 
 ## 六、资源构建
 
-`build-assets` 读取 `asset/` 中的原始素材，压缩后输出到 `src/generated/img/`。前端通过 Vite 的 `import.meta.glob` 引用这些文件，产物文件名带内容哈希，内容一改地址就变。这样只有 `index.html` 受 GitHub Pages 10 分钟缓存影响，图片不会出现旧版本。
+`build-assets` 压缩原始素材并输出到 `src/generated/img/` 和 `src/generated/share/`。Vite 生成的产物文件名带内容哈希，素材更新后地址随之变化。
 
 | 资源 | 来源 | 输出 | 单张上限 |
 | :--- | :--- | :--- | :--- |
 | 角色图 ×8 | DeepSeek、Grok、豆包取 `asset/nonhuman/cards/textfree/`，其余取 `asset/nonhuman/cards/final/` | WebP，保持原宽 1024，质量 80 | 150 KB |
-| 分享图底图 ×16 | `asset/share/{CODE}.png` | WebP，质量 90（底图上有小字，压缩不宜过狠） | 250 KB |
-| 极名标签 ×8 | `asset/share/labels/` | PNG 原样 | 20 KB |
+| 宣传图底图 | `design/share-study/backgrounds/neon/01-cyan-canyon-clear-v2.png` | 1080 × 1440 WebP | 250 KB |
+| 宣传图透明角色 ×8 | `asset/nonhuman/cards/transparent/v1/` | 保留角色与道具，最长边 400 px 的 WebP | 150 KB |
 | 主视觉 | `asset/Festival/` | 是否使用及尺寸随界面设计确定 | 随用途确定 |
 
-超出上限时构建失败。源文件缺失时，开发模式使用占位图并告警；发布构建在环境变量 `AITI_ALLOW_PLACEHOLDER=1` 时才允许占位，上线前须去掉该变量。
+揭晓用角色图缺失时，开发模式使用占位图并告警。发布构建仅在设置 `AITI_ALLOW_PLACEHOLDER=1` 时允许揭晓用占位图，上线前须去掉该变量。
 
 `check-budget` 在构建后检查首屏 JS（gzip ≤ 150 KB）和 CSS（gzip ≤ 20 KB），超出时构建失败。
 

@@ -1,0 +1,31 @@
+{
+  "name": "aiti-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node scripts/build-assets.ts && vite",
+    "build": "node scripts/build-assets.ts --release && tsc --noEmit && vite build && node scripts/check-budget.ts",
+    "preview": "vite preview",
+    "test": "tsc --noEmit && vitest run tests/unit",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "sharp": "^0.34.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.0",
+    "vitest": "^4.1.0"
+  }
+}
