@@ -9,17 +9,16 @@
 ### 1. 内容
 
 - `tsc --noEmit` 通过。
-- [系统设计](design.md)第二节第 3 小节的全部校验规则。每条规则另配一份故意写错的测试数据，确认能检出。
+- [系统设计](design.md)第二节第 3 小节的全部校验规则，包括两个 JSON 的结构、16 个代号恰好各一份，以及题目权重与手写计分表的交叉检查。每条规则另配一份故意写错的测试数据，确认能检出。例如：删掉一个代号、把权重写成 3、把 `modelId` 拼错、把某题的主测维度权重写成 1，测试都必须失败。
 
-内容与文档是否一致不做自动比对，在发布前人工核对：
+内容与文档不再比对，也没有发布前的逐条核对清单。但首次导入有一次人工审阅，在提交第一版 JSON 之前完成：
 
-- [ ] 10 道题的标题、场景、选项文本与 [tests_design.md](../tests_design.md) 一致
-- [ ] 40 个选项的权重与 [tests_design.md](../tests_design.md) 一致
-- [ ] 计分表与 [tests_design.md](../tests_design.md) 第一节一致
-- [ ] 4 个维度名和 8 个极名与 [aiti_personality.md](../aiti_personality.md) 一致
-- [ ] 16 个人格名、对应模型和描述与 [result_page.md](../result_page.md) 一致
+- [ ] 运行 `scripts/import-content.ts` 后，对生成的 JSON 与 [tests_design.md](../tests_design.md)、[result_page.md](../result_page.md) 逐项抽查：10 道题的标题、场景、选项，40 个选项的权重，16 个人格的名称、对应模型和描述
+- [ ] 手写的 `dimensions.ts` 中的 4 个维度名、8 个极名和计分表，对照 [aiti_personality.md](../aiti_personality.md) 和 [tests_design.md](../tests_design.md) 第一节逐项核对
+- [ ] 描述中的强调和等宽片段（如 `Segmentation Fault`、`git diff`）已转成 `Segment[]`，文本里没有残留 `**` 或反引号
+- [ ] 审阅时发现的差异，以文档为准改脚本后重新生成，不手改 JSON，也不让模型重新输入文案
 
-核对时以数据文件为对象逐条比对文档，任何一处不一致，先确认以哪边为准，再把两边改成一致。
+此后修改题目和人格文案，直接改 JSON 并提交，由提交审查把关。
 
 ### 2. 计分
 

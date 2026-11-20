@@ -10,7 +10,7 @@
 
 | 层 | 内容 | 依赖 |
 | :--- | :--- | :--- |
-| 内容层 `content/` | 手工维护的维度、题目、权重和人格数据（见第二节） | 纯数据，无依赖 |
+| 内容层 `content/` | 题目与人格长文（JSON，由文档导入）、维度与计分表（TypeScript，手写）（见第二节） | 纯数据，无依赖 |
 | 核心层 `core/` | 计分、流程状态机、四维呈现数据、分享图合成、环境判断 | 纯 TypeScript，不依赖 React，全部可单元测试 |
 | 界面层 `screens/` | 各状态的界面，手机与电脑各一种布局（见第八节） | React；视觉与动效待界面设计 |
 
@@ -36,13 +36,15 @@ web/
 ├─ vite.config.ts              # base: '/AITI/'
 ├─ scripts/
 │  ├─ build-assets.ts          # asset/ → src/generated/img/
-│  └─ check-budget.ts          # 构建后检查产物体积
+│  ├─ check-budget.ts          # 构建后检查产物体积
+│  └─ import-content.ts        # 一次性：tests_design.md、result_page.md → content/*.json，见第二节，不在任何自动流程中
 ├─ src/
-│  ├─ content/                 # 站点内容数据，手工维护，见第二节
-│  │  ├─ types.ts
-│  │  ├─ dimensions.ts
-│  │  ├─ questions.ts
-│  │  └─ personalities.ts
+│  ├─ content/                 # 站点内容数据，见第二节
+│  │  ├─ types.ts              # 类型，以及极、代号、模型 ID 的常量列表
+│  │  ├─ dimensions.ts         # 维度、极名、计分表，手写
+│  │  ├─ questions.json        # 由 tests_design.md 导入
+│  │  ├─ personalities.json    # 由 result_page.md 导入
+│  │  └─ index.ts              # 导入 JSON 并加上类型
 │  ├─ generated/               # 构建生成，不提交
 │  ├─ core/
 │  │  ├─ score.ts              # 计分与代号
@@ -59,29 +61,49 @@ web/
 
 ## 二、内容数据
 
-站点显示的所有内容文字（维度、题目、选项、权重、人格名、描述）写在 `web/src/content/` 下的 TypeScript 数据文件中，手工维护。构建和运行时都不读取、不解析 `docs/` 下的 Markdown 文档。
+只有两类内容从文档导入：10 道题（题目、场景、选项、权重），以及 16 个人格的名称、对应模型和描述长文。它们存为 JSON。其余文字写在代码里，直接手写：
 
-### 1. 与文档的关系
+| 内容 | 位置 | 来源 |
+| :--- | :--- | :--- |
+| 10 道题 | `content/questions.json` | 由 [tests_design.md](../tests_design.md) 导入 |
+| 16 个人格（名称、对应模型、描述） | `content/personalities.json` | 由 [result_page.md](../result_page.md) 导入 |
+| 4 个维度名、8 个极名、计分表（主测、副测题号） | `content/dimensions.ts` | 手写，对照 [aiti_personality.md](../aiti_personality.md) 和 [tests_design.md](../tests_design.md) 第一节 |
+| 按钮、提示、揭晓文案、错误信息等界面文字 | 界面层代码中 | 手写，随界面设计确定，没有统一的文案文件 |
+
+构建和运行时都不读取、不解析 `docs/` 下的 Markdown 文档。
+
+### 1. 导入与文档的关系
+
+JSON 首次由脚本从文档生成，之后与文档各自独立。
 
 | 项 | 规定 |
 | :--- | :--- |
-| 上线内容 | 以 `web/src/content/` 为准，网页显示什么由它决定 |
-| 文档的作用 | [aiti_personality.md](../aiti_personality.md)、[tests_design.md](../tests_design.md)、[result_page.md](../result_page.md) 用于讨论、审阅和定稿 |
-| 修改顺序 | 先在文档中改定，再改数据文件；同一次提交里两处一起改 |
-| 一致性 | 由提交审查和发布前的人工核对保证（见[测试与验收](verification.md)），不做自动比对 |
+| 上线内容 | 题目和人格长文以 `web/src/content/` 的 JSON 为准，网页显示什么由它决定 |
+| 首次生成 | 开发期运行一次 `scripts/import-content.ts`：读取 [tests_design.md](../tests_design.md) 和 [result_page.md](../result_page.md)，写出 `questions.json` 和 `personalities.json`。脚本是确定性的解析，不经过模型重新输入文字；“对应模型：GPT”这类名称到 `modelId` 的对应，在脚本里用一张固定的表。产出由人审阅 diff 后再提交 |
+| 此后的修改 | 直接改 JSON，不再回头改文档，也不再运行脚本 |
+| 脚本的状态 | 脚本留在仓库中存档，文件开头注明“已完成首次导入，不再使用”。输出文件已存在时脚本默认拒绝运行，要覆盖须显式加 `--force`，以免覆盖手改的内容 |
+| 文档的状态 | [tests_design.md](../tests_design.md) 和 [result_page.md](../result_page.md) 开头各加一行说明：上线内容以 JSON 为准，导入后本文不再同步，仅用于讨论和存档。其余内容文档不受影响 |
+| 一致性 | 不做同步，不做比对，也不再有人工核对清单 |
+
+脚本只在开发者本机运行一次，不在 `npm test`、`npm run build` 和部署工作流中，所以不违反“构建和运行时不解析 Markdown”。
 
 ### 2. 数据结构
 
-`types.ts` 定义类型，另外三个文件按类型导出常量：
+`types.ts` 先定义常量列表，再由列表推出类型，让校验测试和类型使用同一份来源：
 
 ```ts
-type Dim = 'D1' | 'D2' | 'D3' | 'D4'
-type Pole = 'L' | 'H' | 'D' | 'Q' | 'R' | 'U' | 'S' | 'A'
-type Code = 'LDRS' | 'LQRS' | 'LDRA' | 'LQRA' | 'LDUA' | 'LQUA' | 'LDUS' | 'LQUS'
-          | 'HDRA' | 'HQRA' | 'HDRS' | 'HQRS' | 'HDUA' | 'HDUS' | 'HQUA' | 'HQUS'
-type ModelId = 'gpt' | 'deepseek' | 'glm' | 'grok' | 'kimi' | 'claude' | 'gemini' | 'doubao'
+export const DIMS = ['D1', 'D2', 'D3', 'D4'] as const
+export const POLES = ['L', 'H', 'D', 'Q', 'R', 'U', 'S', 'A'] as const
+export const CODES = ['LDRS', 'LQRS', 'LDRA', 'LQRA', 'LDUA', 'LQUA', 'LDUS', 'LQUS',
+                      'HDRA', 'HQRA', 'HDRS', 'HQRS', 'HDUA', 'HDUS', 'HQUA', 'HQUS'] as const
+export const MODEL_IDS = ['gpt', 'deepseek', 'glm', 'grok', 'kimi', 'claude', 'gemini', 'doubao'] as const
 
-interface Dimension {
+type Dim = typeof DIMS[number]
+type Pole = typeof POLES[number]
+type Code = typeof CODES[number]
+type ModelId = typeof MODEL_IDS[number]
+
+interface Dimension {                       // dimensions.ts 导出 Dimension[]，手写
   id: Dim
   name: string                              // '认知内核'
   pos: { letter: Pole; name: string }       // 第一个极，如 L 逻辑工程
@@ -90,47 +112,48 @@ interface Dimension {
   secondary: [number, number, number]       // 副测题号，如 [5, 6, 9]
 }
 
-interface Question {
+interface Question {                        // questions.json 是 Question[]，10 项按题号排列
   id: number                                // 1..10
   title: string                             // '凌晨两点的 FIT 楼机房'
   scene: Text
   options: Record<'A' | 'B' | 'C' | 'D', {
     text: Text
-    weights: Partial<Record<Pole, 1 | 2>>   // 与文档写法一致，如 { H: 2, Q: 1 }
+    weights: Partial<Record<Pole, 1 | 2>>   // 如 { "H": 2, "Q": 1 }
   }>
 }
 
-interface Personality {
+interface Personality {                     // personalities.json 是 Record<Code, Personality>
   persona: string                           // '硬核工程师'
   model: string                             // 'GPT'
   modelId: ModelId
   description: Text
 }
 
-// personalities.ts 导出 Record<Code, Personality>，16 个代号缺一个或多一个都无法通过类型检查
-
 type Text = string | Segment[]
 type Segment = { text: string; style?: 'em' | 'code' }
 ```
 
+`index.ts` 用 `resolveJsonModule` 导入两个 JSON，加上上述类型后导出。JSON 导入的类型只是宽泛的 `string`，TypeScript 无法检查代号是否齐全、权重是否合法，所以这一层由第 3 小节的测试负责，不依赖编译器，也不引入运行时校验库，以免占用首屏 JS 预算。
+
 几点约定：
 
-- **文本不含标记**。字符串里不写 `**`、`` ` `` 之类的 Markdown 符号。需要强调或等宽显示的片段（如选项里的 `Segmentation Fault`、`git diff`）写成 `Segment[]`，由界面层决定如何呈现。
-- **权重按极字母书写**，与文档的 `[H +2, Q +1]` 一一对应，方便人工核对。计分前由 `core/score.ts` 换成有符号数：第一个极为正，第二个极为负，例如 `{ H: 2 }` 换成 `{ D1: -2 }`。
-- **计分表**写在 `Dimension` 的 `primary` 和 `secondary` 中，与题目权重分开维护，供下面的校验使用。
+- **文本不含标记**。字符串里不写 `**`、`` ` `` 之类的 Markdown 符号。需要强调或等宽显示的片段（如选项里的 `Segmentation Fault`、`git diff`）写成 `Segment[]`，由界面层决定如何呈现。导入脚本负责把 Markdown 标记转成 `Segment[]`。
+- **权重按极字母书写**，如 `{ "H": 2, "Q": 1 }`。计分前由 `core/score.ts` 换成有符号数：第一个极为正，第二个极为负，例如 `{ H: 2 }` 换成 `{ D1: -2 }`。
+- **计分表**写在 `Dimension` 的 `primary` 和 `secondary` 中，与题目权重分开维护。两者来源不同（一个手写，一个导入），第 3 小节的测试会交叉检查它们，这同时能发现导入时的权重错误。
 
 ### 3. 校验
 
-类型系统先挡住一部分错误：代号拼错、少了人格、权重字母或分值不合法、模型 ID 不存在，都会在编辑和类型检查时报错。
+JSON 没有字面量类型，代号缺一个、权重写成 3、模型 ID 拼错，编译器都不会报。因此这些规则都由 Vitest 校验，部署工作流在构建前运行测试，不通过就不部署：
 
-其余规则由单元测试校验。部署工作流在构建前运行测试，不通过就不部署：
+1. **结构**：两个 JSON 的字段齐全、类型正确；`weights` 的键属于 `POLES`、值只能是 1 或 2；`modelId` 属于 `MODEL_IDS`；题号合法。
+2. 8 个极字母互不相同，4 个维度各占两个。
+3. 题目编号为 1～10 连续。
+4. 同一选项里不会同时出现一个维度的两极。
+5. 每个选项涉及的维度和分值与计分表一致：该题是某维度的主测题时，该维度分值为 2；是副测题时为 1；不涉及的维度没有分值。
+6. `personalities.json` 的键恰好是 `CODES` 的 16 个值，不多不少；每个代号由 D1～D4 各取一个极字母组成；每个 `modelId` 恰好对应 2 个代号。
+7. 文本中不含 `**`、`` ` `` 等 Markdown 标记残留。
 
-1. 8 个极字母互不相同，4 个维度各占两个。
-2. 题目编号为 1～10 连续。
-3. 同一选项里不会同时出现一个维度的两极。
-4. 每个选项涉及的维度和分值与计分表一致：该题是某维度的主测题时，该维度分值为 2；是副测题时为 1；不涉及的维度没有分值。
-5. 每个代号由 D1～D4 各取一个极字母组成；每个 `modelId` 恰好对应 2 个代号。
-6. 文本中不含 `**`、`` ` `` 等 Markdown 标记残留。
+每条规则另配一份故意写错的测试数据，确认能检出（见[测试与验收](verification.md)）。
 
 以下情况只在测试输出中提示、不判失败：某题四个选项没有覆盖它所测两个维度的全部四种正负组合。这时各结果出现的概率会不均匀，属于内容取舍，由内容负责人确认。
 
