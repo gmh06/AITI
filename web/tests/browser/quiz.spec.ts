@@ -42,6 +42,13 @@ for (const viewport of sizes) {
     await answerQuiz(page)
     const result = page.getByRole('heading', { name: '情绪甜心' })
     await expect(result).toBeFocused()
+    await expect(result).toHaveCSS('font-family', /PingFang SC/)
+    const model = page.locator('.model-name')
+    await expect(model).toHaveCSS('font-family', /PingFang SC/)
+    await expect(model).toHaveCSS('font-size', viewport.width < 768 ? '63px' : '84px')
+    await expect(page.locator('.identity')).toHaveText(/^情绪甜心\s*豆包$/)
+    await expect(page.locator('.result-info .description')).toHaveCSS('font-family', /PingFang SC/)
+    await expect(page.locator('.dimension .pole-neg b').first()).toHaveCSS('font-family', /Cascadia Mono/)
     await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
     await expect(page.locator('.dimension .pole-neg')).toHaveText(['H 人文表达', 'Q 即时直觉', 'U 破界无忌', 'A 顺应配合'])
     await expect(page.locator('.dimension .pole-pos')).toHaveText(['L 逻辑工程', 'D 深度思考', 'R 准则自持', 'S 犀利自主'])
@@ -53,9 +60,15 @@ for (const viewport of sizes) {
     const retest = page.getByRole('button', { name: '再测一次' })
     await expect(retest).toHaveCSS('color', 'rgb(255, 255, 255)')
     for (const button of [savePoster, retest]) {
-      await expect(button).toHaveCSS('width', '214px')
       await expect(button).toHaveCSS('height', '52px')
     }
+    const [saveBox, retestBox, textBox] = await Promise.all([
+      savePoster.boundingBox(), retest.boundingBox(), page.locator('.result-info .description').boundingBox(),
+    ])
+    expect(saveBox!.width).toBeCloseTo(retestBox!.width, 1)
+    expect(saveBox!.y).toBeCloseTo(retestBox!.y, 1)
+    expect(saveBox!.x).toBeCloseTo(textBox!.x, 1)
+    expect(retestBox!.x + retestBox!.width).toBeCloseTo(textBox!.x + textBox!.width, 1)
     await retest.click()
     await expect(page.getByRole('button', { name: '开始测试' })).toBeFocused()
     await page.getByRole('button', { name: '开始测试' }).click()
@@ -117,6 +130,7 @@ test('keeps desktop hover highlights flush with the grid dividers', async ({ pag
   })
   expect(misalignment).toBeLessThan(1)
   await option(page, 'B').hover()
+  await expect(option(page, 'B').locator('.quiz-outline')).toHaveCSS('fill', 'none')
   await expect.poll(() => option(page, 'B').evaluate(
     (button) => getComputedStyle(button, '::before').opacity,
   )).toBe('1')
@@ -134,6 +148,10 @@ test('retains a choice on back and resize, handles a double click, and resets on
   await page.goBack()
   await expect(progress(page)).toHaveText('context 1/10')
   await expect(option(page, 'B')).toHaveAttribute('aria-pressed', 'true')
+  const savedOutline = option(page, 'B').locator('.quiz-outline')
+  await expect(savedOutline).toHaveCSS('fill', 'none')
+  await expect(savedOutline).toHaveCSS('stroke', 'rgb(171, 53, 40)')
+  await expect(page.locator('.question-number .quiz-outline')).toHaveCSS('fill', 'none')
   await page.setViewportSize({ width: 844, height: 390 })
   await expect(option(page, 'B')).toHaveAttribute('aria-pressed', 'true')
   await checkWidth(page)
@@ -308,6 +326,18 @@ test('plays the full reveal and preserves the character position', async ({ page
   await expect(page.getByRole('heading', { name: '硬核工程师' })).toBeFocused({ timeout: 10_000 })
   const after = await art.boundingBox()
   expect(after).toEqual(before)
+  await expect(art).toHaveCSS('z-index', '1')
+  await expect(art.locator('.art-scale')).toHaveCSS('mix-blend-mode', 'normal')
+  const portrait = page.getByRole('img', { name: 'GPT 角色插画' })
+  const cornerAlpha = await portrait.evaluate(async (element: HTMLImageElement) => {
+    await element.decode()
+    const canvas = document.createElement('canvas')
+    canvas.width = canvas.height = 1
+    const context = canvas.getContext('2d')!
+    context.drawImage(element, 0, 0, 1, 1, 0, 0, 1, 1)
+    return context.getImageData(0, 0, 1, 1).data[3]
+  })
+  expect(cornerAlpha).toBe(0)
   await expect(page.locator('.art-peek')).toHaveCSS('clip-path', 'none')
   await expect(page.locator('.is-pos .pole-pos b').first()).toHaveCSS('color', 'rgb(171, 53, 40)')
   await expect(page.locator('.is-pos .pole-neg b').first()).toHaveCSS('color', 'rgb(59, 77, 120)')

@@ -5,7 +5,7 @@ import { MODEL_IDS } from '../src/content/types.ts'
 
 const repository = new URL('../../', import.meta.url)
 const directory = new URL('../src/generated/img/', import.meta.url)
-const sources: { characters: { model: string; white: string; transparent: string }[] } = JSON.parse(
+const sources: { characters: { model: string; transparent: string }[] } = JSON.parse(
   readFileSync(new URL('asset/nonhuman/cards/source-map.json', repository), 'utf8'),
 )
 const allowPlaceholder = !process.argv.includes('--release') || process.env.AITI_ALLOW_PLACEHOLDER === '1'
@@ -15,7 +15,6 @@ const limit = 150_000
 
 const placeholder = Buffer.from(
   `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
-    <path fill="#fff" d="M0 0h${width}v${height}H0z"/>
     <circle cx="512" cy="768" r="250" fill="#e3e8f7"/>
     <path fill="#a2b0f9" d="m512 606 162 162-162 162-162-162z"/>
   </svg>`,
@@ -43,23 +42,22 @@ function engravedLayer(model: string, layer: string) {
 await Promise.all(MODEL_IDS.map(async (model) => {
   const entry = sources.characters.find((source) => source.model === model)
   if (!entry) throw new Error(`Missing character entry for ${model}.`)
-  const source = new URL(entry.white, repository)
+  const source = new URL(entry.transparent, repository)
   const available = existsSync(source)
-  if (!available && !allowPlaceholder) throw new Error(`Missing character art: ${entry.white}`)
+  if (!available && !allowPlaceholder) throw new Error(`Missing character art: ${entry.transparent}`)
   if (!available) console.warn(`Using character placeholder: ${model}`)
   const image = sharp(available ? fileURLToPath(source) : placeholder)
   const metadata = await image.metadata()
-  if (metadata.width !== width || metadata.height !== height) {
-    throw new Error(`Character art for ${model} must be ${width}×${height}.`)
+  if (metadata.width !== width || metadata.height !== height || !metadata.hasAlpha) {
+    throw new Error(`Character art for ${model} must be ${width}×${height} with an alpha channel.`)
   }
-  const info = await image.webp({ quality: 80 }).toFile(fileURLToPath(new URL(`${model}.webp`, directory)))
-  if (info.size > limit) throw new Error(`Character art for ${model} is ${info.size} bytes (limit: ${limit}).`)
 
   const frame = framedArt.scenes.find(({ id }) => id === model)
   if (!frame) throw new Error(`Missing share-card framing for ${model}.`)
   const [left, top, cropWidth, cropHeight] = frame.foreground.sourceRect
-  await Promise.all([
-    sharp(fileURLToPath(new URL(entry.transparent, repository)))
+  const [info] = await Promise.all([
+    image.clone().webp({ quality: 80 }).toFile(fileURLToPath(new URL(`${model}.webp`, directory))),
+    image.clone()
       .extract({ left, top, width: cropWidth, height: cropHeight })
       .resize({ width: 400, height: 400, fit: 'inside' })
       .webp({ quality: 88 })
@@ -67,6 +65,7 @@ await Promise.all(MODEL_IDS.map(async (model) => {
     sharp(engravedLayer(model, 'model')).png()
       .toFile(fileURLToPath(new URL(`poster-name-${model}.png`, shareDirectory))),
   ])
+  if (info.size > limit) throw new Error(`Character art for ${model} is ${info.size} bytes (limit: ${limit}).`)
 }))
 
 await Promise.all([

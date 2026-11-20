@@ -3,6 +3,7 @@ import { questions } from '../content'
 import { OPTIONS } from '../content/types'
 import type { OptionKey } from '../content/types'
 import { REDUCED_MOTION_QUERY } from '../core/env'
+import { QuizOutline } from './QuizOutline'
 import { RichText, TopBar } from './shared'
 
 const ANSWER_FEEDBACK_MS = 280
@@ -52,7 +53,7 @@ export function Quiz({ index, saved, onAnswer, onBack }: QuizProps) {
       </div>
       <div className="question">
         <div className="question-head">
-          <div className="question-number" aria-hidden="true">{String(question.id).padStart(2, '0')}</div>
+          <div className="question-number" aria-hidden="true"><QuizOutline text={String(question.id).padStart(2, '0')} /></div>
           <h2 className="question-scene" id="question-title" aria-describedby="question-progress" tabIndex={-1} ref={heading}>
             <RichText text={question.scene} />
           </h2>
@@ -60,7 +61,7 @@ export function Quiz({ index, saved, onAnswer, onBack }: QuizProps) {
         <div className="options" role="group" aria-labelledby="question-title">
           {OPTIONS.map((key) => (
             <button className="option" type="button" aria-pressed={(pending ?? saved) === key} key={key} onClick={() => answer(key)}>
-              <span className="option-key" aria-hidden="true">{key}</span>
+              <span className="option-key" aria-hidden="true"><QuizOutline text={key} /></span>
               <span className="option-text"><span className="sr-only">{key}. </span><RichText text={question.options[key].text} /></span>
             </button>
           ))}

@@ -8,12 +8,6 @@
   src: url("../../assets/style/share-reading.woff2") format("woff2");
 }
 
-.poster-save-actions {
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-}
-
 .share-dialog {
   position: fixed;
   inset: 0;

@@ -220,7 +220,7 @@ interface DimensionView {
 | 跳过 | 点击或触摸任意位置，或在电脑上按 Enter、空格、Esc，立即派发 `REVEAL_DONE` |
 | 减少动态效果 | 系统开启“减少动态效果”时不播放，直接派发 `REVEAL_DONE` |
 | 等图 | 角色图未加载完成前不进入需要显示角色的阶段；超过 8 秒仍未加载完成，进入 `result` 并显示加载失败与重试 |
-| 角色图 | 只使用无文字版角色图 |
+| 角色图 | 揭晓和结果页共用原尺寸的透明无文字版，结果页将角色绘制在框线前 |
 
 实现揭晓效果时的技术限制：
 
@@ -263,7 +263,7 @@ interface DimensionView {
 
 | 资源 | 来源 | 输出 | 单张上限 |
 | :--- | :--- | :--- | :--- |
-| 角色图 ×8 | DeepSeek、Grok、豆包取 `asset/nonhuman/cards/textfree/`，其余取 `asset/nonhuman/cards/final/` | WebP，保持原宽 1024，质量 80 | 150 KB |
+| 揭晓和结果页角色图 ×8 | 角色取用索引中的 `transparent` 路径 | 带透明通道的 WebP，保持原宽 1024，质量 80 | 150 KB |
 | 分享卡纸纹、字标和模型字样 | `asset/design/card-studies/engraved-v1/fronts.drawio` | 纸纹 WebP、透明字标 PNG | 250 KB |
 | 分享卡内容衬底和二维码 | `asset/design/backgrounds/v3/city-landscape.png`、铭文卡背的 `aiti-qr.png` | 城市背景 WebP、二维码 PNG | 250 KB |
 | 宣传图透明角色 ×8 | `asset/nonhuman/cards/transparent/v1/` | 保留角色与道具，最长边 400 px 的 WebP | 150 KB |

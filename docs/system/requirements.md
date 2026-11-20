@@ -64,7 +64,7 @@
 
 | 素材 | 位置 | 现状 |
 | :--- | :--- | :--- |
-| 角色图 ×8 | [角色取用索引的 `white` 路径](../../asset/nonhuman/cards/source-map.json)，含五张原定稿和 DeepSeek、Grok、豆包三张去字版 | 八张已归档 |
+| 揭晓和结果页角色图 ×8 | [角色取用索引的 `transparent` 路径](../../asset/nonhuman/cards/source-map.json)，无文字，保留原尺寸 | 八张已归档 |
 | 分享卡素材 | 铭文纸纹、字标、八款透明角色图、主视觉衍生城市图和卡背二维码，见[系统设计](design.md)第五、六节 | 已接入结果页保存窗口 |
 | 主视觉 | `asset/Festival/` | 已有；网页是否使用、怎么用待界面设计确定 |
 

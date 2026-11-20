@@ -121,7 +121,7 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
               ))}
             </ul>
             <p className="description"><RichText text={personality.description} /></p>
-            <div className="result-actions poster-save-actions">
+            <div className="result-actions">
               <button ref={shareButton} type="button" className="cta" aria-haspopup="dialog" onClick={() => setShareOpen(true)} disabled={revealing}>保存图片</button>
               <button type="button" className="cta" onClick={onRestart} disabled={revealing}>再测一次</button>
             </div>

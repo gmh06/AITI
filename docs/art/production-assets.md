@@ -7,7 +7,7 @@
 - **原始定稿**：继续保留 [八款动作图](../../asset/nonhuman/cards/final/) 及其完整 prompt 和生成记录。
 - **三张去字版**：[DeepSeek](../../asset/nonhuman/cards/textfree/deepseek.png)、[Grok](../../asset/nonhuman/cards/textfree/grok.png)、[豆包](../../asset/nonhuman/cards/textfree/doubao.png)。1024 × 1536，保留原图坐标，遮罩外像素不变；其余五款直接用原定稿。
 - **八张透明底版**：[transparent/v1](../../asset/nonhuman/cards/transparent/v1/)。1024 × 1536 RGBA PNG，供后续拼接。由内置 `image_gen` 抠图派生，完整动作、道具和装饰保留；无附文、标签与便签。第一批衍生图待审阅，不替换原始定稿。
-- **取用索引**：[source-map.json](../../asset/nonhuman/cards/source-map.json) 同时给出八款的白底版与透明底版路径；网站揭晓动画优先用原坐标白底版。
+- **取用索引**：[source-map.json](../../asset/nonhuman/cards/source-map.json) 同时给出八款的白底版与透明底版路径。网站揭晓和结果页共用原尺寸的透明底版，分享卡使用其裁边版本。
 
 透明版保留白龙鳞片、纸张、月牙、浅色毛发和软垫等白色前景材质。生成式抠图可能轻微调整边缘或颜色，不承诺与原图逐像素一致；原坐标去字版的像素要求单独验收。
 
