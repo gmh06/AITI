@@ -64,7 +64,7 @@
 
 | 素材 | 位置 | 现状 |
 | :--- | :--- | :--- |
-| 角色图 ×8 | `asset/nonhuman/cards/final/`；DeepSeek、Grok、豆包使用 `asset/nonhuman/cards/textfree/` 中的无文字版 | 五张已有；三张无文字版尚未提供 |
+| 角色图 ×8 | [角色取用索引的 `white` 路径](../../asset/nonhuman/cards/source-map.json)，含五张原定稿和 DeepSeek、Grok、豆包三张去字版 | 八张已归档 |
 | 分享图素材 | `asset/share/`，格式见[系统设计](design.md)第五节 | 尚未提供 |
 | 主视觉 | `asset/Festival/` | 已有；网页是否使用、怎么用待界面设计确定 |
 
