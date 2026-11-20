@@ -1,11 +1,15 @@
 import type { ModelId } from '../content/types'
-import { DESKTOP_QUERY, REDUCED_MOTION_QUERY } from '../core/env'
+import { REDUCED_MOTION_QUERY } from '../core/env'
 import type { DimensionView } from '../core/dimensions'
 
 const DURATION = 6000
 const WAIT_AT = 1200
 const RESUME_AT = 1000
+const OPEN_AT = 3200
+const OPENED_AT = 3800
 const EASE = 'cubic-bezier(.16, 1, .3, 1)'
+const ART_HEIGHT = 1.5 // The artwork box is 2:3, with its width as the unit.
+const CIRCLE_PERCENT_BASE = Math.hypot(1, ART_HEIGHT) / Math.SQRT2
 
 // Center is relative to the original image. Radius is a fraction of its width.
 const framing: Record<ModelId, { x: number; y: number; radius: number }> = {
@@ -54,30 +58,26 @@ export function startReveal(
   views: DimensionView[],
   onDone: () => void,
 ) {
-  const desktop = matchMedia(DESKTOP_QUERY)
-  const reduced = matchMedia(REDUCED_MOTION_QUERY)
-  if (reduced.matches || document.hidden || !HTMLElement.prototype.animate) {
+  const reduced = matchMedia(REDUCED_MOTION_QUERY).matches
+  if (!HTMLElement.prototype.animate) {
     onDone()
     return undefined
   }
 
   const wrap = screen.querySelector<HTMLElement>('.art-wrap')!
+  const ringPosition = wrap.querySelector<HTMLElement>('.reveal-ring-position')!
   const ring = wrap.querySelector<HTMLElement>('.reveal-ring')!
   const noise = wrap.querySelector<HTMLElement>('.reveal-noise')!
   const grain = noise.querySelector<HTMLElement>('span')!
   const coarse = wrap.querySelector<HTMLCanvasElement>('.reveal-coarse')!
   const fine = wrap.querySelector<HTMLCanvasElement>('.reveal-fine')!
-  const point = framing[model]
-  const { width, height } = wrap.getBoundingClientRect()
-  const x = point.x * width
-  const y = point.y * height
-  const radius = point.radius * width
-  const endRadius = Math.hypot(Math.max(x, width - x), Math.max(y, height - y)) + 2
-  const clip = (size: number) => `circle(${size}px at ${x}px ${y}px)`
-  ring.style.left = `${x}px`
-  ring.style.top = `${y}px`
-  ring.style.margin = `${-radius}px 0 0 ${-radius}px`
-  ring.style.width = ring.style.height = `${2 * radius}px`
+  const { x, y, radius } = framing[model]
+  const endRadius = Math.hypot(Math.max(x, 1 - x), Math.max(y, 1 - y) * ART_HEIGHT) + .01
+  // Percentages keep the ring and clip aligned when the artwork resizes mid-reveal.
+  const clip = (size: number) => `circle(${100 * size / CIRCLE_PERCENT_BASE}% at ${100 * x}% ${100 * y}%)`
+  ringPosition.style.left = `${100 * x}%`
+  ringPosition.style.top = `${100 * y}%`
+  ringPosition.style.width = `${200 * radius}%`
   const texture = getNoiseTexture()
   if (texture) grain.style.backgroundImage = `url(${texture})`
   const previousOverflow = document.documentElement.style.overflow
@@ -95,10 +95,14 @@ export function startReveal(
   }
 
   const fade = (from: number, to: number): Frame[] => [[from, { opacity: 0 }], [to, { opacity: 1 }]]
-  const pulse = (opacity: number, scale = 1) => ({ opacity, transform: `scale(${scale})` })
-  const move = (opacity: number, y: number, scale = 1) => ({ opacity, transform: `translateY(${y}px) scale(${scale})` })
+  const pulse = (opacity: number, scale = 1) => ({ opacity, transform: `scale(${reduced ? 1 : scale})` })
+  const move = (opacity: number, y: number, scale = 1) => ({
+    opacity,
+    transform: reduced ? 'none' : `translateY(${y}px) scale(${scale})`,
+  })
+  add(screen.querySelector('.reveal-background'), [[OPEN_AT, { opacity: 1 }], [OPENED_AT, { opacity: 0 }]])
   add(noise, [
-    [0, pulse(0)], [200, pulse(.85)], [1000, pulse(.85)], [1100, pulse(1, 1.04)],
+    [0, pulse(0)], [200, pulse(.85)], [1000, pulse(.85)], [1100, pulse(reduced ? .85 : 1, 1.04)],
     [1200, pulse(.85)], [1600, pulse(.5)], [2200, pulse(0)],
   ])
   add(wrap.querySelector('.reveal-caption'), [
@@ -106,15 +110,21 @@ export function startReveal(
   ])
   add(ring, [
     [1200, pulse(0)], [1600, pulse(1)], [2400, { ...pulse(1), easing: 'linear' }],
-    [3200, pulse(1, 1.03)], [3500, pulse(0, 1.7)],
+    [OPEN_AT, pulse(1, 1.03)], [3500, pulse(0, 1.7)],
   ])
-  add(screen.querySelector('.reveal-flash'), [[3199, { opacity: 0 }], [3200, { opacity: .5 }], [3440, { opacity: 0 }]])
-  add(wrap.querySelector('.art-scale'), [
-    [3600, { transform: 'scale(1)' }], [3800, { transform: 'scale(.97)' }], [4000, { transform: 'scale(1)' }],
-  ])
-  add(wrap.querySelector('.art-peek'), [
+  if (!reduced) {
+    add(screen.querySelector('.reveal-flash'), [
+      [0, { opacity: 0, easing: 'steps(1, end)' }], [OPEN_AT, { opacity: .5 }], [3440, { opacity: 0 }],
+    ])
+    add(wrap.querySelector('.art-scale'), [
+      [3600, { transform: 'scale(1)' }], [3800, { transform: 'scale(.97)' }], [4000, { transform: 'scale(1)' }],
+    ])
+  }
+  add(wrap.querySelector('.art-peek'), reduced ? [
+    [0, { clipPath: clip(radius), easing: 'steps(1, end)' }], [OPEN_AT, { clipPath: clip(endRadius) }],
+  ] : [
     [0, { clipPath: clip(radius) }], [2400, { clipPath: clip(radius), easing: 'linear' }],
-    [3200, { clipPath: clip(radius * 1.03) }], [3800, { clipPath: clip(endRadius) }],
+    [OPEN_AT, { clipPath: clip(radius * 1.03) }], [OPENED_AT, { clipPath: clip(endRadius) }],
   ])
   add(coarse, fade(1200, 1600))
   add(fine, fade(1600, 2200))
@@ -123,14 +133,16 @@ export function startReveal(
   screen.querySelectorAll('.dimension').forEach((element, index) => {
     const from = 4600 + 120 * index
     add(element, fade(from, from + 440))
-    add(element.querySelector('.bar'), [
-      [from, { transform: 'scaleX(0)' }], [from + 440, { transform: `scaleX(${views[index].ratio})` }],
-    ])
+    if (!reduced) {
+      add(element.querySelector('.bar'), [
+        [from, { transform: 'scaleX(0)' }], [from + 440, { transform: `scaleX(${views[index].ratio})` }],
+      ])
+    }
   })
   screen.querySelectorAll('.topbar, .model-name, .description, .result-actions, .art-halo, .art-ring, .art-corner')
     .forEach((element) => add(element, [[5400, move(0, 8)], [6000, move(1, 0)]]))
 
-  const jitter = grain.animate(Array.from({ length: 12 }, () => ({
+  const jitter = reduced ? undefined : grain.animate(Array.from({ length: 12 }, () => ({
     transform: `translate(${-Math.floor(Math.random() * 128)}px, ${-Math.floor(Math.random() * 128)}px)`,
     easing: 'steps(1, end)',
   })), { duration: 480, iterations: Infinity })
@@ -146,30 +158,13 @@ export function startReveal(
     })
   }, WAIT_AT)
 
-  function onKey(event: KeyboardEvent) {
-    if (event.key === 'Enter' || event.key === ' ' || event.key === 'Escape') {
-      event.preventDefault()
-      finish()
-    }
-  }
-  function onVisibility() {
-    if (document.hidden) finish()
-  }
-  function onMotion() {
-    if (reduced.matches) finish()
-  }
   function dispose() {
     if (disposed) return
     disposed = true
     window.clearTimeout(waitTimer)
     animations[0].onfinish = null
     animations.forEach((animation) => animation.cancel())
-    jitter.cancel()
-    window.removeEventListener('keydown', onKey, true)
-    window.removeEventListener('orientationchange', finish)
-    document.removeEventListener('visibilitychange', onVisibility)
-    desktop.removeEventListener('change', finish)
-    reduced.removeEventListener('change', onMotion)
+    jitter?.cancel()
     document.documentElement.style.overflow = previousOverflow
   }
   function finish() {
@@ -179,11 +174,6 @@ export function startReveal(
   }
 
   animations[0].onfinish = finish
-  window.addEventListener('keydown', onKey, true)
-  window.addEventListener('orientationchange', finish)
-  document.addEventListener('visibilitychange', onVisibility)
-  desktop.addEventListener('change', finish)
-  reduced.addEventListener('change', onMotion)
 
   return {
     ready(image: HTMLImageElement) {

@@ -3,7 +3,8 @@ import type { Page } from '@playwright/test'
 
 const progress = (page: Page) => page.locator('.context-label')
 const option = (page: Page, key = 'A') => page.getByRole('button', { name: new RegExp(`^${key}\\.`) })
-const skip = (page: Page) => page.getByRole('button', { name: '跳过揭晓' })
+const reveal = (page: Page) => page.getByRole('region', { name: '正在揭晓测试结果' })
+const revealTimeout = { timeout: 15_000 }
 
 async function start(page: Page) {
   await page.goto('./')
@@ -41,7 +42,9 @@ for (const viewport of sizes) {
     expect(columns === 'none').toBe(viewport.width < 768)
     await answerQuiz(page)
     const result = page.getByRole('heading', { name: '情绪甜心' })
-    await expect(result).toBeFocused()
+    await expect(reveal(page)).toBeFocused()
+    await expect(page.locator('.reveal-flash')).toHaveCSS('opacity', '0')
+    await expect(result).toBeFocused(revealTimeout)
     await expect(result).toHaveCSS('font-family', /PingFang SC/)
     const model = page.locator('.model-name')
     await expect(model).toHaveCSS('font-family', /PingFang SC/)
@@ -54,7 +57,7 @@ for (const viewport of sizes) {
     await expect(page.locator('.dimension .pole-pos')).toHaveText(['L 逻辑工程', 'D 深度思考', 'R 准则自持', 'S 犀利自主'])
     await expect(page.locator('.is-neg .pole-neg b').first()).toHaveCSS('color', 'rgb(171, 53, 40)')
     await expect(page.locator('.is-neg .pole-pos b').first()).toHaveCSS('color', 'rgb(59, 77, 120)')
-    await expect(skip(page)).toHaveCount(0)
+    await expect(reveal(page)).toHaveCount(0)
     await checkWidth(page)
     const savePoster = page.getByRole('button', { name: '保存图片' })
     const retest = page.getByRole('button', { name: '再测一次' })
@@ -176,7 +179,7 @@ test('lets the browser leave the home screen after reloading a quiz', async ({ p
   await expect(page).toHaveURL(previous)
 })
 
-test('supports keyboard-only answering and escape from the reveal', async ({ page }) => {
+test('supports keyboard-only answering and keeps the reveal active on keyboard and browser back', async ({ page }) => {
   await page.goto('./')
   const startButton = page.getByRole('button', { name: '开始测试' })
   await expect(startButton).toBeVisible()
@@ -190,10 +193,16 @@ test('supports keyboard-only answering and escape from the reveal', async ({ pag
     await expect(option(page)).toBeFocused()
     await page.keyboard.press(index % 2 ? 'Enter' : 'Space')
   }
-  await expect(skip(page)).toBeFocused()
-  await expect(skip(page)).toHaveCSS('opacity', '1')
+  await expect(reveal(page)).toBeFocused()
+  await page.keyboard.press('Enter')
+  await page.keyboard.press('Space')
   await page.keyboard.press('Escape')
-  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused()
+  await page.evaluate(() => new Promise<void>((resolve) => {
+    window.addEventListener('popstate', () => resolve(), { once: true })
+    history.back()
+  }))
+  await expect(reveal(page)).toBeFocused()
+  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused(revealTimeout)
   await expect(page.locator('.art-peek')).toHaveCSS('clip-path', 'none')
   await expect(page.locator('html')).not.toHaveCSS('overflow', 'hidden')
 })
@@ -215,7 +224,7 @@ test('downloads the visible home background and defers character art until the r
   ])
   await page.getByRole('button', { name: '开始测试' }).click()
   await answerQuiz(page)
-  await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
+  await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible(revealTimeout)
   expect(requests.filter((path) => /^(gpt|claude|deepseek|glm|grok|kimi|gemini|doubao)-/.test(path))).toEqual([
     expect.stringMatching(/^doubao-/),
   ])
@@ -249,6 +258,7 @@ test('opens the share poster before retest and downloads the generated JPEG', as
   await start(page)
   await answerQuiz(page)
 
+  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused(revealTimeout)
   const description = await page.locator('.result .description').innerText()
   expect(description.trim()).not.toBe('')
   await expect(page.locator('.result-actions button')).toHaveText(['保存图片', '再测一次'])
@@ -318,13 +328,23 @@ test('retries share-card asset failures inside the save dialog', async ({ page }
   await expect(dialog.getByRole('img')).toBeVisible()
 })
 
-test('plays the full reveal and preserves the character position', async ({ page }) => {
+test('keeps the backdrop black through the clear peek and preserves the character position', async ({ page }) => {
   await start(page)
   await answerQuiz(page, 'BBBBBBBBBB')
-  await expect(skip(page)).toBeVisible()
+  await expect(reveal(page)).toBeVisible()
+  const backdrop = page.locator('.reveal-background')
+  await expect(backdrop).toHaveCSS('background-color', 'rgb(0, 0, 0)')
+  await expect(backdrop).toHaveCSS('opacity', '1')
   const art = page.locator('.art-wrap')
   const before = await art.boundingBox()
-  await expect(page.getByRole('heading', { name: '硬核工程师' })).toBeFocused({ timeout: 10_000 })
+  await expect.poll(() => art.evaluate((element) => {
+    const peek = getComputedStyle(element.querySelector('.art-peek')!)
+    const character = getComputedStyle(element.querySelector('.character')!)
+    const background = getComputedStyle(document.querySelector('.reveal-background')!)
+    return character.opacity === '1' && peek.clipPath.startsWith('circle(') && background.opacity === '1'
+  })).toBe(true)
+  await expect(backdrop).toHaveCSS('opacity', '0')
+  await expect(page.getByRole('heading', { name: '硬核工程师' })).toBeFocused(revealTimeout)
   const after = await art.boundingBox()
   expect(after).toEqual(before)
   await expect(art).toHaveCSS('z-index', '1')
@@ -344,7 +364,7 @@ test('plays the full reveal and preserves the character position', async ({ page
   await expect(page.locator('.is-pos .pole-neg b').first()).toHaveCSS('color', 'rgb(59, 77, 120)')
 })
 
-test('pauses for a slow image and skips on a layout change', async ({ page }) => {
+test('keeps the reveal paused on a black backdrop through a layout change', async ({ page }) => {
   let release!: () => void
   const hold = new Promise<void>((resolve) => { release = resolve })
   await page.route('**/assets/doubao-*.webp', async (route) => {
@@ -353,15 +373,15 @@ test('pauses for a slow image and skips on a layout change', async ({ page }) =>
   })
   await start(page)
   await answerQuiz(page)
-  await expect(skip(page)).toBeVisible()
+  await expect(reveal(page)).toBeVisible()
   await expect.poll(() => page.locator('.reveal-noise').evaluate(
     (element) => element.getAnimations().some((animation) => animation.playState === 'paused'),
   )).toBe(true)
   await page.setViewportSize({ width: 390, height: 844 })
-  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused()
-  await expect(page.getByRole('status')).toHaveText('正在加载角色图…')
+  await expect(reveal(page)).toBeVisible()
+  await expect(page.locator('.reveal-background')).toHaveCSS('opacity', '1')
   release()
-  await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
+  await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible(revealTimeout)
 })
 
 test('offers a working retry after an image error', async ({ page }) => {
@@ -402,7 +422,7 @@ for (const hasTouch of [false, true]) {
       await expect.poll(playback).toBe('running')
       await press(viewport.width / 2, viewport.height / 2)
       await expect.poll(playback).toBe('running')
-      await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused({ timeout: 10_000 })
+      await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused(revealTimeout)
       await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
     })
   })
@@ -417,7 +437,7 @@ test('ends a reveal when image loading times out', async ({ page }) => {
   })
   await start(page)
   await answerQuiz(page)
-  await expect(skip(page)).toBeVisible()
+  await expect(reveal(page)).toBeVisible()
   await expect(page.getByRole('status')).toHaveText('角色图没有加载出来', { timeout: 9000 })
   await expect(page.getByRole('button', { name: '重试' })).toBeEnabled()
   endRequest()

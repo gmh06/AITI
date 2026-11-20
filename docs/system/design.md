@@ -199,7 +199,7 @@ interface DimensionView {
 | `intro` | `START` | `quiz`，`index = 0`，答案清空 |
 | `quiz` | `ANSWER(index, key)` | 记录答案；`index < 9` 时进入下一题，否则计算结果并进入 `reveal` |
 | `quiz` | `BACK` | `index > 0` 时回到上一题，已选答案保留并显示；`index = 0` 时回到 `intro` |
-| `reveal` | `REVEAL_DONE` 或 `BACK` | `result` |
+| `reveal` | `REVEAL_DONE` | `result` |
 | `result` | `BACK` | `intro` |
 | `result` | `RESTART` | `intro`，答案清空 |
 
@@ -217,8 +217,8 @@ interface DimensionView {
 | :--- | :--- |
 | 输入 | 结果，以及该结果角色图的加载状态 |
 | 结束 | 播放完毕后派发 `REVEAL_DONE` |
-| 跳过 | 按 Enter、空格或 Esc 时立即派发 `REVEAL_DONE`。点击或触摸时继续播放 |
-| 减少动态效果 | 系统开启“减少动态效果”时不播放，直接派发 `REVEAL_DONE` |
+| 播放 | 揭晓不可跳过。0–3.2 秒及等图期间全屏纯黑，随后随窥视孔展开淡回结果页背景 |
+| 减少动态效果 | 保留完整时间轴和淡入淡出，省去闪白、抖动、回弹及其他连续位移 |
 | 等图 | 角色图未加载完成前不进入需要显示角色的阶段；超过 8 秒仍未加载完成，进入 `result` 并显示加载失败与重试 |
 | 角色图 | 揭晓和结果页共用原尺寸的透明无文字版，结果页将角色绘制在框线前 |
 
@@ -325,5 +325,5 @@ interface DimensionView {
 | WebP | 角色图、底图 | 支持范围内的浏览器均支持，不做降级 |
 | canvas 导出 | 分享图 | 显示失败提示，引导截屏 |
 | `navigator.share` 文件分享 | 保存分享图 | 改用下载或长按 |
-| `prefers-reduced-motion` | 跳过揭晓 | 按未开启处理 |
+| `prefers-reduced-motion` | 减少揭晓中的移动和闪烁 | 按未开启处理 |
 | History API | 拦截返回键 | 支持范围内均支持 |

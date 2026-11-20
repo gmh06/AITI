@@ -625,7 +625,9 @@ code {
   .result-actions { margin-top: 22px; }
 }
 
-.revealing .result-contents { pointer-events: none; }
+.revealing:focus { outline: none; }
+.revealing .result-contents { position: relative; pointer-events: none; }
+.reveal-background { position: fixed; inset: 0; pointer-events: none; background: #000; }
 .reveal-coarse, .reveal-fine, .reveal-noise, .reveal-ring, .reveal-caption, .reveal-flash { opacity: 0; }
 .reveal-noise, .reveal-ring-position, .reveal-caption { position: absolute; pointer-events: none; }
 .reveal-noise {
@@ -639,13 +641,14 @@ code {
   mask-image: radial-gradient(closest-side, black 52%, transparent);
 }
 .reveal-noise span { position: absolute; inset: 0 -128px -128px 0; background: #c6ceeb; background-size: 128px 128px; }
-.reveal-ring-position { inset: 0; }
+.reveal-ring-position { aspect-ratio: 1; transform: translate(-50%, -50%); }
 .reveal-ring {
   position: absolute;
-  border: 1.5px solid rgb(73 91 162 / 60%);
+  inset: 0;
+  border: 1.5px solid rgb(198 206 235 / 75%);
   border-radius: 50%;
 }
-.reveal-ring::before { content: ""; position: absolute; inset: -9px; border: 1px dashed rgb(73 91 162 / 30%); border-radius: inherit; }
+.reveal-ring::before { content: ""; position: absolute; inset: -9px; border: 1px dashed rgb(198 206 235 / 45%); border-radius: inherit; }
 .reveal-ring::after {
   content: "";
   position: absolute;
@@ -660,28 +663,12 @@ code {
   inset-inline: 0;
   top: 79%;
   margin: 0;
-  color: var(--muted);
+  color: #e3e8f7;
   font-size: 14px;
   letter-spacing: .16em;
   text-align: center;
 }
 .reveal-flash { position: fixed; inset: 0; z-index: 2; background: white; pointer-events: none; }
-.reveal-skip {
-  position: fixed;
-  top: calc(var(--safe-top) + 16px);
-  right: calc(var(--safe-right) + 22px);
-  z-index: 3;
-  min-width: 44px;
-  min-height: 44px;
-  border: 0;
-  padding-inline: 12px;
-  background: none;
-  color: var(--muted);
-  font-size: 14px;
-  opacity: 0;
-  pointer-events: none;
-}
-.reveal-skip:focus-visible { opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }

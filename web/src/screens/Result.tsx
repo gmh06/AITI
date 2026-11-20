@@ -24,7 +24,6 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
   const screen = useRef<HTMLElement>(null)
   const heading = useRef<HTMLHeadingElement>(null)
   const shareButton = useRef<HTMLButtonElement>(null)
-  const skip = useRef<HTMLButtonElement>(null)
   const reveal = useRef<ReturnType<typeof startReveal>>(undefined)
 
   useLayoutEffect(() => {
@@ -43,8 +42,9 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
       heading.current?.focus({ preventScroll: true })
       return
     }
-    skip.current?.focus({ preventScroll: true })
-    const playback = startReveal(screen.current!, personality.modelId, dims, onRevealed)
+    const section = screen.current!
+    section.focus({ preventScroll: true })
+    const playback = startReveal(section, personality.modelId, dims, onRevealed)
     reveal.current = playback
     return () => {
       playback?.dispose()
@@ -61,7 +61,9 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
   const state = revealing ? 'revealing' : artwork.status
 
   return (
-    <section className={`screen result ${state}`} aria-labelledby={revealing ? undefined : 'result-title'} ref={screen}>
+    <section className={`screen result ${state}`} aria-labelledby={revealing ? undefined : 'result-title'}
+      aria-label={revealing ? '正在揭晓测试结果' : undefined} tabIndex={revealing ? -1 : undefined} ref={screen}>
+      {revealing && <div className="reveal-background" aria-hidden="true" />}
       <div className="result-contents" aria-hidden={revealing} inert={revealing}>
         <TopBar backLabel="首页" onBack={onBack} inactive={revealing} />
         <div className="result-body">
@@ -132,10 +134,7 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
         setShareOpen(false)
         shareButton.current?.focus({ preventScroll: true })
       }} />}
-      {revealing && <>
-        <div className="reveal-flash" aria-hidden="true" />
-        <button type="button" className="reveal-skip" ref={skip} onClick={onRevealed} aria-label="跳过揭晓">跳过</button>
-      </>}
+      {revealing && <div className="reveal-flash" aria-hidden="true" />}
     </section>
   )
 }

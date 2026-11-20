@@ -31,7 +31,7 @@ export function reduceFlow(state: Flow, event: FlowEvent): Flow {
         : { screen: 'reveal', result: score(answers) }
     }
     case 'reveal':
-      return event.type === 'REVEAL_DONE' || event.type === 'BACK'
+      return event.type === 'REVEAL_DONE'
         ? { screen: 'result', result: state.result }
         : state
     case 'result':

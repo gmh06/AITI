@@ -23,7 +23,7 @@ describe('quiz flow', () => {
     expect(reveal).toEqual({ screen: 'reveal', result: { code: 'HQUA', scores: { D1: -1, D2: -5, D3: -1, D4: -5 } } })
     const result = reduceFlow(reveal, { type: 'REVEAL_DONE' })
     expect(result.screen).toBe('result')
-    expect(reduceFlow(reveal, { type: 'BACK' })).toEqual(result)
+    expect(reduceFlow(reveal, { type: 'BACK' })).toBe(reveal)
     expect(reduceFlow(result, { type: 'REVEAL_DONE' })).toBe(result)
     expect(reduceFlow(result, { type: 'RESTART' })).toEqual(initialFlow)
     expect(reduceFlow(result, { type: 'BACK' })).toEqual(initialFlow)
