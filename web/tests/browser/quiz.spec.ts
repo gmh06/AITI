@@ -149,7 +149,7 @@ test('retains a choice on back and resize, handles a double click, and resets on
   await expect(progress(page)).toHaveText('context 1/10')
   await expect(option(page, 'B')).toHaveAttribute('aria-pressed', 'true')
   const savedOutline = option(page, 'B').locator('.quiz-outline')
-  await expect(savedOutline).toHaveCSS('fill', 'none')
+  await expect(savedOutline.locator('path')).toHaveCSS('fill', 'rgb(171, 53, 40)')
   await expect(savedOutline).toHaveCSS('stroke', 'rgb(171, 53, 40)')
   await expect(page.locator('.question-number .quiz-outline')).toHaveCSS('fill', 'none')
   await page.setViewportSize({ width: 844, height: 390 })
@@ -191,6 +191,7 @@ test('supports keyboard-only answering and escape from the reveal', async ({ pag
     await page.keyboard.press(index % 2 ? 'Enter' : 'Space')
   }
   await expect(skip(page)).toBeFocused()
+  await expect(skip(page)).toHaveCSS('opacity', '1')
   await page.keyboard.press('Escape')
   await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused()
   await expect(page.locator('.art-peek')).toHaveCSS('clip-path', 'none')
@@ -373,24 +374,39 @@ test('offers a working retry after an image error', async ({ page }) => {
   await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
 })
 
-test('resumes when the slow image arrives and accepts a click to skip', async ({ page }) => {
-  let release!: () => void
-  const hold = new Promise<void>((resolve) => { release = resolve })
-  await page.route('**/assets/doubao-*.webp', async (route) => {
-    await hold
-    await route.continue()
+for (const hasTouch of [false, true]) {
+  test.describe(hasTouch ? 'touch input' : 'mouse input', () => {
+    const viewport = hasTouch ? { width: 390, height: 844 } : { width: 1280, height: 800 }
+    test.use({ hasTouch, isMobile: hasTouch, viewport })
+
+    test('keeps the reveal playing after pointer input', async ({ page }) => {
+      let release!: () => void
+      const hold = new Promise<void>((resolve) => { release = resolve })
+      await page.route('**/assets/doubao-*.webp', async (route) => {
+        await hold
+        await route.continue()
+      })
+      const press = (x: number, y: number) => hasTouch ? page.touchscreen.tap(x, y) : page.mouse.click(x, y)
+      await start(page)
+      await answerQuiz(page)
+      const noise = page.locator('.reveal-noise')
+      const playback = () => noise.evaluate((element) => element.getAnimations()[0]?.playState)
+      try {
+        await expect.poll(playback).toBe('paused')
+        await press(viewport.width / 2, viewport.height / 2)
+        await press(viewport.width - 44, 38)
+        await expect.poll(playback).toBe('paused')
+      } finally {
+        release()
+      }
+      await expect.poll(playback).toBe('running')
+      await press(viewport.width / 2, viewport.height / 2)
+      await expect.poll(playback).toBe('running')
+      await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused({ timeout: 10_000 })
+      await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
+    })
   })
-  await start(page)
-  await answerQuiz(page)
-  const noise = page.locator('.reveal-noise')
-  const playback = () => noise.evaluate((element) => element.getAnimations()[0]?.playState)
-  await expect.poll(playback).toBe('paused')
-  release()
-  await expect.poll(playback).toBe('running')
-  await page.mouse.click(30, 215)
-  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeFocused()
-  await expect(page.getByRole('img', { name: '豆包 角色插画' })).toBeVisible()
-})
+}
 
 test('ends a reveal when image loading times out', async ({ page }) => {
   let endRequest!: () => void

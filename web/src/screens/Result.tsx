@@ -134,9 +134,7 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
       }} />}
       {revealing && <>
         <div className="reveal-flash" aria-hidden="true" />
-        <button type="button" className="reveal-skip" ref={skip} onClick={onRevealed} aria-label="跳过揭晓">
-          <span>跳过</span>
-        </button>
+        <button type="button" className="reveal-skip" ref={skip} onClick={onRevealed} aria-label="跳过揭晓">跳过</button>
       </>}
     </section>
   )
