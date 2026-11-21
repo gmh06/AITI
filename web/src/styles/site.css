@@ -143,12 +143,12 @@ button {
   --headline-unit: min(var(--base-size), 8vh);
   --headline-unit: min(var(--base-size), 8dvh);
   --title-height: calc(var(--headline-unit) * 2.03);
-  --title-top: 27%;
-  --event-gap: clamp(6px, .9vh, 12px);
-  --event-width: calc(100vw - var(--safe-left) - var(--safe-right) - 32px);
-  --brand-height: min(calc(var(--headline-unit) * 1.5), calc(var(--event-width) / 12.77));
-  --activity-height: min(calc(var(--headline-unit) * 1.5), calc(var(--event-width) / 5.15));
-  --event-top: calc(var(--title-top) + var(--title-height) + var(--headline-unit) * .65);
+  --title-top: 39%;
+  --event-beam-gap: clamp(9px, 2.2vw, 24px);
+  --event-title-gap: clamp(12px, 2.2vh, 26px);
+  --event-side-width: calc(49vw - max(var(--safe-left), var(--safe-right)) - var(--event-beam-gap) - 14px);
+  /* Both wordmarks use the same 7665:1096 proportions. */
+  --event-height: min(calc(var(--headline-unit) * 1.14), calc(var(--event-side-width) * 1096 / 7665));
   height: 100vh;
   height: 100dvh;
   padding: 0;
@@ -167,18 +167,15 @@ button {
 }
 
 .intro-event {
-  top: var(--event-top);
+  top: calc(var(--title-top) - var(--event-height) - var(--event-title-gap));
   inset-inline: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--event-gap);
+  height: var(--event-height);
   animation: rise .7s 1.05s var(--ease-out) both;
 }
 
-.intro-event img { display: block; width: auto; max-width: var(--event-width); }
-.event-brand { height: var(--brand-height); }
-.event-activity { height: var(--activity-height); }
+.intro-event img { position: absolute; width: auto; height: 100%; }
+.event-department { right: calc(100% - var(--vanishing-x) + var(--event-beam-gap)); }
+.event-festival { left: calc(var(--vanishing-x) + var(--event-beam-gap)); }
 
 .intro-title {
   --title-gap: calc(var(--title-height) * .45);
@@ -191,6 +188,14 @@ button {
   position: absolute;
   top: var(--title-top);
   height: var(--title-height);
+  overflow: visible;
+}
+
+.intro-title g {
+  stroke: rgb(8 25 60 / 85%);
+  stroke-width: 2.6;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
 }
 
 .intro-title-left {
@@ -223,7 +228,7 @@ button {
 @keyframes open-right { from { transform: translateX(calc(-1 * var(--title-shift))); } }
 
 .intro-start {
-  top: max(calc(var(--vanishing-y) - 36px), calc(var(--event-top) + var(--brand-height) + var(--activity-height) + var(--event-gap) + 3vh));
+  top: calc(var(--vanishing-y) - 36px);
   left: var(--vanishing-x);
   z-index: 1;
   display: grid;
@@ -273,14 +278,14 @@ button {
 @media (min-width: 768px) {
   .intro {
     --base-size: clamp(30px, min(6vh, 3.8vw), 56px);
-    --title-top: 31%;
+    --title-top: 42%;
   }
   .festival-logo { width: clamp(220px, 17vw, 300px); }
 }
 
 @media (max-height: 480px) {
   .intro {
-    --title-top: 25%;
+    --title-top: 45%;
     --vanishing-y: 80%;
     --headline-unit: min(var(--base-size), 6vh);
     --headline-unit: min(var(--base-size), 6dvh);

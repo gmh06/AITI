@@ -44,7 +44,7 @@ const asset = (name: string) => {
   if (!file) throw new Error(`Missing build asset: ${name}`)
   return `assets/${file}`
 }
-const shared = ['logo-white', 'event-brand', 'event-activity'].map(asset)
+const shared = ['logo-white', 'event-department', 'event-festival'].map(asset)
 check('Entry JS (gzip)', total(js, true), 150_000)
 check('Entry CSS (gzip)', total(css, true), 20_000)
 check('Mobile intro art', total([...shared, asset('night-portrait')]), 200_000)

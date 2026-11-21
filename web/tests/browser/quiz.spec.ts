@@ -269,8 +269,8 @@ test('downloads the visible home background and defers character art until the r
   await page.goto('./')
   await page.waitForLoadState('networkidle')
   expect(requests.slice().sort()).toEqual([
-    expect.stringMatching(/^event-activity-/),
-    expect.stringMatching(/^event-brand-/),
+    expect.stringMatching(/^event-department-/),
+    expect.stringMatching(/^event-festival-/),
     expect.stringMatching(/^logo-white-/),
     expect.stringMatching(/^night-portrait-/),
   ])

@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { loadParticipationTotal } from '../core/participation'
-import activity from '../../assets/style/event-activity.svg'
-import eventBrand from '../../assets/style/event-brand.svg'
+import eventDepartment from '../../assets/style/event-department.svg'
+import eventFestival from '../../assets/style/event-festival.svg'
 import festivalLogo from '../../assets/style/logo-white.png'
 
 export function Intro({ onStart, restoreFocus }: { onStart: () => void; restoreFocus: boolean }) {
@@ -28,10 +28,10 @@ export function Intro({ onStart, restoreFocus }: { onStart: () => void; restoreF
           <path id="intro-t" d="M0 0H78L84 6V22H53V100H31V22H6L0 16Z" />
           <polygon id="intro-octagon" points="18,4 46,4 60,18 60,46 46,60 18,60 4,46 4,18" />
           <linearGradient id="intro-title-left">
-            <stop offset="0" stopColor="#7484CF" /><stop offset=".7" stopColor="#D5DDFF" /><stop offset="1" stopColor="#FFFFFF" />
+            <stop offset="0" stopColor="#A3B2F2" /><stop offset=".7" stopColor="#E5ECFF" /><stop offset="1" stopColor="#FFFFFF" />
           </linearGradient>
           <linearGradient id="intro-title-right">
-            <stop offset="0" stopColor="#FFFFFF" /><stop offset=".3" stopColor="#D5DDFF" /><stop offset="1" stopColor="#7484CF" />
+            <stop offset="0" stopColor="#FFFFFF" /><stop offset=".3" stopColor="#E5ECFF" /><stop offset="1" stopColor="#A3B2F2" />
           </linearGradient>
           <linearGradient id="intro-button" x2="1" y2="1">
             <stop offset="0" stopColor="#1C2E6B" /><stop offset=".55" stopColor="#3C4FA8" /><stop offset="1" stopColor="#5E79D6" />
@@ -40,6 +40,11 @@ export function Intro({ onStart, restoreFocus }: { onStart: () => void; restoreF
       </svg>
       <span className="intro-beam" aria-hidden="true" />
       <h1 id="intro-title" className="sr-only">AITI</h1>
+      <img className="festival-logo" src={festivalLogo} alt="Beyond Context" width="1100" height="390" fetchPriority="high" />
+      <div className="intro-event">
+        <img className="event-department" src={eventDepartment} alt="计算机科学与技术系" width="7665" height="1096" />
+        <img className="event-festival" src={eventFestival} alt="第 44 届学生节" width="7665" height="1096" />
+      </div>
       <div className="intro-title" aria-hidden="true">
         <svg className="intro-title-left" viewBox="0 0 128 100">
           <g fill="url(#intro-title-left)"><use href="#intro-a" /><use href="#intro-i" x="106" /></g>
@@ -47,11 +52,6 @@ export function Intro({ onStart, restoreFocus }: { onStart: () => void; restoreF
         <svg className="intro-title-right" viewBox="0 0 120 100">
           <g fill="url(#intro-title-right)"><use href="#intro-t" /><use href="#intro-i" x="98" /></g>
         </svg>
-      </div>
-      <img className="festival-logo" src={festivalLogo} alt="Beyond Context" width="1100" height="390" fetchPriority="high" />
-      <div className="intro-event">
-        <img className="event-brand" src={eventBrand} alt="计算机系第44届学生节「Beyond Context」" />
-        <img className="event-activity" src={activity} alt="趣味人格测试活动" />
       </div>
       <div className="intro-start">
         <button className="dive" type="button" aria-label="开始测试" onClick={onStart} ref={start}>

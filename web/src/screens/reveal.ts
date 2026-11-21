@@ -4,8 +4,7 @@ import type { DimensionView } from '../core/dimensions'
 
 const WAIT_AT = 1200
 const PEEK_VISIBLE_AT = 1650
-const PEEK_BREATH_AT = PEEK_VISIBLE_AT + 1000
-const CHARGE_AT = PEEK_BREATH_AT + 1180
+const CHARGE_AT = PEEK_VISIBLE_AT + 1180
 const CHARGED_AT = CHARGE_AT + 280
 const OPEN_AT = CHARGED_AT + 90
 const OPENED_AT = OPEN_AT + 700
@@ -20,7 +19,6 @@ const CIRCLE_PERCENT_BASE = Math.hypot(1, ART_HEIGHT) / Math.SQRT2
 
 const peekMotion = [
   { time: PEEK_VISIBLE_AT, scale: 1, easing: 'linear' },
-  { time: PEEK_BREATH_AT, scale: 1, easing: 'linear' },
   { time: CHARGE_AT, scale: 1.03, easing: 'ease-in' },
   { time: CHARGED_AT, scale: .72, easing: 'linear' },
   { time: OPEN_AT, scale: .72, easing: EASE },
