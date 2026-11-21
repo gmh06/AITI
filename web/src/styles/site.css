@@ -628,7 +628,7 @@ code {
 .revealing:focus { outline: none; }
 .revealing .result-contents { position: relative; pointer-events: none; }
 .reveal-background { position: fixed; inset: 0; pointer-events: none; background: #000; }
-.reveal-coarse, .reveal-fine, .reveal-noise, .reveal-ring, .reveal-caption, .reveal-flash { opacity: 0; }
+.reveal-noise, .reveal-ring, .reveal-caption { opacity: 0; }
 .reveal-noise, .reveal-ring-position, .reveal-caption { position: absolute; pointer-events: none; }
 .reveal-noise {
   top: 50%;
@@ -668,7 +668,6 @@ code {
   letter-spacing: .16em;
   text-align: center;
 }
-.reveal-flash { position: fixed; inset: 0; z-index: 2; background: white; pointer-events: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }

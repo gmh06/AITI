@@ -23,18 +23,16 @@ export function useCharacter(model: ModelId) {
       if (!active) return
       active = false
       window.clearTimeout(timeout)
-      image.onload = image.onerror = null
       if (result.status === 'failed') image.removeAttribute('src')
       setArtwork(result)
     }
 
-    const timeout = window.setTimeout(() => settle({ status: 'failed' }), IMAGE_TIMEOUT_MS)
-    image.onload = () => settle({ status: 'ready', image })
-    image.onerror = () => settle({ status: 'failed' })
+    const fail = () => settle({ status: 'failed' })
+    const timeout = window.setTimeout(fail, IMAGE_TIMEOUT_MS)
     image.src = url
+    image.decode().then(() => settle({ status: 'ready', image }), fail)
     return () => {
       window.clearTimeout(timeout)
-      image.onload = image.onerror = null
       if (active) image.removeAttribute('src')
       active = false
     }

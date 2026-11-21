@@ -53,7 +53,7 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
   }, [revealing, personality.modelId, dims, onRevealed])
 
   useLayoutEffect(() => {
-    if (artwork.status === 'ready') reveal.current?.ready(artwork.image)
+    if (artwork.status === 'ready') reveal.current?.ready()
     if (artwork.status === 'failed') reveal.current?.finish()
   }, [artwork])
 
@@ -73,10 +73,6 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
             <div className="art-wrap">
               <div className="art-scale">
                 <div className="art-peek">
-                  {revealing && <>
-                    <canvas className="reveal-coarse" aria-hidden="true" />
-                    <canvas className="reveal-fine" aria-hidden="true" />
-                  </>}
                   <img className="character" src={image?.src} alt={image ? `${personality.model} 角色插画` : ''} width="1024" height="1536" />
                 </div>
               </div>
@@ -134,7 +130,6 @@ export function Result({ result, revealing, onRevealed, onBack, onRestart }: Res
         setShareOpen(false)
         shareButton.current?.focus({ preventScroll: true })
       }} />}
-      {revealing && <div className="reveal-flash" aria-hidden="true" />}
     </section>
   )
 }
