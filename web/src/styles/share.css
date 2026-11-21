@@ -27,8 +27,7 @@
 .share-dialog[open] { display: flex; flex-direction: column; gap: 12px; }
 .share-dialog::backdrop { background: rgb(10 27 62 / 70%); }
 .share-dialog-fallback-backdrop { position: fixed; inset: 0; z-index: 50; background: rgb(10 27 62 / 70%); }
-.share-dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-.share-dialog-header h2 { margin: 0; font-size: 20px; letter-spacing: .09em; }
+.share-dialog-header { display: flex; justify-content: flex-end; }
 .share-dialog-close {
   display: grid;
   place-items: center;

@@ -112,9 +112,8 @@ export function ShareDialog({ code, personality, dimensions, onClose }: ShareDia
   return <>
     {!nativeDialog && <div className="share-dialog-fallback-backdrop" aria-hidden="true" />}
     <dialog ref={dialog} className="share-dialog" open={nativeDialog ? undefined : true}
-      role="dialog" aria-modal="true" aria-labelledby="share-title" onClose={onClose} onKeyDown={handleFallbackKeys}>
+      role="dialog" aria-modal="true" aria-label="保存图片" onClose={onClose} onKeyDown={handleFallbackKeys}>
       <header className="share-dialog-header">
-        <h2 id="share-title">保存图片</h2>
         <button type="button" className="share-dialog-close" aria-label="关闭" onClick={close}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
             <path d="m5 5 14 14M19 5 5 19" />

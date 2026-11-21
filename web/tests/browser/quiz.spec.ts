@@ -320,6 +320,7 @@ test('opens the share poster before retest and downloads the generated JPEG', as
   await trigger.focus()
   await page.keyboard.press('Enter')
   const dialog = page.getByRole('dialog', { name: '保存图片' })
+  await expect(dialog.getByRole('heading')).toHaveCount(0)
   const poster = dialog.getByRole('img', { name: '情绪甜心 · 豆包 宣传图' })
   await expect(poster).toBeVisible()
   await expect.poll(() => poster.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1080)
