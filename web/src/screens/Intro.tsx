@@ -1,14 +1,23 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { loadParticipationTotal } from '../core/participation'
 import activity from '../../assets/style/event-activity.svg'
 import eventBrand from '../../assets/style/event-brand.svg'
 import festivalLogo from '../../assets/style/logo-white.png'
 
 export function Intro({ onStart, restoreFocus }: { onStart: () => void; restoreFocus: boolean }) {
   const start = useRef<HTMLButtonElement>(null)
+  const [participation, setParticipation] = useState<number>()
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
     if (restoreFocus) start.current?.focus({ preventScroll: true })
   }, [restoreFocus])
+  useEffect(() => {
+    let active = true
+    void loadParticipationTotal().then((total) => {
+      if (active) setParticipation(total)
+    })
+    return () => { active = false }
+  }, [])
 
   return (
     <section className="screen intro" aria-labelledby="intro-title">
@@ -44,14 +53,17 @@ export function Intro({ onStart, restoreFocus }: { onStart: () => void; restoreF
         <img className="event-brand" src={eventBrand} alt="计算机系第44届学生节「Beyond Context」" />
         <img className="event-activity" src={activity} alt="趣味人格测试活动" />
       </div>
-      <button className="dive" type="button" aria-label="开始测试" onClick={onStart} ref={start}>
-        <svg className="dive-pulse" viewBox="0 0 64 64" aria-hidden="true"><use href="#intro-octagon" /></svg>
-        <svg className="dive-pulse dive-pulse-late" viewBox="0 0 64 64" aria-hidden="true"><use href="#intro-octagon" /></svg>
-        <svg className="dive-core" viewBox="0 0 64 64" aria-hidden="true">
-          <use href="#intro-octagon" />
-          <path d="M26 21L44 32L26 43Z" fill="#fff" />
-        </svg>
-      </button>
+      <div className="intro-start">
+        <button className="dive" type="button" aria-label="开始测试" onClick={onStart} ref={start}>
+          <svg className="dive-pulse" viewBox="0 0 64 64" aria-hidden="true"><use href="#intro-octagon" /></svg>
+          <svg className="dive-pulse dive-pulse-late" viewBox="0 0 64 64" aria-hidden="true"><use href="#intro-octagon" /></svg>
+          <svg className="dive-core" viewBox="0 0 64 64" aria-hidden="true">
+            <use href="#intro-octagon" />
+            <path d="M26 21L44 32L26 43Z" fill="#fff" />
+          </svg>
+        </button>
+        {participation !== undefined && <p className="participation-total">累计 {participation} 次参与</p>}
+      </div>
     </section>
   )
 }

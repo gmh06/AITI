@@ -1,0 +1,17 @@
+{
+  "name": "aiti-participation",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-21",
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    "SITE_ORIGIN": "https://gmh06.github.io"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "aiti-participation",
+      "database_id": "b1c8cafa-12e6-4f1c-ab3a-406c412ea41a"
+    }
+  ]
+}

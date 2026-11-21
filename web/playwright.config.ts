@@ -17,6 +17,7 @@ export default defineConfig({
   },
   webServer: {
     command: `npm run build && npm run preview -- --host 127.0.0.1 --port ${port} --strictPort`,
+    env: { VITE_PARTICIPATION_API_URL: new URL('test-participation', baseURL).href },
     url: baseURL,
     reuseExistingServer: !process.env.CI,
   },

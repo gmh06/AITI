@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { initialFlow, reduceFlow } from './flow'
 import type { Flow, FlowEvent } from './flow'
+import { recordParticipation } from './participation'
 
 function isSessionEntry() {
   return history.state?.aitiSession === true
@@ -67,6 +68,7 @@ export function useFlow() {
       return
     }
     commit(next)
+    if (previous.screen === 'quiz' && next.screen === 'reveal') void recordParticipation()
   }
 
   return { flow, send }

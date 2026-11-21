@@ -222,10 +222,17 @@ button {
 @keyframes open-left { from { transform: translateX(var(--title-shift)); } }
 @keyframes open-right { from { transform: translateX(calc(-1 * var(--title-shift))); } }
 
-.dive {
+.intro-start {
   top: max(calc(var(--vanishing-y) - 36px), calc(var(--event-top) + var(--brand-height) + var(--activity-height) + var(--event-gap) + 3vh));
-  left: calc(var(--vanishing-x) - 36px);
+  left: var(--vanishing-x);
   z-index: 1;
+  display: grid;
+  justify-items: center;
+  width: max-content;
+  transform: translateX(-50%);
+}
+
+.dive {
   display: grid;
   place-items: center;
   width: 72px;
@@ -254,6 +261,15 @@ button {
   to { transform: scale(2.3); opacity: 0; }
 }
 
+.participation-total {
+  margin: 6px 0 0;
+  color: #dfe6ff;
+  font-size: 12px;
+  line-height: 1.4;
+  text-shadow: 0 1px 4px #13162d;
+  animation: rise .7s .9s var(--ease-out) both;
+}
+
 @media (min-width: 768px) {
   .intro {
     --base-size: clamp(30px, min(6vh, 3.8vw), 56px);
@@ -270,7 +286,7 @@ button {
     --headline-unit: min(var(--base-size), 6dvh);
   }
   .festival-logo { width: min(34vw, 160px, 42vh); }
-  .dive { top: min(calc(100% - var(--safe-bottom) - 76px), calc(var(--vanishing-y) - 36px)); }
+  .intro-start { top: min(calc(100% - var(--safe-bottom) - 104px), calc(var(--vanishing-y) - 36px)); }
 }
 
 .topbar, .context {

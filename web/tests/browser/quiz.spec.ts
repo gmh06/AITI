@@ -25,6 +25,59 @@ async function checkWidth(page: Page) {
   )).toBe(true)
 }
 
+test('reports one event per completed quiz and displays the updated shared total', async ({ page }) => {
+  const submissions: string[] = []
+  const counted = new Set<string>()
+  await page.route('**/test-participation', async (route) => {
+    const request = route.request()
+    if (request.method() === 'GET') return route.fulfill({ json: { total: 1273463 + counted.size } })
+
+    const id = request.postData()!
+    submissions.push(id)
+    counted.add(id)
+    // Simulate a failed response after the event was already written.
+    await route.fulfill({ status: submissions.length === 1 ? 503 : 204 })
+  })
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.setViewportSize({ width: 844, height: 390 })
+  await page.goto('./')
+  const total = page.getByText('累计 1273463 次参与', { exact: true })
+  const button = page.getByRole('button', { name: '开始测试' })
+  await expect(total).toBeVisible()
+  const [totalBox, buttonBox] = await Promise.all([total.boundingBox(), button.boundingBox()])
+  expect(totalBox!.y).toBeGreaterThan(buttonBox!.y + buttonBox!.height)
+  expect(totalBox!.y + totalBox!.height).toBeLessThanOrEqual(390)
+
+  await button.click()
+  await answerQuiz(page, 'AAAAAAAAA')
+  await expect(progress(page)).toHaveText('context 10/10')
+  expect(submissions).toHaveLength(0)
+  await option(page).dblclick()
+  await expect(reveal(page)).toBeVisible()
+  await expect.poll(() => submissions.length).toBe(2)
+  expect(submissions[0]).toMatch(/^[0-9a-f]{32}$/)
+  expect(submissions[1]).toBe(submissions[0])
+  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeVisible(revealTimeout)
+  await page.getByRole('button', { name: '再测一次' }).click()
+  await expect(page.getByText('累计 1273464 次参与', { exact: true })).toBeVisible()
+  await button.click()
+  await answerQuiz(page)
+  await expect(reveal(page)).toBeVisible()
+  await expect.poll(() => submissions.length).toBe(3)
+  expect(submissions[2]).not.toBe(submissions[0])
+})
+
+test('keeps the quiz and result usable when the counter is unavailable', async ({ page }) => {
+  await page.route('**/test-participation', (route) => route.abort())
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await start(page)
+  await answerQuiz(page)
+  await expect(page.getByRole('heading', { name: '情绪甜心' })).toBeVisible(revealTimeout)
+  await page.getByRole('button', { name: '再测一次' }).click()
+  await expect(page.getByRole('button', { name: '开始测试' })).toBeFocused()
+  await expect(page.locator('.participation-total')).toHaveCount(0)
+})
+
 const sizes = [
   { width: 360, height: 780 },
   { width: 390, height: 844 },
