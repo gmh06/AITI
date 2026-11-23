@@ -1,47 +1,44 @@
 # AITI · Beyond Context
 
-清华大学计算机科学与技术系第44届学生节路演互动活动。
+> 清华大学计算机科学与技术系第 44 届学生节 **Beyond Context** 路演互动项目。
 
-An interactive AI personality quiz for the roadshow of Tsinghua CS's 44th Student Festival, **Beyond Context**.
+[![GitHub Pages 部署状态](https://github.com/gmh06/AITI/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/gmh06/AITI/actions/workflows/deploy-pages.yml)
+[![源代码采用 MIT 许可](https://img.shields.io/badge/Code-MIT-31539e)](LICENSE)
 
-## 项目简介
+**[在线体验 AITI](https://gmh06.github.io/AITI/)**
 
-AITI 是一项趣味 AI 人格测试活动，计划在学生节前的路演中与同学们见面。
+![AITI 宣传图。七款非人形角色在 Beyond Context 的蓝色城市中跃向同一处星光。](docs/showcase/aiti-poster.jpg)
 
-我们希望通过轻松、有参与感的互动，让同学们发现自己更多面的可能，并与本届学生节的主题 **Beyond Context** 建立联系。
+## 从答题到揭晓
 
-## 主题背景
+在 10 道校园情境题中，选出最接近你平时做法的答案。AITI 根据**认知内核、思考倾向、对齐模式和交互姿态**四个维度计分，匹配 16 种人格之一。 [四维人格设定](docs/aiti_personality.md)
 
-- **Context 帮助我们理解世界。** 大模型依靠上下文理解信息；人的家庭、学校、专业、朋友与经历，也构成了各自认识世界的背景。
-- **Context 也影响我们如何认识自己。** 熟悉的环境和已有的经验塑造了我们的判断与自我定义。
-- **Beyond 意味着继续拓展。** 带着已有的经历，走进更大的 Context，看见新的视角与可能。
+答完后，对应角色从圆形窥视孔中逐渐揭晓。你可以查看四维倾向和人格解读，也可以将结果保存为分享图。 [角色设计](docs/model_character.md) · [揭晓动画](docs/animation.md)
 
-## 当前进展
+## 实现与部署
 
-纯前端测试应用位于 `web/`，包含 10 道题、揭晓动画和 16 种人格结果。结果页的「保存结果」打开本次结果的图片预览，可下载或在微信内长按保存。结果页和卡片正文均从 `web/src/content/personalities.json` 中对应人格的 `description` 读取。
+前端使用 React、TypeScript 和 Vite，发布在 GitHub Pages。答题、计分和分享图合成在浏览器中完成，累计参与次数由 Cloudflare Worker 和 D1 记录。 [系统设计](docs/system/design.md) · [计数服务](counter/README.md)
 
-## 本地运行
+## 素材来源
 
-需要 Node.js 24 LTS。在仓库根目录执行以下命令，打开终端输出的 `/AITI/` 地址。
+- **活动视觉**　Beyond Context 官方字标和原始主视觉来自清华大学计算机科学与技术系第 44 届学生节。城市背景以活动主视觉为参考，使用 OpenAI 图像生成工具制作。 [字标与原始主视觉](asset/Festival/) · [背景制作记录](asset/design/backgrounds/v3/)
+- **人形卡面**　GPT、DeepSeek、Claude、Gemini、Grok、GLM 和 Kimi 的人形设定参考 ZipZipPipe 的《AI娘化》。DeepSeek 鲸鱼娘的原角色由上善无形创作，蓝白女仆版由 ZipZipPipe 二次设计。豆包参考字节跳动豆包的品牌形象。AITI 卡面插画使用 AI 辅助制作。 [逐款来源、参考图核验范围与生成记录](docs/art/human.md#2-参考图与来源)
+- **角色插画**　揭晓动画和结果页使用 AITI 制作的七款非人形插画，豆包沿用人形版。README 封面以七款非人形角色的四视图为参考，使用 AI 辅助绘制新动作。 [逐款设计来源](docs/art/nonhuman.md) · [四视图](asset/nonhuman/final/README.md) · [上线图像索引](asset/nonhuman/cards/source-map.json)
+- **字体**　得意黑（Smiley Sans）、站酷庆科黄油体和 Audiowide 的字体文件及子集遵循各自的 SIL Open Font License 1.1。 [得意黑许可](web/assets/style/Smiley-Sans-OFL.txt) · [站酷庆科黄油体许可](asset/design/typography/fonts/zcoolqingkehuangyou/OFL.txt) · [Audiowide 许可](asset/design/typography/fonts/audiowide/OFL.txt)
+- **品牌参考素材**　各 AI 产品的 App 图标、网页标志和吉祥物参考归相应权利人。部分参考文件的首发页面与再分发许可尚未核实。 [品牌参考目录](asset/icon/) · [素材索引](asset/README.md)
 
-```sh
-cd web
-npm ci
-npm run dev
-```
+## 授权
 
-`npm test` 运行类型和单元测试。`npm run build` 生成 `web/dist/`，并检查资源大小。`npm run preview` 可以预览构建后的站点。
+AITI 贡献者有权授权的程序源代码采用 **MIT License**，包括网页程序、参与计数服务、测试、构建和制作脚本。题库、人格文案、插画、背景、卡面、活动字标、产品标志、字体及第三方参考图适用各自的权利与许可。 [MIT 许可证](LICENSE)
 
-浏览器验收可先运行 `npx playwright install chromium`，再运行 `npm run test:browser`。使用本机 Chrome 时，可将环境变量 `AITI_BROWSER_CHANNEL` 设为 `chrome`。
+ZipZipPipe 的《AI娘化》合集要求署名和非商业使用。对继承 DeepSeek 鲸鱼娘设计的图像，应保留上善无形与 ZipZipPipe 的署名及来源，按 **CC BY-NC-SA 4.0** 使用，公开分享改编时标注修改并沿用同一许可。其他未列明开放许可的素材，复用前应向相应权利人确认许可。 [ZipZipPipe 作品说明](https://www.pixiv.net/artworks/148186519) · [上善无形原帖](https://www.bilibili.com/opus/1231977657712771073) · [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)
 
 ## 项目资料
 
-- [活动策划案](docs/Activity_draft.md)：活动流程、系统功能、卡片设计、现场安排及待落实事项。
-- [项目简报](docs/PROJECT_BRIEF.md)：已确认的背景、目标与方案摘要。
-- [AITI 设计总览](AITI设计总览.md)：测试结构，以及人格分类、模型人格设定和题库计分规则的阅读入口。
-- [结果页文案](docs/result_page.md)：16 个人格的结果页描述文案及对应模型。
-- [原卡片形象与生图规范](docs/art/human.md)：已确认的人形方案插画及生图记录，与非人形方案互为替代、并行推进，两套均用于纪念卡片。
-- [模型形象设定 · 非人形方案](docs/art/nonhuman.md)：七款非人形角色与八款卡片动作插画均已确认，**网站上线采用本方案**；[四视图终版](asset/nonhuman/final/README.md)及[八款动作插画、prompt 与生成记录](asset/nonhuman/cards/final/)已归档，豆包沿用现有人形，与原版平级维护。
-- [动画设计](docs/animation.md)：揭晓动画的时间轴、窥视取景、等待与异常处理，已按系统设计的技术限制修订；[原稿](docs/animation_original.md)留作记录。
-- [素材目录](asset/README.md)：铭文版与 Q 版卡面、共用背面、网页角色图、主视觉及背景。可按用途找到 PNG、分层 draw.io 源文件和制作记录。
-- 网页的编写与部署：[现实约束与要求](docs/system/requirements.md)、[系统设计](docs/system/design.md)（行为、数据、构建与部署；不含界面视觉）、[测试与验收](docs/system/verification.md)。题目和人格描述存为 `web/src/content/` 的 JSON，首版由脚本从题库和结果页文案一次性导入，此后以 JSON 为准。
+- 网页题目、人格文案和计分规则见 [站点内容](web/src/content/)。设计和校对资料见 [题库](docs/tests_design.md) · [结果页文案](docs/result_page.md) · [测试与验收](docs/system/verification.md)。
+- 纪念卡成品、分层源文件和制作记录见 [素材目录](asset/README.md)。早期策划和试稿见 [整理前的仓库版本](https://github.com/gmh06/AITI/tree/a6692286c70f86d2cd26437ba15f5adb882fc83a)。
+
+## 项目贡献者
+
+- [gmh06](https://github.com/gmh06)
+- [Zaogezi](https://github.com/Zaogezi)

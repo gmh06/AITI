@@ -25,14 +25,24 @@
 
 避免写实、3D 黏土或塑料质感、厚涂、多手多指、手与道具融合、畸形面部、裁切人物和自行添加的文字。角色只保留指定道具及配饰。豆包从原始 3D 参考转为同套 2D Q 版。
 
-## 2. 参考图
+## 2. 参考图与来源
+
+### 社区与品牌设定
+
+- **GPT、Claude、Gemini、Grok、GLM、Kimi** 的人形设定可与 ZipZipPipe 发布的白龙娘、橙发花饰、紫发星饰猫娘、金发黑裙、黑白狐娘和银发蓝裙对应。作者要求署名和非商业使用。 [Pixiv《AI娘化》](https://www.pixiv.net/artworks/148186519) · [B 站《大AI和小AI们》](https://www.bilibili.com/video/BV1tE9XBbErS/)
+- **DeepSeek** 的人形参考为蓝发鲸鱼女仆。鲸鱼娘原角色由上善无形创作，蓝白女仆造型由 ZipZipPipe 二次设计。对应的上游许可为 CC BY-NC-SA 4.0。分发承袭该设计的图像时保留两位作者的署名和来源，标注所作修改，并以相同许可分享改编。 [上善无形原帖](https://www.bilibili.com/opus/1231977657712771073) · [ZipZipPipe 作品说明](https://www.bilibili.com/video/BV1tE9XBbErS/) · [许可条款](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)
+- **豆包**根据字节跳动豆包品牌的短发、红围巾 3D 形象制作。仓库中全身参考图的首发页面及再分发许可尚未核实。 [豆包官方应用页面](https://apps.apple.com/cn/app/id6459478672) · [仓库参考图](../../asset/human/original/doubao.jpg)
+
+仓库保存的四视图和「人物小记」用于定位服装、配饰和造型。上述署名对应角色设定的来源，具体参考文件的制作者、首发页面及再分发许可尚未核实。下列本地路径记录了 AITI 卡面制作时实际使用的参考。
+
+### AITI 卡面取用记录
 
 - GPT、DeepSeek、Claude：`asset/human/notes/` 中同名人物小记为主，`asset/human/sheets/` 四视图用于补查细节。
 - GLM、Grok、Gemini：`asset/human/sheets/` 中同名四视图为角色参考；统一画风参照 `asset/human/notes/gpt.jpg`。
 - Kimi：`asset/human/original/kimi.jpg` 核对深蓝配色和 K 标志，`asset/human/sheets/kimi.jpg` 补充造型，GPT 小记用于统一画风。
 - 豆包：`asset/human/original/doubao.jpg` 仅取人物与服装特征，画风参照 `asset/human/notes/claude.jpg`，不保留手机界面或 3D 质感。
 
-这些原始设定图属于支撑素材，继续保留；它们与生成试稿分开管理。
+AITI 卡面动作、道具和构图由项目组确定，动作插画通过 OpenAI 图像生成工具制作。具体参考输入和调整过程见本页开头链接的记录。
 
 ## 3. 画面文字与标志
 

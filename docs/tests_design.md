@@ -1,4 +1,4 @@
-> **内容来源说明**：题目和人格描述在网站中以 `web/src/content/` 下的 JSON 为准。JSON 首版由开发期脚本从本文档一次性导入，导入完成后本文档不再同步，仅用于讨论和存档；导入完成之前以本文档为准。见[系统设计](system/design.md)第二节。
+> 本文记录题目和计分设计。网站使用 [questions.json](../web/src/content/questions.json) 和 [dimensions.ts](../web/src/content/dimensions.ts)。
 
 # 「Beyond Context」AITI 人格测试题库
 

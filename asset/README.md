@@ -5,8 +5,10 @@
 - **实物卡与网页电子卡正面 · 铭文版**：八张角色卡。原始整卡 PNG 可直接取用。与 Q 版混排时，从分层版导出对应角色页，确保底图、边框和字标位置一致。[原始 PNG](design/card-studies/engraved-v1/) · [对齐后总览](design/card-studies/engraved-v1/aligned-overview.jpg) · [分层 draw.io](design/card-studies/engraved-v1/fronts.drawio)
 - **实物卡与网页电子卡正面 · Q 版人形**：八张全彩 PNG，与铭文版并行。保留原画配色、动作和道具，三处卡面字标与铭文版一致。[单卡 PNG](design/card-studies/chibi-v1/) · [八款总览](design/card-studies/chibi-v1/overview.jpg) · [分层 draw.io](design/card-studies/chibi-v1/fronts.drawio)
 - **卡片背面**：共用版式，含 Beyond Context 字标、学生节信息和 AITI 测试入口二维码。二维码指向已约定的 GitHub Pages 地址。[PNG 预览](design/card-studies/engraved-v1/back.png) · [draw.io 源文件](design/card-studies/engraved-v1/back.drawio) · [独立二维码 SVG](design/card-studies/engraved-v1/aiti-qr.svg)
-- **揭晓动画与结果页角色**：取 `white` 路径对应的八张原坐标白底动作图。DeepSeek、Grok、豆包取去字版，其余五款取原定稿。[八款角色取用索引](nonhuman/cards/source-map.json) · [动画设计](../docs/animation.md)
-- **分享图排版**：角色沿用原版动作插画，拼接时可取索引中的 `transparent` 版本。候选背景已归档。正式分享素材计划放在 `asset/share/`，16 张人格底图、8 张极名标签和 `layout.json` 待制作，四维条形按测试结果实时叠加。[透明底角色](nonhuman/cards/transparent/v1/) · [分享背景竖版](design/backgrounds/v3/share-portrait-r2.png) · [分享背景横版](design/backgrounds/v3/share-landscape.png) · [分享素材规格](../docs/system/design.md#五分享图)
+- **揭晓动画与结果页角色**　构建使用索引中 `transparent` 路径对应的八张原坐标透明底插画。 [八款角色取用索引](nonhuman/cards/source-map.json) · [动画设计](../docs/animation.md)
+- **分享图**　构建从铭文版提取纸纹和字标，按 v5 场景配置裁切透明底角色图，并压缩横版城市背景。浏览器按实际结果合成文案和四维条。 [分享图实现说明](../docs/system/design.md#五分享图) · [取景配置](design/card-studies/v5/scenes.json) · [素材构建脚本](../web/scripts/build-assets.ts)
+
+角色设定、字体、活动视觉与第三方素材的出处和授权见 [仓库说明](../README.md#素材来源)。
 
 ## 目录结构
 
