@@ -29,7 +29,7 @@
 
 ## 授权
 
-AITI 贡献者有权授权的程序源代码采用 **MIT License**，包括网页程序、参与计数服务、测试、构建和制作脚本。题库、人格文案、插画、背景、卡面、活动字标、产品标志、字体及第三方参考图适用各自的权利与许可。 [MIT 许可证](LICENSE)
+**MIT License 仅适用于 AITI 贡献者有权授权的程序源代码**，包括网页程序、参与计数服务、测试、构建和制作脚本。题库、人格文案、插画、背景、卡面、活动字标、产品标志、字体及第三方参考图适用各自的权利与许可。 [MIT 许可证](LICENSE)
 
 ZipZipPipe 的《AI娘化》合集要求署名和非商业使用。对继承 DeepSeek 鲸鱼娘设计的图像，应保留上善无形与 ZipZipPipe 的署名及来源，按 **CC BY-NC-SA 4.0** 使用，公开分享改编时标注修改并沿用同一许可。其他未列明开放许可的素材，复用前应向相应权利人确认许可。 [ZipZipPipe 作品说明](https://www.pixiv.net/artworks/148186519) · [上善无形原帖](https://www.bilibili.com/opus/1231977657712771073) · [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)
 
