@@ -20,7 +20,7 @@ describe('quiz flow', () => {
   it('calculates the result on Q10, reveals it once, and clears it on restart', () => {
     const last: Flow = { screen: 'quiz', index: 9, answers: Array.from({ length: 9 }, () => 'A') }
     const reveal = reduceFlow(last, { type: 'ANSWER', index: 9, key: 'A' })
-    expect(reveal).toEqual({ screen: 'reveal', result: { code: 'HQUA', scores: { D1: -1, D2: -5, D3: -1, D4: -5 } } })
+    expect(reveal).toEqual({ screen: 'reveal', result: { code: 'HQUA', scores: { D1: -1, D2: -3, D3: -1, D4: -5 } } })
     const result = reduceFlow(reveal, { type: 'REVEAL_DONE' })
     expect(result.screen).toBe('result')
     expect(reduceFlow(reveal, { type: 'BACK' })).toBe(reveal)

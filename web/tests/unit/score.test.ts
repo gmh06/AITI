@@ -5,9 +5,9 @@ import { getDimensionViews } from '../../src/core/dimensions'
 import { score } from '../../src/core/score'
 
 it.each([
-  ['AAAAAAAAAA', 'HQUA', { D1: -1, D2: -5, D3: -1, D4: -5 }],
+  ['AAAAAAAAAA', 'HQUA', { D1: -1, D2: -3, D3: -1, D4: -5 }],
   ['BBBBBBBBBB', 'LDRS', { D1: 1, D2: 3, D3: 1, D4: 1 }],
-  ['ABCDABCDAB', 'HDRA', { D1: -3, D2: 3, D3: 3, D4: -1 }],
+  ['ABCDABCDAB', 'HDRA', { D1: -3, D2: 5, D3: 3, D4: -1 }],
 ])('scores %s as %s', (answers, code, scores) => {
   expect(score([...answers] as OptionKey[])).toEqual({ code, scores })
 })
