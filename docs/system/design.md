@@ -12,7 +12,7 @@
 
 | 层 | 内容 | 依赖 |
 | :--- | :--- | :--- |
-| 内容层 `content/` | 题目与人格长文（JSON，由文档导入）、维度与计分表（TypeScript，手写）（见第二节） | 纯数据，无依赖 |
+| 内容层 `content/` | 题目与人格长文（JSON）、维度与计分表（TypeScript），见第二节 | 纯数据，无依赖 |
 | 核心层 `core/` | 计分、流程状态机、四维呈现数据、分享图合成、环境判断 | 纯 TypeScript，不依赖 React，全部可单元测试 |
 | 界面层 `screens/` | 各状态的界面，手机与电脑各一种布局（见第八节） | React；视觉与动效待界面设计 |
 
@@ -37,15 +37,14 @@ web/
 ├─ package.json
 ├─ vite.config.ts              # base: '/AITI/'
 ├─ scripts/
-│  ├─ build-assets.ts          # asset/ → src/generated/img/
-│  ├─ check-budget.ts          # 构建后检查产物体积
-│  └─ import-content.ts        # 一次性：tests_design.md、result_page.md → content/*.json，见第二节，不在任何自动流程中
+│  ├─ build-assets.ts          # asset/ → src/generated/
+│  └─ check-budget.ts          # 构建后检查产物体积
 ├─ src/
 │  ├─ content/                 # 站点内容数据，见第二节
 │  │  ├─ types.ts              # 类型，以及极、代号、模型 ID 的常量列表
 │  │  ├─ dimensions.ts         # 维度、极名、计分表，手写
-│  │  ├─ questions.json        # 由 tests_design.md 导入
-│  │  ├─ personalities.json    # 由 result_page.md 导入
+│  │  ├─ questions.json        # 上线题目与选项权重
+│  │  ├─ personalities.json    # 上线人格名称、模型与描述
 │  │  └─ index.ts              # 导入 JSON 并加上类型
 │  ├─ generated/               # 构建生成，不提交
 │  ├─ core/
@@ -63,31 +62,20 @@ web/
 
 ## 二、内容数据
 
-只有两类内容从文档导入：10 道题（题干、选项、权重；【】括起的题目标题不导入），以及 16 个人格的名称、对应模型和描述。结果页与分享卡共用同一人格条目的 `description`。维度名、极名和界面文字写在代码里：
+站点内容包含 10 道题和 16 种人格。结果页与分享卡共用同一人格条目的 `description`。维度名、极名和界面文字写在代码里。
 
-| 内容 | 位置 | 来源 |
-| :--- | :--- | :--- |
-| 10 道题 | `content/questions.json` | 由 [tests_design.md](../tests_design.md) 导入 |
-| 16 个人格（名称、对应模型、描述） | `content/personalities.json` | 由 [result_page.md](../result_page.md) 导入 |
-| 4 个维度名、8 个极名、计分表（主测、副测题号） | `content/dimensions.ts` | 手写，对照 [aiti_personality.md](../aiti_personality.md) 和 [tests_design.md](../tests_design.md) 第一节 |
-| 按钮、提示、揭晓文案、错误信息等界面文字 | 界面层代码中 | 手写，随界面设计确定，没有统一的文案文件 |
+| 内容 | 位置 |
+| :--- | :--- |
+| 10 道题的题干、选项和权重 | [questions.json](../../web/src/content/questions.json) |
+| 16 个人格的名称、对应模型和描述 | [personalities.json](../../web/src/content/personalities.json) |
+| 4 个维度名、8 个极名、计分表（主测、副测题号） | [dimensions.ts](../../web/src/content/dimensions.ts) |
+| 按钮、提示、揭晓文案、错误信息等界面文字 | [界面层代码](../../web/src/screens/) |
 
 构建和运行时都不读取、不解析 `docs/` 下的 Markdown 文档。
 
-### 1. 导入与文档的关系
+### 1. 内容维护
 
-JSON 首次由脚本从文档生成，之后与文档各自独立。
-
-| 项 | 规定 |
-| :--- | :--- |
-| 上线内容 | 题目和人格长文以 `web/src/content/` 的 JSON 为准，网页显示什么由它决定 |
-| 首次生成 | 开发期运行一次 `scripts/import-content.ts`：读取 [tests_design.md](../tests_design.md) 和 [result_page.md](../result_page.md)，写出 `questions.json` 和 `personalities.json`。脚本是确定性的解析，不经过模型重新输入文字；“对应模型：GPT”这类名称到 `modelId` 的对应，在脚本里用一张固定的表。产出由人审阅 diff 后再提交 |
-| 此后的修改 | 直接改 JSON，不再回头改文档，也不再运行脚本 |
-| 脚本的状态 | 脚本留在仓库中存档，文件开头注明“已完成首次导入，不再使用”。输出文件已存在时脚本默认拒绝运行，要覆盖须显式加 `--force`，以免覆盖手改的内容 |
-| 文档的状态 | [tests_design.md](../tests_design.md) 和 [result_page.md](../result_page.md) 开头各加一行说明：上线内容以 JSON 为准，导入后本文不再同步，仅用于讨论和存档。其余内容文档不受影响 |
-| 一致性 | 不做同步，不做比对，也不再有人工核对清单 |
-
-脚本只在开发者本机运行一次，不在 `npm test`、`npm run build` 和部署工作流中，所以不违反“构建和运行时不解析 Markdown”。
+题目和人格文案直接在对应的 JSON 中修改。修改题目权重时，同时检查 `dimensions.ts` 中的主测、副测配置并运行 `npm test`。
 
 ### 2. 数据结构
 

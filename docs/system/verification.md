@@ -11,14 +11,7 @@
 - `tsc --noEmit` 通过。
 - [系统设计](design.md)第二节第 3 小节的全部校验规则，包括两个 JSON 的结构、16 个代号恰好各一份，以及题目权重与手写计分表的交叉检查。每条规则另配一份故意写错的测试数据，确认能检出。例如：删掉一个代号、把权重写成 3、把 `modelId` 拼错、把某题的主测维度权重写成 1，测试都必须失败。
 
-内容与文档不再比对，也没有发布前的逐条核对清单。但首次导入有一次人工审阅，在提交第一版 JSON 之前完成：
-
-- [ ] 运行 `scripts/import-content.ts` 后，对生成的 JSON 与 [tests_design.md](../tests_design.md)、[result_page.md](../result_page.md) 逐项抽查：10 道题的题干、选项（文档中【】括起的标题不导入），40 个选项的权重，16 个人格的名称、对应模型和描述
-- [ ] 手写的 `dimensions.ts` 中的 4 个维度名、8 个极名和计分表，对照 [aiti_personality.md](../aiti_personality.md) 和 [tests_design.md](../tests_design.md) 第一节逐项核对
-- [ ] 描述中的强调和等宽片段（如 `Segmentation Fault`、`git diff`）已转成 `Segment[]`，文本里没有残留 `**` 或反引号
-- [ ] 审阅时发现的差异，以文档为准改脚本后重新生成，不手改 JSON，也不让模型重新输入文案
-
-此后修改题目和人格文案，直接改 JSON 并提交，由提交审查把关。
+修改文案时同时检查网页和分享图的呈现。强调和等宽片段使用 JSON 中的 `Segment[]`。
 
 ### 2. 计分
 
